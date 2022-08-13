@@ -3,8 +3,9 @@
      <div class="flex md:flex-row flex-col-reverse items-start">
        <!-- Sidebar -->
        <div class="sidebar bg-[#000000] flex items-center md:flex-col text-white h-screen w-[20%] md:py-4 md:px-3">
-       <router-link to="/" class="logo text-center md:block hidden border-b-2 border-gray-500 py-3 w-full">
-        <h1 class="font-medium text-2xl">Logo.</h1>
+       <router-link to="/" class="logo select-none text-center md:flex items-center justify-center hidden border-b-2 border-gray-500 py-4 w-full">
+        <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
+        <h1 class="font-medium text-2xl">Muslims app</h1>
        </router-link>
        <div class="links items-center md:flex-col mt-[10%]">
          
