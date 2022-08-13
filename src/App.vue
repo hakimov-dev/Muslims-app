@@ -4,7 +4,7 @@
     </component>
 </template>
 
-<script>
+<script setup>
 import mainLayout from '@/layouts/mainLayout'
 
 const layout = mainLayout
