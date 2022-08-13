@@ -2,12 +2,12 @@
     <div class="main-layout">
      <div class="flex md:flex-row flex-col-reverse items-start">
        <!-- Sidebar -->
-       <div class="sidebar bg-[#000000] flex items-center md:flex-col text-white h-screen w-[20%] md:py-4 md:px-3">
+       <div class="sidebar bg-[#000000] flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3">
        <router-link to="/" class="logo select-none text-center md:flex items-center justify-center hidden border-b-2 border-gray-500 py-4 w-full">
         <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
         <h1 class="font-medium text-2xl">Muslims app</h1>
        </router-link>
-       <div class="links items-center md:flex-col mt-[10%]">
+       <div class="links items-center md:block md:w-auto w-full flex justify-evenly flex-row md:mt-[10%] md:py-0 py-2">
          
          <router-link 
          :class="$route.name !== 'home' ? 'opacity-60' : ''"
@@ -18,28 +18,42 @@
          
          <router-link 
           :class="$route.name !== 'pray-time' ? 'opacity-60' : ''"
-          class="flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all" to="/pray-time">
+          class="md:flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all" to="/pray-time">
           <img class="h-[30px] w-[30px] md:mr-2" src="../assets/imgs/mosque.png" alt="">
           <h1 class="md:block hidden">Prayer time</h1>
          </router-link>
        
          <router-link 
           :class="$route.name !== 'muslims-calendar' ? 'opacity-60' : ''"
-          class="flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all" to="/muslims-calendar">
+          class="md:flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all" to="/muslims-calendar">
           <img class="h-[30px] w-[30px] md:mr-2" src="../assets/imgs/calendar.png" alt="">
           <h1 class="md:block hidden">Calendar</h1>
          </router-link>
 
           <router-link 
            :class="$route.name !== 'user-settings' ? 'opacity-60' : ''"
-           class="flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all" to="/user-settings">
+           class="md:flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all" to="/user-settings">
            <img class="h-[30px] w-[30px] md:mr-2" src="../assets/imgs/settings.png" alt="">
            <h1 class="md:block hidden">Settings</h1>
-         </router-link>
+         </router-link> 
        </div>
 
        <a target="_blank" href="https://github.com/hakimov-dev/Muslims-app/discussions/1" class="text-red-500 md:block hidden md:mt-[120%]">Report bug?</a>
        </div>
+
+       <!-- Navbar -->
+       <div class="navbar w-[60%] md:hidden md:h-[60px] h-[50px] flex items-center">
+       <router-link to="/" class="logo select-none text-center flex items-center justify-center w-full">
+         <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
+         <h1 class="font-medium text-xl">Muslims app</h1>
+       </router-link>
+       </div>
      </div>
     </div>
 </template>
+
+<style>
+    .main-layout, .show-page{
+        background:linear-gradient(120deg, #131518, #111212, #121212);
+    }
+</style>
