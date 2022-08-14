@@ -52,12 +52,14 @@
           <img class="h-[30px] w-[30px] rounded-full mr-2" src="../assets/imgs/user.png" alt="">
           <h1 class="md:text-[18px] text-[14px] md:block hidden">Hakimov-dev</h1>
          </div>
+        <transition>
          <div v-if="dropOpen" class="links-box flex flex-col z-[111] items-stretch bg-[#282828] shadow-xl mt-2 md:p-2 p-1 w-full md:rounded-none rounded-[3px] text-center">
-          <router-link class="p-1 m-1 md:flex hidden items-center justify-evenly hover:bg-[#4b4b4b] transition-all" to="/user-settings"><img class="md:w-[20px] h-[20px]" src="../assets/imgs/user2.png" alt=""><span>Your profile</span></router-link>
-          <router-link class="p-1 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all" to="/favorite"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/saved.png" alt=""><span>Favorite</span></router-link>
-          <hr class="h-[.5px] border-gray-500 px-2 md:block hidden">
-          <div class="p-1 flex items-center p-1 mt-2 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/logout.png" alt=""><span class="text-red-600">Log out</span></div>
+           <router-link class="p-1 m-1 md:flex hidden items-center justify-evenly hover:bg-[#4b4b4b] transition-all" to="/user-settings"><img class="md:w-[20px] h-[20px]" src="../assets/imgs/user2.png" alt=""><span>Your profile</span></router-link>
+           <router-link class="p-1 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all" to="/favorite"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/saved.png" alt=""><span>Favorite</span></router-link>
+           <hr class="h-[.5px] border-gray-500 px-2 md:block hidden">
+           <div class="p-1 flex items-center p-1 mt-2 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/logout.png" alt=""><span class="text-red-600">Log out</span></div>
          </div>
+        </transition>
        </div>
        </div>
      </div>
