@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-
+const dropOpen = false
 </script>
 
 <style>
