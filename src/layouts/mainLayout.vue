@@ -48,7 +48,7 @@
          <h1 class="font-medium text-xl">Muslims app</h1>
        </router-link>
        <div class="user-dropdown md:mt-4 mt-[26%] p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right">
-         <div class="flex items-center" @click="openDrop">
+         <div @click="dropOpen = !dropOpen" class="flex items-center">
           <img class="h-[30px] w-[30px] rounded-full mr-2" src="../assets/imgs/user.png" alt="">
           <h1 class="md:text-[18px] text-[14px] md:block hidden">Hakimov-dev</h1>
          </div>
@@ -64,8 +64,14 @@
     </div>
 </template>
 
-<script setup>
-var dropOpen = false
+<script>
+export default {
+  data() {
+    return {
+      dropOpen: false
+    }
+  },
+}
 </script>
 
 <style>
