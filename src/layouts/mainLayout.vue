@@ -38,15 +38,27 @@
          </router-link> 
        </div>
 
-       <a target="_blank" href="https://github.com/hakimov-dev/Muslims-app/discussions/1" class="text-red-500 md:block hidden md:mt-[120%]">Report bug?</a>
+       <a target="_blank" href="https://github.com/hakimov-dev/Muslims-app/discussions/1" class="text-red-500 md:block hidden md:mt-[100%]">Report bug?</a>
        </div>
 
        <!-- Navbar -->
-       <div class="navbar w-[60%] md:hidden md:h-[60px] h-[50px] flex items-center">
-       <router-link to="/" class="logo select-none text-center flex items-center justify-center w-full">
+       <div class="navbar md:w-[80%] w-[100%] justify-between md:py-0 py-3 md:h-[60px] h-[50px] md:block flex items-center">
+       <router-link to="/" class="logo md:hidden select-none text-center flex items-center justify-center text-white">
          <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
          <h1 class="font-medium text-xl">Muslims app</h1>
        </router-link>
+       <div class="user-dropdown md:mt-0 mt-[26%] p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right">
+         <div class="flex items-center">
+         <img class="h-[30px] w-[30px] rounded-full mr-2" src="../assets/imgs/user.png" alt="">
+         <h1 class="md:text-[18px] text-[14px] md:block hidden">Hakimov-dev</h1>
+         </div>
+         <div class="links-box flex flex-col z-[111] items-stretch bg-[#282828] shadow-xl mt-2 md:p-2 p-1 w-full md:rounded-none rounded-[3px] text-center">
+          <router-link class="p-1 m-1 md:flex hidden items-center justify-evenly hover:bg-[#4b4b4b] transition-all" to="/user-settings"><img class="md:w-[20px] h-[20px]" src="../assets/imgs/user2.png" alt=""><span>Your profile</span></router-link>
+          <router-link class="p-1 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all" to="/favorite"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/saved.png" alt=""><span>Favorite</span></router-link>
+          <hr class="h-[.5px] border-gray-500 px-2 md:block hidden">
+          <div class="p-1 flex items-center p-1 mt-2 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/logout.png" alt=""><span class="text-red-600">Log out</span></div>
+         </div>
+       </div>
        </div>
      </div>
     </div>
