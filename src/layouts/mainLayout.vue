@@ -64,6 +64,10 @@
     </div>
 </template>
 
+<script setup>
+
+</script>
+
 <style>
     .main-layout, .show-page{
         background:linear-gradient(120deg, #131518, #111212, #121212);
