@@ -17,15 +17,13 @@
           </div>
          </div>
          <div class="audio-wrap flex items-center w-[60%]">
-          <div class="audio flex items-center flex-col">
+          <div class="audio flex items-center w-[30%]">
             <div @click="onPlay" class="play-button bg-white rounded-full p-[12px] hover:opacity-80 transition-all cursor-pointer">
                <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
             </div>
-            <span class="times-display">
-              {{currentTime}}
-              /
-              {{duration}}
+            <span class="times-display text-white ml-3 text-[14x]">
+              {{currentTime}}/{{duration}}
             </span>
           </div>
           <audio id="player" controls controlslist="nodownload noplaybackrate">
@@ -48,17 +46,16 @@ function onPlay(){
   if(isPlay.value == false){
     isPlay.value = true
     player.play()
+    player.addEventListener('timeupdate', event => {
+      currentTime.value = formatTime(player.currentTime)
+      duration.value = formatTime(player.currentTime)
+    })
    }else{
     isPlay.value = false
     player.pause()
    }
 }
 
-// Time update
-var player = document.querySelector('#player')
-player.addEventListener('timeupdate', event => {
-  
-})
 </script>
 
 <style scoped>
@@ -71,4 +68,16 @@ audio::-webkit-media-controls-panel{
       border-radius: 0px !important;
       outline: none !important;
     }
+
+  audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display{
+   display: none;
+  }  
+
+  audio::-webkit-media-controls-timeline {
+    background-color: #fff !important;
+    border-radius:100px ;
+    margin-left: 13px;
+    margin-right: 13px; 
+    width: 50%;
+  }
 </style>
