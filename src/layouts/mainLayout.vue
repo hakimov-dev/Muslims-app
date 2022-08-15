@@ -3,7 +3,7 @@
     <div class="flex md:flex-row flex-col-reverse items-start">
       <!-- Sidebar -->
       <div
-        class="sidebar bg-[#000000] fixed flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
+        class="sidebar bg-[#000000] md:fixed flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
       >
         <router-link
           to="/"
@@ -149,7 +149,7 @@
           </div>
         </div>
         <!-- Show page -->
-        <div class="show-page min-h-[89.5vh] h-auto mt-2">
+        <div class="show-page min-h-[99.5vh] h-auto mt-2">
         
         </div>
       </div>
@@ -163,7 +163,8 @@ export default {
     return {
       dropOpen: false
     };
-  }
+  },
+
 };
 </script>
 
