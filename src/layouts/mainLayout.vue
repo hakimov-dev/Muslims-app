@@ -170,6 +170,9 @@ export default {
     };
   },
 
+  components: {
+  },
+
   mounted() {
     this.scroll();
   },
