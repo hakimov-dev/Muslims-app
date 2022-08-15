@@ -171,6 +171,7 @@ export default {
   },
 
   components: {
+    musicPlayer
   },
 
   mounted() {
