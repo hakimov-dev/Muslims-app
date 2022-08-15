@@ -53,6 +53,12 @@ function onPlay(){
     player.pause()
    }
 }
+
+// Time update
+var player = document.querySelector('#player')
+player.addEventListener('timeupdate', event => {
+  
+})
 </script>
 
 <style scoped>
