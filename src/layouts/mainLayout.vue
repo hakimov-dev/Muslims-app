@@ -42,9 +42,9 @@
        </div>
 
        
-        <div class="main-content">
+        <div class="main-content md:w-[80%] w-[100%]">
        <!-- Navbar -->
-       <div class="navbar md:w-[80%] w-[100%] justify-between md:py-0 py-4 md:px-0 px-4 md:h-[60px] h-[50px] md:block flex items-center">
+       <div class="navbar justify-between md:py-0 py-4 md:px-0 px-4 md:h-[60px] h-[50px] md:block flex items-center">
        <router-link to="/" class="logo md:hidden select-none text-center flex items-center justify-center text-white">
          <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
          <h1 class="font-medium text-xl">Muslims app</h1>
