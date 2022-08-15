@@ -34,6 +34,7 @@
 <script setup>
 import { ref } from 'vue'
 
+let isPlay = ref(false)
 </script>
 
 <style></style>
