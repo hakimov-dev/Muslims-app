@@ -155,6 +155,7 @@
         <div class="show-page min-h-[109.5vh] h-auto m-2 md:ml-[22%]">
           <router-view />
         </div>
+        <!-- Music player -->
       </div>
     </div>
   </div>
