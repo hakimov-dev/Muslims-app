@@ -166,7 +166,23 @@ export default {
   },
  
  methods: {
-  
+  isScrolledIntoView (el) {
+    let rect = el.getBoundingClientRect()
+    let elemTop = rect.top
+    let elemBottom = rect.bottom
+
+    let isVisible = elemTop < window.innerHeight && elemBottom >= 0
+    return isVisible
+  },
+
+  scroll () {
+  window.onscroll = () => {
+    let scrolledTo = document.querySelector('.show-page')
+
+    if (scrolledTo && this.isScrolledIntoView(scrolledTo)) {
+      console.log('scrolled')
+  }}
+  }
  },
 };
 </script>
