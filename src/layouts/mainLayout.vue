@@ -164,6 +164,10 @@ export default {
       dropOpen: false
     };
   },
+
+  mounted() {
+    this.scroll()
+  },
  
  methods: {
   isScrolledIntoView (el) {
