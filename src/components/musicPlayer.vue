@@ -57,7 +57,12 @@ function onPlay(){
 }
 
 function formatTime(audio_duration){
- 
+ let sec = Math.floor( audio_duration );
+ let min = Math.floor( sec / 60 );
+  min = min >= 10 ? min : '0' + min;
+  sec = Math.floor( sec % 60 );
+  sec = sec >= 10 ? sec : '0' + sec;
+  return min + ":"+ sec;
 }
 </script>
 
