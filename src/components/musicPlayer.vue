@@ -48,4 +48,6 @@ function onPlay(){
 }
 </script>
 
-<style></style>
+<style scoped>
+
+</style>
