@@ -83,7 +83,9 @@
       <div class="main-content w-[100%] flex flex-col">
         <!-- Navbar -->
         <div
-          :class="scrollHeight > 10 ? 'fixed shadow-xl bg-[#000000] w-full' : ''"
+          :class="
+            scrollHeight > 10 ? 'fixed shadow-xl bg-[#000000] w-full' : ''
+          "
           class="transition-all navbar justify-between md:py-0 py-4 md:px-0 px-4 md:h-[90px] h-[50px] md:block flex items-center"
         >
           <router-link
@@ -151,7 +153,7 @@
         </div>
         <!-- Show page -->
         <div class="show-page min-h-[109.5vh] h-auto m-2 md:ml-[22%]">
-         <router-view />
+          <router-view />
         </div>
       </div>
     </div>
@@ -163,33 +165,34 @@ export default {
   data() {
     return {
       dropOpen: false,
-      scrollHeight: 0,
+      scrollHeight: 0
     };
   },
 
   mounted() {
-    this.scroll()
-  },
- 
- methods: {
-  isScrolledIntoView (el) {
-    let rect = el.getBoundingClientRect()
-    let elemTop = rect.top
-    let elemBottom = rect.bottom
-
-    let isVisible = elemTop < window.innerHeight && elemBottom >= 0
-    return isVisible
+    this.scroll();
   },
 
-  scroll () {
-  window.onscroll = () => {
-    let scrolledTo = document.querySelector('.show-page')
+  methods: {
+    isScrolledIntoView(el) {
+      let rect = el.getBoundingClientRect();
+      let elemTop = rect.top;
+      let elemBottom = rect.bottom;
 
-    if (scrolledTo && this.isScrolledIntoView(scrolledTo)) {
-      this.scrollHeight = window.pageYOffset
-  }}
+      let isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+      return isVisible;
+    },
+
+    scroll() {
+      window.onscroll = () => {
+        let scrolledTo = document.querySelector(".show-page");
+
+        if (scrolledTo && this.isScrolledIntoView(scrolledTo)) {
+          this.scrollHeight = window.pageYOffset;
+        }
+      };
+    }
   }
- },
 };
 </script>
 
