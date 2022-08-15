@@ -37,6 +37,7 @@ import { ref } from 'vue'
 let isPlay = ref(false)
 
 function onPlay(){
+ var player = document.querySelector('#player')
 
 }
 </script>
