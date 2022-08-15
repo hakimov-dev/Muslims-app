@@ -161,6 +161,7 @@
 </template>
 
 <script>
+import musicPlayer from '../components/musicPlayer.vue'
 export default {
   data() {
     return {
