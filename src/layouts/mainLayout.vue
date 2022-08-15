@@ -164,7 +164,10 @@ export default {
       dropOpen: false
     };
   },
-
+ 
+ methods: {
+  
+ },
 };
 </script>
 
