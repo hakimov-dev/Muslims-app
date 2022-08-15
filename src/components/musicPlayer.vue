@@ -52,6 +52,7 @@ function onPlay(){
     player.addEventListener('timeupdate', event => {
       currentTime.value = formatTime(player.currentTime)
       duration.value = formatTime(player.duration)
+      durationWidth.value = Math.floor(player.currentTime)
     })
    }else{
     isPlay.value = false
