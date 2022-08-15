@@ -17,6 +17,12 @@
           </div>
          </div>
          <div class="audio-wrap flex items-center w-[60%]">
+          <div class="audio flex items-center flex-col">
+            <div @click="isPlay = !isPlay" class="play-button bg-white rounded-full p-[12px] hover:opacity-80 transition-all cursor-pointer">
+               <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
+               <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
+            </div>
+          </div>
           <audio controls controlslist="nodownload">
            <source id="player" src="../assets/audio.mp3" type="audio/mp3">
           </audio>
@@ -26,6 +32,7 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style></style>
