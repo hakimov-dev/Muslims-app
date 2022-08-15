@@ -152,10 +152,11 @@
           </div>
         </div>
         <!-- Show page -->
-        <div class="show-page min-h-[109.5vh] h-auto m-2 md:ml-[22%]">
+        <div class="show-page min-h-[99.5vh] h-auto m-2 md:ml-[22%]">
           <router-view />
         </div>
         <!-- Music player -->
+        <musicPlayer class="fixed w-full bottom-0 bg-[#181818] md:h-[13vh]" />
       </div>
     </div>
   </div>
