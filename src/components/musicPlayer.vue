@@ -16,6 +16,11 @@
             <img class="h-[20px] w-[20px] cursor-pointer" src="../assets/imgs/share.png" alt="" />
           </div>
          </div>
+         <div class="audio-wrap flex items-center w-[60%]">
+          <audio controls controlslist="nodownload">
+           <source id="player" src="../assets/audio.mp3" type="audio/mp3">
+          </audio>
+         </div>
         </div>
     </div>
 </template>
