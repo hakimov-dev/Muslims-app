@@ -23,8 +23,8 @@
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
             </div>
           </div>
-          <audio controls controlslist="nodownload">
-           <source id="player" src="../assets/audio.mp3" type="audio/mp3">
+          <audio id="player" controls controlslist="nodownload">
+           <source src="../assets/audio.mp3" type="audio/mp3">
           </audio>
          </div>
         </div>
@@ -38,7 +38,13 @@ let isPlay = ref(false)
 
 function onPlay(){
  var player = document.querySelector('#player')
-
+  if(isPlay.value == false){
+    isPlay.value = true
+    player.play()
+   }else{
+    isPlay.value = false
+    player.pause()
+   }
 }
 </script>
 
