@@ -42,12 +42,12 @@
        </div>
 
        <!-- Navbar -->
-       <div class="navbar md:w-[80%] w-[100%] justify-between md:py-0 py-3 md:h-[60px] h-[50px] md:block flex items-center">
+       <div class="navbar md:w-[80%] w-[100%] justify-between md:py-0 py-4 md:px-0 px-4 md:h-[60px] h-[50px] md:block flex items-center">
        <router-link to="/" class="logo md:hidden select-none text-center flex items-center justify-center text-white">
          <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
          <h1 class="font-medium text-xl">Muslims app</h1>
        </router-link>
-       <div @click.stop class="user-dropdown md:mt-4 mt-[26%] p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right">
+       <div @click.stop :class="dropOpen ? 'mt-[19%] md:-mr-0 -mr-[6.5%]' : ''" class="user-dropdown md:mt-4 p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right">
          <div @click="dropOpen = !dropOpen" class="flex items-center">
           <img class="h-[30px] w-[30px] rounded-full mr-2" src="../assets/imgs/user.png" alt="">
           <h1 class="md:text-[18px] text-[14px] md:block hidden">Hakimov-dev</h1>
