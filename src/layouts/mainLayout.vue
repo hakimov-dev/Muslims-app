@@ -49,7 +49,7 @@
          <img class="h-[40px] w-[40px] mr-2" src="../assets/imgs/logo.png" alt="">
          <h1 class="font-medium text-xl">Muslims app</h1>
        </router-link>
-       <div @click.stop :class="dropOpen ? 'mt-[19%] md:-mr-0 -mr-[6.5%]' : ''" class="user-dropdown md:mt-4 p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right">
+       <div @click.stop :class="dropOpen ? 'mt-[25%] md:-mr-0 -mr-[8%]' : ''" class="user-dropdown md:mt-4 p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right">
          <div @click="dropOpen = !dropOpen" class="flex items-center">
           <img class="h-[30px] w-[30px] rounded-full mr-2" src="../assets/imgs/user.png" alt="">
           <h1 class="md:text-[18px] text-[14px] md:block hidden">Hakimov-dev</h1>
