@@ -41,6 +41,8 @@
        <a target="_blank" href="https://github.com/hakimov-dev/Muslims-app/discussions/1" class="text-red-500 md:block hidden md:mt-[100%]">Report bug?</a>
        </div>
 
+       
+        <div class="main-content">
        <!-- Navbar -->
        <div class="navbar md:w-[80%] w-[100%] justify-between md:py-0 py-4 md:px-0 px-4 md:h-[60px] h-[50px] md:block flex items-center">
        <router-link to="/" class="logo md:hidden select-none text-center flex items-center justify-center text-white">
@@ -60,7 +62,8 @@
            <div class="p-1 flex items-center p-1 mt-2 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all"><img class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2" src="../assets/imgs/logout.png" alt=""><span class="text-red-600">Log out</span></div>
          </div>
         </transition>
-       </div>
+        </div>
+        </div>
        </div>
      </div>
     </div>
