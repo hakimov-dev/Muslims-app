@@ -40,7 +40,8 @@
 import { ref } from 'vue'
 
 let isPlay = ref(false)
-
+let currentTime = ref('00:00')
+let duration = ref('00:00')
 
 function onPlay(){
  var player = document.querySelector('#player')
