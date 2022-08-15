@@ -149,7 +149,7 @@
           </div>
         </div>
         <!-- Show page -->
-        <div class="show-page h-screen mt-2">
+        <div class="show-page min-h-[89.5vh] h-auto mt-2">
         
         </div>
       </div>
