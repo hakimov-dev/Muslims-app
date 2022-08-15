@@ -17,7 +17,7 @@
           </div>
          </div>
          <div class="audio-wrap flex items-center w-[60%]">
-          <div class="audio flex items-center w-[30%]">
+          <div class="audio flex items-center w-[40%]">
             <div @click="onPlay" class="play-button bg-white rounded-full p-[12px] hover:opacity-80 transition-all cursor-pointer">
                <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
@@ -25,8 +25,10 @@
             <span class="times-display text-white ml-3 text-[14x]">
               {{currentTime}}/{{duration}}
             </span>
+            <input v-model="durationWidth" type="range" name="foo">
+            <output for="foo" onforminput="value = foo.valueAsNumber;"></output>
           </div>
-          <audio id="player" controls controlslist="nodownload noplaybackrate">
+          <audio class="hidden" id="player" controls controlslist="nodownload noplaybackrate">
            <source src="../assets/audio.mp3" type="audio/mp3">
           </audio>
          </div>
