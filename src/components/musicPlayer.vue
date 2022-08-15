@@ -22,8 +22,13 @@
                <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
             </div>
+            <span class="times-display">
+              {{currentTime}}
+              /
+              {{duration}}
+            </span>
           </div>
-          <audio id="player" controls controlslist="nodownload">
+          <audio id="player" controls controlslist="nodownload noplaybackrate">
            <source src="../assets/audio.mp3" type="audio/mp3">
           </audio>
          </div>
@@ -35,6 +40,7 @@
 import { ref } from 'vue'
 
 let isPlay = ref(false)
+
 
 function onPlay(){
  var player = document.querySelector('#player')
@@ -49,5 +55,13 @@ function onPlay(){
 </script>
 
 <style scoped>
+audio::-webkit-media-controls-play-button{
+  display: none;
+}
 
+audio::-webkit-media-controls-panel{
+      background-color: #181818 !important;
+      border-radius: 0px !important;
+      outline: none !important;
+    }
 </style>
