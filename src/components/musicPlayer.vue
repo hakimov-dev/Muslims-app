@@ -48,7 +48,7 @@ function onPlay(){
     player.play()
     player.addEventListener('timeupdate', event => {
       currentTime.value = formatTime(player.currentTime)
-      duration.value = formatTime(player.currentTime)
+      duration.value = formatTime(player.duration)
     })
    }else{
     isPlay.value = false
@@ -56,6 +56,9 @@ function onPlay(){
    }
 }
 
+function formatTime(audio_duration){
+ 
+}
 </script>
 
 <style scoped>
