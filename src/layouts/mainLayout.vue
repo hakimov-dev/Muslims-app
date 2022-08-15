@@ -3,7 +3,7 @@
     <div class="flex md:flex-row flex-col-reverse items-start">
       <!-- Sidebar -->
       <div
-        class="sidebar bg-[#000000] flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
+        class="sidebar bg-[#000000] fixed flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
       >
         <router-link
           to="/"
@@ -80,7 +80,7 @@
         >
       </div>
 
-      <div class="main-content md:w-[80%] w-[100%]">
+      <div class="main-content w-[100%] flex flex-col">
         <!-- Navbar -->
         <div
           class="navbar justify-between md:py-0 py-4 md:px-0 px-4 md:h-[60px] h-[50px] md:block flex items-center"
@@ -149,6 +149,9 @@
           </div>
         </div>
         <!-- Show page -->
+        <div class="show-page h-screen mt-2">
+        
+        </div>
       </div>
     </div>
   </div>
