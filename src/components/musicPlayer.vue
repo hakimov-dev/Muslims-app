@@ -17,7 +17,7 @@
           </div>
          </div>
          <div class="audio-wrap flex items-center w-[60%]">
-          <div class="audio flex items-center w-[40%]">
+          <div class="audio flex items-center w-[100%]">
             <div @click="onPlay" class="play-button bg-white rounded-full p-[12px] hover:opacity-80 transition-all cursor-pointer">
                <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
@@ -25,8 +25,8 @@
             <span class="times-display text-white ml-3 text-[14x]">
               {{currentTime}}/{{duration}}
             </span>
-            <input v-model="durationWidth" type="range" name="foo">
-            <output for="foo" onforminput="value = foo.valueAsNumber;"></output>
+            <input  v-model="durationWidth" class="timeline ml-3 w-[40%]" max="100" type="range" name="foo">
+            <!-- <output for="foo" onforminput="value = foo.valueAsNumber;"></output> -->
           </div>
           <audio class="hidden" id="player" controls controlslist="nodownload noplaybackrate">
            <source src="../assets/audio.mp3" type="audio/mp3">
@@ -42,7 +42,7 @@ import { ref } from 'vue'
 let isPlay = ref(false)
 let currentTime = ref('00:00')
 let duration = ref('00:00')
-let durationWidth = ref(0)
+let durationWidth = ref(-10)
 
 function onPlay(){
  var player = document.querySelector('#player')
@@ -52,7 +52,7 @@ function onPlay(){
     player.addEventListener('timeupdate', event => {
       currentTime.value = formatTime(player.currentTime)
       duration.value = formatTime(player.duration)
-      durationWidth.value = Math.floor(player.currentTime)
+      durationWidth.value = Math.floor((100 * player.currentTime) / player.duration)
     })
    }else{
     isPlay.value = false
@@ -92,4 +92,41 @@ audio::-webkit-media-controls-panel{
     margin-right: 13px; 
     width: 50%;
   }
+
+  /* Range input style */
+
+ input[type=range] {
+  -webkit-appearance: none;
+  height: 5px;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+  /* input[type="range"]::-webkit-slider-thumb {
+    width: 5px;
+    border-radius: 5px;
+    background-color: #000 !important;
+  } */
+
+
+.timeline::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .1s;
+  background-color: white;
+}
+
+.timeline::-webkit-slider-thumb:hover {
+  background-color: white;
+}
+
+.timeline:hover::-webkit-slider-thumb {
+  opacity: 1;
+}
+
 </style>
