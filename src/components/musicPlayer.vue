@@ -58,7 +58,6 @@ function onPlay(){
     isPlay.value = true
     audioVolume.value = player.volume
     volumeEl.style.backgroundSize = `${Math.floor((100 * player.volume) / 1)}% 100%`
-    console.log(volumeEl)
     player.play()
     player.addEventListener('timeupdate', event => {
       currentTime.value = formatTime(player.currentTime)
