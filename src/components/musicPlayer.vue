@@ -29,7 +29,7 @@
             <div class="volume flex items-center md:ml-[3%]">
                <img v-if="audioVolume > 0" class="h-[26px] w-[26px]" src="../assets/imgs/volume.png" alt="">
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/mute.png" alt="">
-              <input v-model="audioVolume" class="volumeline ml-3 w-[45%]" max="10" type="range" name="volume">
+              <input @change="updateVolume" v-model="audioVolume" class="volumeline ml-3 w-[45%]" max="10" type="range" name="volume">
             </div>
           </div>
           <audio class="hidden" id="player" controls controlslist="nodownload noplaybackrate">
