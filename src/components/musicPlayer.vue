@@ -27,8 +27,8 @@
             </span>
             <input  v-model="durationWidth" class="timeline ml-3 w-[33%]" max="100" type="range" name="foo">
             <div class="volume flex items-center md:ml-[3%]">
-               <img class="h-[26px] w-[26px]" src="../assets/imgs/volume.png" alt="">
-               <img class="h-[20px] w-[20px]" src="../assets/imgs/mute.png" alt="">
+               <img v-if="audioVolume > 0" class="h-[26px] w-[26px]" src="../assets/imgs/volume.png" alt="">
+               <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/mute.png" alt="">
               <input v-model="audioVolume" class="volumeline ml-3 w-[45%]" max="1" type="range" name="volume">
             </div>
           </div>
