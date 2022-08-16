@@ -87,6 +87,10 @@ function updateVolume(){
  player.volume = audioVolume.value / 10
  volumeEl.style.backgroundSize = `${Math.floor((100 * player.volume) / 1)}% 100%`
 }
+
+function muteAudio(){
+  
+}
 </script>
 
 <style scoped>
