@@ -89,7 +89,14 @@ function updateVolume(){
 }
 
 function muteAudio(){
-  
+  if(audioVolume.value > 0){
+     audioVolume.value = 0
+     updateVolume()
+  }
+  else{
+     audioVolume.value = 10
+     updateVolume()
+     }
 }
 </script>
 
