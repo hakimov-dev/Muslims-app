@@ -83,6 +83,9 @@ function formatTime(audio_duration){
 function updateVolume(){
  var player = document.querySelector('#player')
  var volumeEl = document.querySelector('.volumeline')
+
+ player.volume = audioVolume.value / 10
+ volumeEl.style.backgroundSize = `${Math.floor((100 * player.volume) / 1)}% 100%`
 }
 </script>
 
