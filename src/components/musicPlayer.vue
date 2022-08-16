@@ -47,6 +47,7 @@ let isPlay = ref(false)
 let currentTime = ref('00:00')
 let duration = ref('00:00')
 let durationWidth = ref(-10)
+let audioVolume = ref(0)
 
 function onPlay(){
  var player = document.querySelector('#player')
