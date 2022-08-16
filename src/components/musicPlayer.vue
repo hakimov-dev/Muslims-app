@@ -54,6 +54,7 @@ function onPlay(){
  var timeline = document.querySelector('.timeline')
   if(isPlay.value == false){
     isPlay.value = true
+    audioVolume.value = player.volume
     player.play()
     player.addEventListener('timeupdate', event => {
       currentTime.value = formatTime(player.currentTime)
