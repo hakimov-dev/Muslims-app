@@ -46,6 +46,7 @@ let durationWidth = ref(-10)
 
 function onPlay(){
  var player = document.querySelector('#player')
+ var timeline = document.querySelector('.timeline')
   if(isPlay.value == false){
     isPlay.value = true
     player.play()
@@ -53,6 +54,8 @@ function onPlay(){
       currentTime.value = formatTime(player.currentTime)
       duration.value = formatTime(player.duration)
       durationWidth.value = Math.floor((100 * player.currentTime) / player.duration)
+      timeline.style.backgroundSize = `${Math.floor((100 * player.currentTime) / player.duration)}% 100%`
+      console.log(timeline)
     })
    }else{
     isPlay.value = false
@@ -94,20 +97,17 @@ audio::-webkit-media-controls-panel{
   }
 
   /* Range input style */
-
- input[type=range] {
+  
+  .timeline{
   -webkit-appearance: none;
-  height: 5px;
-  background: white;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-  /* input[type="range"]::-webkit-slider-thumb {
-    width: 5px;
-    border-radius: 5px;
-    background-color: #000 !important;
-  } */
+   height: 5px;
+   border-radius: 20px;
+   cursor: pointer;
+   background-color: rgba(161, 161, 161, 0.884);
+   background-size: 0% 100%s;
+   background-image: linear-gradient(white, white);
+   background-repeat: no-repeat;
+  }
 
 
 .timeline::-webkit-slider-thumb {
