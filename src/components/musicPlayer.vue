@@ -25,8 +25,10 @@
             <span class="times-display text-white ml-3 text-[14x]">
               {{currentTime}}/{{duration}}
             </span>
-            <input  v-model="durationWidth" class="timeline ml-3 w-[40%]" max="100" type="range" name="foo">
-            <!-- <output for="foo" onforminput="value = foo.valueAsNumber;"></output> -->
+            <input  v-model="durationWidth" class="timeline ml-3 w-[35%]" max="100" type="range" name="foo">
+            <div class="volume flex items-center">
+              
+            </div>
           </div>
           <audio class="hidden" id="player" controls controlslist="nodownload noplaybackrate">
            <source src="../assets/audio.mp3" type="audio/mp3">
@@ -97,7 +99,7 @@ audio::-webkit-media-controls-panel{
   }
 
   /* Range input style */
-  
+
   .timeline{
   -webkit-appearance: none;
    height: 5px;
