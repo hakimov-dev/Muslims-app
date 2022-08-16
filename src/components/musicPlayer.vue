@@ -79,6 +79,10 @@ function formatTime(audio_duration){
   sec = sec >= 10 ? sec : '0' + sec;
   return min + ":"+ sec;
 }
+
+function updateVolume(){
+  
+}
 </script>
 
 <style scoped>
