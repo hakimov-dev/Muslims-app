@@ -2,13 +2,13 @@
     <div class="music-player md:ml-[20%] p-3 select-none">
         <div class="flex items-center justify-between">
          <div class="img-wrap flex items-center w-[40%]">
-          <img class="h-[66px] w-[66px] rounded" src="https://i.scdn.co/image/ab67616d00004851be302672e7dd977906f343c8" alt="" />
+          <img class="h-[66px] w-[66px] rounded" src="https://i.ytimg.com/vi/QVDwN4RMlQE/maxresdefault.jpg" alt="" />
           <div class="author flex flex-col ml-[15px] w-[25%] overflow-hidden">
            <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
-             Oq libos 
+             in aradtum 
            </h1>
            <h1 class="author-name text-gray-400 text-[12px]">
-             Green 71
+             Nasheeds
            </h1>
           </div>
           <div class="social flex items-center justify-evenly w-[20%]">
