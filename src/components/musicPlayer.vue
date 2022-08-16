@@ -48,14 +48,17 @@ let currentTime = ref('00:00')
 let duration = ref('00:00')
 let durationWidth = ref(-10)
 let audioVolume = ref(0)
-let volumeEl = document.querySelector('.volume')
 
 function onPlay(){
  var player = document.querySelector('#player')
  var timeline = document.querySelector('.timeline')
+ var volumeEl = document.querySelector('.volumeline')
+  
   if(isPlay.value == false){
     isPlay.value = true
     audioVolume.value = player.volume
+    volumeEl.style.backgroundSize = `${Math.floor((100 * player.volume) / 1)}% 100%`
+    console.log(volumeEl)
     player.play()
     player.addEventListener('timeupdate', event => {
       currentTime.value = formatTime(player.currentTime)
@@ -110,7 +113,7 @@ audio::-webkit-media-controls-panel{
    border-radius: 20px;
    cursor: pointer;
    background-color: rgba(161, 161, 161, 0.884);
-   background-size: 0% 100%s;
+   background-size: 0% 100%;
    background-image: linear-gradient(white, white);
    background-repeat: no-repeat;
   }
