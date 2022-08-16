@@ -17,7 +17,7 @@
           </div>
          </div>
          <div class="audio-wrap flex items-center w-[60%]">
-          <div class="audio flex items-center w-[100%]">
+          <div class="audio flex items-center w-[100%] md:!-ml-[15%]">
             <div @click="onPlay" class="play-button bg-white rounded-full p-[12px] hover:opacity-80 transition-all cursor-pointer">
                <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
                <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
@@ -25,9 +25,11 @@
             <span class="times-display text-white ml-3 text-[14x]">
               {{currentTime}}/{{duration}}
             </span>
-            <input  v-model="durationWidth" class="timeline ml-3 w-[35%]" max="100" type="range" name="foo">
-            <div class="volume flex items-center">
-              
+            <input  v-model="durationWidth" class="timeline ml-3 w-[33%]" max="100" type="range" name="foo">
+            <div class="volume flex items-center md:ml-[3%]">
+               <img class="h-[26px] w-[26px]" src="../assets/imgs/volume.png" alt="">
+               <img class="h-[20px] w-[20px]" src="../assets/imgs/mute.png" alt="">
+              <input class="volumeline ml-3 w-[45%]" max="30" type="range" name="volume">
             </div>
           </div>
           <audio class="hidden" id="player" controls controlslist="nodownload noplaybackrate">
@@ -57,7 +59,6 @@ function onPlay(){
       duration.value = formatTime(player.duration)
       durationWidth.value = Math.floor((100 * player.currentTime) / player.duration)
       timeline.style.backgroundSize = `${Math.floor((100 * player.currentTime) / player.duration)}% 100%`
-      console.log(timeline)
     })
    }else{
     isPlay.value = false
@@ -111,8 +112,18 @@ audio::-webkit-media-controls-panel{
    background-repeat: no-repeat;
   }
 
+ .volumeline{
+  -webkit-appearance: none;
+   height: 5px;
+   border-radius: 20px;
+   cursor: pointer;
+   background-color: rgba(161, 161, 161, 0.884);
+   background-size: 0% 100%;
+   background-image: linear-gradient(white, white);
+   background-repeat: no-repeat;
+  }
 
-.timeline::-webkit-slider-thumb {
+.timeline::-webkit-slider-thumb, .volumeline::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1em;
   height: 1em;
@@ -123,11 +134,11 @@ audio::-webkit-media-controls-panel{
   background-color: white;
 }
 
-.timeline::-webkit-slider-thumb:hover {
+.timeline::-webkit-slider-thumb:hover, .volumeline::-webkit-slider-thumb:hover {
   background-color: white;
 }
 
-.timeline:hover::-webkit-slider-thumb {
+.timeline:hover::-webkit-slider-thumb, .volumeline:hover::-webkit-slider-thumb{
   opacity: 1;
 }
 
