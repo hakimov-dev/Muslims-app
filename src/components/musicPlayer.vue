@@ -81,7 +81,8 @@ function formatTime(audio_duration){
 }
 
 function updateVolume(){
-  
+ var player = document.querySelector('#player')
+ var volumeEl = document.querySelector('.volumeline')
 }
 </script>
 
