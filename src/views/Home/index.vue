@@ -1,6 +1,6 @@
 <template>
     <div class="main-page">
-        <div class="cards flex justify-between items-center flex-wrap md:p-[4%]">
+        <div class="cards flex justify-between items-center flex-wrap md:p-[3%]">
          <Card v-for="item in 10"/>
         </div>
     </div>
