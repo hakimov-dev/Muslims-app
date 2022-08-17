@@ -1,7 +1,7 @@
 <template>
     <div class="main-page">
         <div class="cards flex justify-between items-center flex-wrap md:p-[3%]">
-         <Card v-for="item in 10"/>
+         <Card v-for="item in 114"/>
         </div>
     </div>
 </template>
