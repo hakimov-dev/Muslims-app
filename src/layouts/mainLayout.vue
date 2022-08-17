@@ -99,6 +99,7 @@
             />
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
+          <input type="text" placeholder="Search...">
           <div
             @click.stop
             :class="dropOpen ? 'mt-[25%] md:-mr-0 -mr-[8%]' : ''"
