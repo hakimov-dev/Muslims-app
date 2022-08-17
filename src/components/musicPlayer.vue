@@ -1,9 +1,9 @@
 <template>
     <div class="music-player md:ml-[20%] p-3 select-none">
-        <div class="flex items-center justify-between">
-         <div class="img-wrap flex items-center w-[40%]">
+        <div class="flex md:flex-row flex-col items-center justify-between">
+         <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
           <img class="h-[66px] w-[66px] rounded" src="https://i.ytimg.com/vi/QVDwN4RMlQE/maxresdefault.jpg" alt="" />
-          <div class="author flex flex-col ml-[15px] w-[25%] overflow-hidden">
+          <div class="author flex flex-col ml-[15px] md:w-[25%] w-[60%] overflow-hidden">
            <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
              in aradtum 
            </h1>
@@ -16,19 +16,19 @@
             <img class="h-[20px] w-[20px] cursor-pointer" src="../assets/imgs/share.png" alt="" />
           </div>
          </div>
-         <div class="audio-wrap flex items-center w-[60%]">
+         <div class="audio-wrap flex items-center md:w-[60%] w-full ml-[5%] md:mt-0 mt-3">
           <div class="audio flex items-center w-[100%] md:!-ml-[15%]">
-            <div @click="onPlay" class="play-button bg-white rounded-full p-[12px] hover:opacity-80 transition-all cursor-pointer">
-               <img v-if="!isPlay" class="h-[20px] w-[20px]" src="../assets/imgs/play.png" alt="">
-               <img v-else class="h-[20px] w-[20px]" src="../assets/imgs/pause.png" alt="">
+            <div @click="onPlay" class="play-button bg-white rounded-full md:p-[12px] p-[6px] hover:opacity-80 transition-all cursor-pointer">
+               <img v-if="!isPlay" class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]" src="../assets/imgs/play.png" alt="">
+               <img v-else class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]" src="../assets/imgs/pause.png" alt="">
             </div>
             <span class="times-display text-white ml-3 text-[14x]">
               {{currentTime}}/{{duration}}
             </span>
-            <input  v-model="durationWidth" class="timeline ml-3 w-[33%]" max="100" type="range" name="foo">
+            <input  v-model="durationWidth" class="timeline md:ml-3 mx-3 md:w-[33%] w-[40%]" max="100" type="range" name="foo">
             <div class="volume flex items-center md:ml-[3%]">
-               <img @click="muteAudio" v-if="audioVolume > 0" class="transition-all hover:opacity-80 cursor-pointer h-[26px] w-[26px]" src="../assets/imgs/volume.png" alt="">
-               <img @click="muteAudio" v-else class="transition-all hover:opacity-80 cursor-pointer h-[20px] w-[20px]" src="../assets/imgs/mute.png" alt="">
+               <img @click="muteAudio" v-if="audioVolume > 0" class="transition-all hover:opacity-80 cursor-pointer md:h-[26px] md:w-[26px] w-[22px] h-[22px]" src="../assets/imgs/volume.png" alt="">
+               <img @click="muteAudio" v-else class="transition-all hover:opacity-80 cursor-pointer md:h-[20px] md:w-[20px] h-[18px] w-[18px]" src="../assets/imgs/mute.png" alt="">
               <input @change="updateVolume" v-model="audioVolume" class="volumeline ml-3 w-[45%]" max="10" type="range" name="volume">
             </div>
           </div>
