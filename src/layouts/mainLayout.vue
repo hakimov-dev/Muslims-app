@@ -3,7 +3,7 @@
     <div class="flex md:flex-row flex-col-reverse items-start">
       <!-- Sidebar -->
       <div
-        class="z-[111] sidebar bg-[#000000] md:fixed flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
+        class="z-[1111] sidebar bg-[#000000] md:fixed flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
       >
         <router-link
           to="/"
@@ -84,7 +84,7 @@
         <!-- Navbar -->
         <div
           :class="
-            scrollHeight > 10 ? 'fixed shadow-xl bg-[#000000] w-full' : ''
+            scrollHeight > 10 ? 'fixed shadow-xl bg-[#000000] w-full z-[111]' : ''
           "
           class="transition-all navbar justify-between md:py-0 py-4 md:px-0 px-4 md:h-[90px] h-[50px] md:block flex items-center"
         >
