@@ -102,8 +102,8 @@
           <input type="text" placeholder="Search...">
           <div
             @click.stop
-            :class="dropOpen ? 'mt-[25%] md:-mr-0 -mr-[8%]' : ''"
-            class="user-dropdown md:mt-4 p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right"
+            :class="dropOpen ? 'md:mt-[14%] mt-[25%] md:-mr-0 -mr-[8%] ' : 'md:mt-0'"
+            class="user-dropdown p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right"
           >
             <div @click="dropOpen = !dropOpen" class="flex items-center">
               <img
