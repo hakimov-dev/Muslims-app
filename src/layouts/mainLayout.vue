@@ -86,7 +86,7 @@
           :class="
             scrollHeight > 10 ? 'fixed shadow-xl bg-[#000000] w-full z-[111]' : ''
           "
-          class="transition-all navbar justify-between md:py-0 py-4 md:px-0 px-4 md:h-[90px] h-[50px] md:block flex items-center"
+          class="transition-all navbar justify-between md:py-0 py-4 md:px-0 px-4 md:pl-[25%] md:h-[90px] h-[70px] flex items-center"
         >
           <router-link
             to="/"
