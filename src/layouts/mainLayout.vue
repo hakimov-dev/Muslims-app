@@ -99,7 +99,7 @@
             />
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
-          <input class="search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[30%] p-2 px-6 bg-[#121416] rounded-[20px]" type="text" placeholder="Enter something for search...">
+          <input class="md:block hidden search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[30%] p-2 px-10 bg-[#121416] rounded-[20px]" type="text" placeholder="Enter something for search...">
           <div
             @click.stop
             :class="dropOpen ? 'md:mt-[14%] mt-[25%] md:-mr-0 -mr-[8%] ' : 'md:mt-0'"
@@ -207,5 +207,13 @@ export default {
 <style>
 .main-layout {
   background: linear-gradient(120deg, #131518, #111212, #121212);
+}
+
+.search{
+  background-image: url('../assets/imgs/search-input.png');
+  background-size: 20px;
+  background-position-x: 13px;
+  background-position-y: 55%;
+  background-repeat: no-repeat;
 }
 </style>
