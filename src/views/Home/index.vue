@@ -4,4 +4,6 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import card from './components/mp3Card.vue'
+</script>
