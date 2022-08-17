@@ -1,6 +1,8 @@
 <template>
     <div class="main-page">
-        <h1 class="text-2xl underline font-bold">Hello this is main page!</h1>
+        <div class="cards flex justify-between items-center flex-wrap md:p-[10%]">
+         
+        </div>
     </div>
 </template>
 
