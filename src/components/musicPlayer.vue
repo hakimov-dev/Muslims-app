@@ -3,7 +3,7 @@
         <div class="flex md:flex-row flex-col items-center justify-between">
          <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
           <img class="h-[66px] w-[66px] rounded" src="https://i.ytimg.com/vi/QVDwN4RMlQE/maxresdefault.jpg" alt="" />
-          <div class="author flex flex-col ml-[15px] md:w-[25%] w-[60%] overflow-hidden">
+          <div class="author flex flex-col ml-[15px] md:w-[40%] w-[60%] overflow-hidden">
            <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
              in aradtum 
            </h1>
