@@ -8,4 +8,5 @@
 </template>
 
 <script setup>
+import PrayTimeCard from './components/PrayTimeCard.vue'
 </script>
