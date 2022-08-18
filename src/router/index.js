@@ -10,6 +10,11 @@ const routes = [
     path: '/pray-time',
     name: "pray-time",
     component: () => import("../views/PrayTimes")
+  },
+  {
+    path: '/muslims-calendar',
+    name: 'muslims-calendar',
+    component: () => import("../views/Calendar")
   }
 ];
 
