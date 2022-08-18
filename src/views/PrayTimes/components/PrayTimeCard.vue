@@ -14,6 +14,17 @@
 const props = defineProps(['id'])
 
 function returnImage(id){
-
+    if(id == 1)
+      return require('../../../assets/imgs/fajr.jpg')
+    else if(id == 2)
+      return require('../../../assets/imgs/sunrise.jpg')
+    else if(id == 3)
+       return require('../../../assets/imgs/dhur.jpg')
+    else if(id == 4)
+        return require('../../../assets/imgs/asr.jpg')
+    else if(id == 5)
+        return require('../../../assets/imgs/maghrib.jpg')
+     else if(id == 6)
+        return require('../../../assets/imgs/isha.jpg')
 }
 </script>
