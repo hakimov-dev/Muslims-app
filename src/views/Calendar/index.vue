@@ -8,7 +8,7 @@
 <script setup>
 import { ref } from 'vue'
 
- let date = ref('')
+let date = ref('')
 
 </script>
 
