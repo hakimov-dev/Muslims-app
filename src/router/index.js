@@ -15,6 +15,11 @@ const routes = [
     path: '/muslims-calendar',
     name: 'muslims-calendar',
     component: () => import("../views/Calendar")
+  },
+  {
+    path: '/user-settings',
+    name: 'user-settings',
+    component: () => import("../views/Settings")
   }
 ];
 
