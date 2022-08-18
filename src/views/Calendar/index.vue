@@ -5,6 +5,8 @@
     </div>
 </template>
 
+<script setup></script>
+
 <style scoped>
  input[type="date"]::-webkit-calendar-picker-indicator{
     content: url('../../assets/imgs/calendar-input.png');
