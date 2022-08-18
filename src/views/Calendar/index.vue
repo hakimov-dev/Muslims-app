@@ -6,5 +6,8 @@
 </template>
 
 <style scoped>
-
+ input[type="date"]::-webkit-calendar-picker-indicator{
+    content: url('../../assets/imgs/calendar-input.png');
+    margin-right: 4px;
+ }
 </style>
