@@ -5,7 +5,9 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+ const date = ''
+</script>
 
 <style scoped>
  input[type="date"]::-webkit-calendar-picker-indicator{
