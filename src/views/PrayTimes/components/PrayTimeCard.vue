@@ -3,9 +3,9 @@
        <div class="img-wrap flex flex-col md:h-[160px] h-[120px] overflow-hidden relative">
          <img class="md:h-[160px] h-[120px] !rounded-xl shadow-xl" :src="returnImage(props.id)" alt="">
        </div>
-       <div class="text-wrap flex flex-col p-3 text-white leading-[30px]">
-         <h1 class="pray-name text-[18px] font-medium"></h1>
-         <h1 class="pray-time text-[14px] opacity-60"></h1>
+       <div class="text-wrap flex flex-col p-3 text-white leading-[50px] text-center">
+         <h1 class="pray-name text-[18px] font-medium">Asr</h1>
+         <h1 class="pray-time text-[16px] opacity-80">00:00</h1>
        </div>
     </div>
 </template>
