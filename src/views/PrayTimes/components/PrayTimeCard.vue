@@ -12,4 +12,8 @@
 
 <script setup>
 const props = defineProps(['id'])
+
+function returnImage(id){
+
+}
 </script>
