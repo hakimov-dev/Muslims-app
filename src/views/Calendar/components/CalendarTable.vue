@@ -37,7 +37,7 @@
 
       <!-- Content -->
       <tbody>
-         <tr class="!rounded-b-xl">
+         <tr class="!rounded-b-xl" v-for="item in 10">
             <td class="p-4 text-center">
                3 
             </td>
