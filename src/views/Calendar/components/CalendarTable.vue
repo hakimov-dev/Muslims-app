@@ -1,10 +1,10 @@
 <template>
-   <div class="bg-white rounded-xl">
+   <div class="bg-[#181818] rounded-xl">
 
-<div class="overflow-x-auto !rounded-t-xl mt-[3%]">
-   <table class="table-auto w-full !rounded-t-xl">
+<div class="overflow-x-auto !rounded-t-md mt-[3%]">
+   <table class="table-auto w-full !rounded-t-xl text-white">
       <thead class="border-b">
-         <tr class="bg-gray-100">
+         <tr class="bg-[#000000]">
             <th class="text-center p-4 font-medium">
                Mуxаrrам
             </th>
@@ -37,7 +37,7 @@
 
       <!-- Content -->
       <tbody>
-         <tr class="!rounded-b-xl" :class="item !== 10 ? 'border-b-[1px] border-gray-400' : ''" v-for="item in 10">
+         <tr class="!rounded-b-md" :class="item !== 10 ? 'border-b-[1px] border-gray-400' : ''" v-for="item in 10">
             <td class="p-4 text-center">
                3 
             </td>
