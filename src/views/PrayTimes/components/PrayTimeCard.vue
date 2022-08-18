@@ -1,5 +1,5 @@
 <template>
-     <div class="pray-time-card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[245px] md:h-[310px] w-[175px] h-[250px] shadow-xl m-[2%] rounded-xl">
+     <div class="pray-time-card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[245px] md:h-[310px] w-[165px] h-[250px] shadow-xl md:mt-[2%] mt-[4%] md:m-[2%] rounded-xl">
        <div class="img-wrap flex flex-col md:h-[160px] h-[120px] overflow-hidden relative">
          <img class="md:h-[160px] h-[120px] !rounded-xl shadow-xl" :src="returnImage(props.id)" alt="">
        </div>
