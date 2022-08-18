@@ -37,7 +37,7 @@
 
       <!-- Content -->
       <tbody>
-         <tr class="!rounded-b-xl" v-for="item in 10">
+         <tr class="!rounded-b-xl" :class="item !== 10 ? 'border-b-[1px] border-gray-400' : ''" v-for="item in 10">
             <td class="p-4 text-center">
                3 
             </td>
