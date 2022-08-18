@@ -6,6 +6,7 @@
 </template>
 
 <script setup>
+import CalendarTable from './components/CalendarTable.vue'
 import { ref } from 'vue'
 
 let date = ref('')
