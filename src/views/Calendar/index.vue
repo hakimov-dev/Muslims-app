@@ -10,6 +10,8 @@ import { ref } from 'vue'
 
 let date = ref('')
 
+const newDate = new Date()
+
 </script>
 
 <style scoped>
