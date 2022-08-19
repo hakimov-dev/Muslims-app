@@ -19,6 +19,7 @@
           >Report bug?</a
         >
         </div>
+        <!-- Update password page -->
     </div>
 </template>
 
