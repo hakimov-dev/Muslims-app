@@ -7,12 +7,15 @@
         v-if="$route.name == 'user-settings'"
         class="flex flex-col items-center md:w-[50%] mt-[3%]"
       >
-        <div class="img-wrap flex justify-center items-center text-center">
+        <div class="img-wrap flex justify-center items-center text-center relative">
           <img
             class="md:h-[120px] md:w-[120px] rounded-full object-contain bg-black p-3 select-none"
             src="../../assets/imgs/user2.png"
             alt=""
           />
+          <label for="file" class="absolute md:-bottom-[1%] bottom-2 right-[3%] cursor-pointer md:-right-[1%] h-[35px] w-[35px] bg-[#1b1b1b] pt-[9px] pl-[9px] rounded-full">
+           <img class="h-[17px] w-[17px]" src="../../assets/imgs/edit.png" alt="">
+          </label>
         </div>
         <div class="inputs-wrap mt-[20px] md:w-[70%] w-[80%]">
           <input
