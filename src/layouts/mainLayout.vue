@@ -59,7 +59,7 @@
           </router-link>
 
           <router-link
-            :class="$route.name !== 'user-settings' ? 'opacity-60' : ''"
+            :class="$route.name !== 'user-settings' ? ($route.name !== 'update-pasword' ? 'opacity-60' : '') : ''"
             class="md:flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all"
             to="/user-settings"
           >
