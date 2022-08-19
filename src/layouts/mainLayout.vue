@@ -108,7 +108,7 @@
             <div @click="dropOpen = !dropOpen" class="flex items-center">
               <img
                 class="h-[30px] w-[30px] rounded-full mr-2"
-                src="../assets/imgs/user.png"
+                src="../assets/imgs/user2.png"
                 alt=""
               />
               <h1 class="md:text-[18px] text-[14px] md:block hidden">
@@ -125,7 +125,7 @@
                   to="/user-settings"
                   ><img
                     class="md:w-[20px] h-[20px]"
-                    src="../assets/imgs/user2.png"
+                    src="../assets/imgs/user.png"
                     alt=""
                   /><span>Your profile</span></router-link
                 >
