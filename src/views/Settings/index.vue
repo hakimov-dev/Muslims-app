@@ -5,4 +5,5 @@
 </template>
 
 <script setup>
+import SettingNav from './components/SettingNavbar.vue'
 </script>
