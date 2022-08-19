@@ -22,7 +22,7 @@ const routes = [
     component: () => import("../views/Settings")
   },
   {
-    path: '/update-password',
+    path: '/update-passwords',
     name: 'update-pasword',
     component: () => import("../views/Settings")
   }
