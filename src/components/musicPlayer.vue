@@ -1,169 +1,236 @@
 <template>
-    <div class="music-player md:ml-[20%] p-3 select-none">
-        <div class="flex md:flex-row flex-col items-center justify-between">
-         <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
-          <img class="h-[66px] w-[66px] rounded" src="https://i.ytimg.com/vi/QVDwN4RMlQE/maxresdefault.jpg" alt="" />
-          <div class="author flex flex-col ml-[15px] md:w-[40%] w-[60%] overflow-hidden">
-           <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
-             in aradtum 
-           </h1>
-           <h1 class="author-name text-gray-400 text-[12px]">
-             Nasheeds
-           </h1>
-          </div>
-          <div class="social flex items-center justify-evenly w-[20%]">
-            <img class="h-[20px] w-[20px] cursor-pointer" src="../assets/imgs/saved.png" alt="" />
-            <img class="h-[20px] w-[20px] cursor-pointer" src="../assets/imgs/share.png" alt="" />
-          </div>
-         </div>
-         <div class="audio-wrap flex items-center md:w-[60%] w-full ml-[5%] md:mt-0 mt-3">
-          <div class="audio flex items-center w-[100%] md:!-ml-[15%]">
-            <div @click="onPlay" class="play-button bg-white rounded-full md:p-[12px] p-[6px] hover:opacity-80 transition-all cursor-pointer">
-               <img v-if="!isPlay" class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]" src="../assets/imgs/play.png" alt="">
-               <img v-else class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]" src="../assets/imgs/pause.png" alt="">
-            </div>
-            <span class="times-display text-white ml-3 text-[14x]">
-              {{currentTime}}/{{duration}}
-            </span>
-            <input  v-model="durationWidth" class="timeline md:ml-3 mx-3 md:w-[33%] w-[40%]" max="100" type="range" name="foo">
-            <div class="volume flex items-center md:ml-[3%]">
-               <img @click="muteAudio" v-if="audioVolume > 0" class="transition-all hover:opacity-80 cursor-pointer md:h-[26px] md:w-[26px] w-[22px] h-[22px]" src="../assets/imgs/volume.png" alt="">
-               <img @click="muteAudio" v-else class="transition-all hover:opacity-80 cursor-pointer md:h-[20px] md:w-[20px] h-[18px] w-[18px]" src="../assets/imgs/mute.png" alt="">
-              <input @change="updateVolume" v-model="audioVolume" class="volumeline ml-3 w-[45%]" max="10" type="range" name="volume">
-            </div>
-          </div>
-          <audio class="hidden" id="player" controls controlslist="nodownload noplaybackrate">
-           <source src="../assets/audio.mp3" type="audio/mp3">
-          </audio>
-         </div>
+  <div class="music-player md:ml-[20%] p-3 select-none">
+    <div class="flex md:flex-row flex-col items-center justify-between">
+      <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
+        <img
+          class="h-[66px] w-[66px] rounded"
+          src="https://i.ytimg.com/vi/QVDwN4RMlQE/maxresdefault.jpg"
+          alt=""
+        />
+        <div
+          class="author flex flex-col ml-[15px] md:w-[40%] w-[60%] overflow-hidden"
+        >
+          <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
+            in aradtum
+          </h1>
+          <h1 class="author-name text-gray-400 text-[12px]">Nasheeds</h1>
         </div>
+        <div class="social flex items-center justify-evenly w-[20%]">
+          <img
+            class="h-[20px] w-[20px] cursor-pointer"
+            src="../assets/imgs/saved.png"
+            alt=""
+          />
+          <img
+            class="h-[20px] w-[20px] cursor-pointer"
+            src="../assets/imgs/share.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="audio-wrap flex items-center md:w-[60%] w-full ml-[5%] md:mt-0 mt-3"
+      >
+        <div class="audio flex items-center w-[100%] md:!-ml-[15%]">
+          <div
+            @click="onPlay"
+            class="play-button bg-white rounded-full md:p-[12px] p-[6px] hover:opacity-80 transition-all cursor-pointer"
+          >
+            <img
+              v-if="!isPlay"
+              class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]"
+              src="../assets/imgs/play.png"
+              alt=""
+            />
+            <img
+              v-else
+              class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]"
+              src="../assets/imgs/pause.png"
+              alt=""
+            />
+          </div>
+          <span class="times-display text-white ml-3 text-[14x]">
+            {{ currentTime }}/{{ duration }}
+          </span>
+          <input
+            v-model="durationWidth"
+            class="timeline md:ml-3 mx-3 md:w-[33%] w-[40%]"
+            max="100"
+            type="range"
+            name="foo"
+          />
+          <div class="volume flex items-center md:ml-[3%]">
+            <img
+              @click="muteAudio"
+              v-if="audioVolume > 0"
+              class="transition-all hover:opacity-80 cursor-pointer md:h-[26px] md:w-[26px] w-[22px] h-[22px]"
+              src="../assets/imgs/volume.png"
+              alt=""
+            />
+            <img
+              @click="muteAudio"
+              v-else
+              class="transition-all hover:opacity-80 cursor-pointer md:h-[20px] md:w-[20px] h-[18px] w-[18px]"
+              src="../assets/imgs/mute.png"
+              alt=""
+            />
+            <input
+              @change="updateVolume"
+              v-model="audioVolume"
+              class="volumeline ml-3 w-[45%]"
+              max="10"
+              type="range"
+              name="volume"
+            />
+          </div>
+        </div>
+        <audio
+          class="hidden"
+          id="player"
+          controls
+          controlslist="nodownload noplaybackrate"
+        >
+          <source src="../assets/audio.mp3" type="audio/mp3" />
+        </audio>
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-let isPlay = ref(false)
-let currentTime = ref('00:00')
-let duration = ref('00:00')
-let durationWidth = ref(-10)
-let audioVolume = ref(0)
+let isPlay = ref(false);
+let currentTime = ref("00:00");
+let duration = ref("00:00");
+let durationWidth = ref(-10);
+let audioVolume = ref(0);
 
-function onPlay(){
- var player = document.querySelector('#player')
- var timeline = document.querySelector('.timeline')
- var volumeEl = document.querySelector('.volumeline')
-  
-  if(isPlay.value == false){
-    isPlay.value = true
-    audioVolume.value = player.volume
-    volumeEl.style.backgroundSize = `${Math.floor((100 * player.volume) / 1)}% 100%`
-    player.play()
-    player.addEventListener('timeupdate', event => {
-      currentTime.value = formatTime(player.currentTime)
-      duration.value = formatTime(player.duration)
-      durationWidth.value = Math.floor((100 * player.currentTime) / player.duration)
-      timeline.style.backgroundSize = `${Math.floor((100 * player.currentTime) / player.duration)}% 100%`
-    })
-   }else{
-    isPlay.value = false
-    player.pause()
-   }
-}
+function onPlay() {
+  var player = document.querySelector("#player");
+  var timeline = document.querySelector(".timeline");
+  var volumeEl = document.querySelector(".volumeline");
 
-function formatTime(audio_duration){
- let sec = Math.floor( audio_duration );
- let min = Math.floor( sec / 60 );
-  min = min >= 10 ? min : '0' + min;
-  sec = Math.floor( sec % 60 );
-  sec = sec >= 10 ? sec : '0' + sec;
-  return min + ":"+ sec;
-}
-
-function updateVolume(){
- var player = document.querySelector('#player')
- var volumeEl = document.querySelector('.volumeline')
-
- player.volume = audioVolume.value / 10
- volumeEl.style.backgroundSize = `${Math.floor((100 * player.volume) / 1)}% 100%`
-}
-
-function muteAudio(){
-  if(audioVolume.value > 0){
-     audioVolume.value = 0
-     updateVolume()
+  if (isPlay.value == false) {
+    isPlay.value = true;
+    audioVolume.value = player.volume;
+    volumeEl.style.backgroundSize = `${Math.floor(
+      (100 * player.volume) / 1
+    )}% 100%`;
+    player.play();
+    player.addEventListener("timeupdate", (event) => {
+      currentTime.value = formatTime(player.currentTime);
+      duration.value = formatTime(player.duration);
+      durationWidth.value = Math.floor(
+        (100 * player.currentTime) / player.duration
+      );
+      timeline.style.backgroundSize = `${Math.floor(
+        (100 * player.currentTime) / player.duration
+      )}% 100%`;
+    });
+  } else {
+    isPlay.value = false;
+    player.pause();
   }
-  else{
-     audioVolume.value = 10
-     updateVolume()
-     }
+}
+
+function formatTime(audio_duration) {
+  let sec = Math.floor(audio_duration);
+  let min = Math.floor(sec / 60);
+  min = min >= 10 ? min : "0" + min;
+  sec = Math.floor(sec % 60);
+  sec = sec >= 10 ? sec : "0" + sec;
+  return min + ":" + sec;
+}
+
+function updateVolume() {
+  var player = document.querySelector("#player");
+  var volumeEl = document.querySelector(".volumeline");
+
+  player.volume = audioVolume.value / 10;
+  volumeEl.style.backgroundSize = `${Math.floor(
+    (100 * player.volume) / 1
+  )}% 100%`;
+}
+
+function muteAudio() {
+  if (audioVolume.value > 0) {
+    audioVolume.value = 0;
+    updateVolume();
+  } else {
+    audioVolume.value = 10;
+    updateVolume();
+  }
 }
 </script>
 
 <style scoped>
-audio::-webkit-media-controls-play-button{
+audio::-webkit-media-controls-play-button {
   display: none;
 }
 
-audio::-webkit-media-controls-panel{
-      background-color: #181818 !important;
-      border-radius: 0px !important;
-      outline: none !important;
-    }
+audio::-webkit-media-controls-panel {
+  background-color: #181818 !important;
+  border-radius: 0px !important;
+  outline: none !important;
+}
 
-  audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display{
-   display: none;
-  }  
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
 
-  audio::-webkit-media-controls-timeline {
-    background-color: #fff !important;
-    border-radius:100px ;
-    margin-left: 13px;
-    margin-right: 13px; 
-    width: 50%;
-  }
+audio::-webkit-media-controls-timeline {
+  background-color: #fff !important;
+  border-radius: 100px;
+  margin-left: 13px;
+  margin-right: 13px;
+  width: 50%;
+}
 
-  /* Range input style */
+/* Range input style */
 
-  .timeline{
+.timeline {
   -webkit-appearance: none;
-   height: 5px;
-   border-radius: 20px;
-   cursor: pointer;
-   background-color: rgba(161, 161, 161, 0.884);
-   background-size: 0% 100%;
-   background-image: linear-gradient(white, white);
-   background-repeat: no-repeat;
-  }
+  height: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: rgba(161, 161, 161, 0.884);
+  background-size: 0% 100%;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+}
 
- .volumeline{
+.volumeline {
   -webkit-appearance: none;
-   height: 5px;
-   border-radius: 20px;
-   cursor: pointer;
-   background-color: rgba(161, 161, 161, 0.884);
-   background-size: 0% 100%;
-   background-image: linear-gradient(white, white);
-   background-repeat: no-repeat;
-  }
+  height: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: rgba(161, 161, 161, 0.884);
+  background-size: 0% 100%;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+}
 
-.timeline::-webkit-slider-thumb, .volumeline::-webkit-slider-thumb {
+.timeline::-webkit-slider-thumb,
+.volumeline::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   cursor: pointer;
   opacity: 0;
-  transition: all .1s;
+  transition: all 0.1s;
   background-color: white;
 }
 
-.timeline::-webkit-slider-thumb:hover, .volumeline::-webkit-slider-thumb:hover {
+.timeline::-webkit-slider-thumb:hover,
+.volumeline::-webkit-slider-thumb:hover {
   background-color: white;
 }
 
-.timeline:hover::-webkit-slider-thumb, .volumeline:hover::-webkit-slider-thumb{
+.timeline:hover::-webkit-slider-thumb,
+.volumeline:hover::-webkit-slider-thumb {
   opacity: 1;
 }
-
 </style>

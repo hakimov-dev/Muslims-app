@@ -1,11 +1,11 @@
 <template>
-    <component :is="layout">
-       <router-view />
-    </component>
+  <component :is="layout">
+    <router-view />
+  </component>
 </template>
 
 <script setup>
-import mainLayout from '@/layouts/mainLayout'
+import mainLayout from "@/layouts/mainLayout";
 
-const layout = mainLayout
+const layout = mainLayout;
 </script>

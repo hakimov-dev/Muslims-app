@@ -84,7 +84,9 @@
         <!-- Navbar -->
         <div
           :class="
-            scrollHeight > 10 ? 'fixed shadow-xl bg-[#000000] w-full z-[111]' : ''
+            scrollHeight > 10
+              ? 'fixed shadow-xl bg-[#000000] w-full z-[111]'
+              : ''
           "
           class="transition-all navbar justify-between md:py-0 py-4 md:px-0 px-4 md:pl-[25%] md:pr-[3%] md:h-[90px] h-[70px] flex items-center"
         >
@@ -99,10 +101,16 @@
             />
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
-          <input class="md:block hidden search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[30%] p-2 px-10 bg-[#121416] rounded-[20px]" type="text" placeholder="Enter something for search...">
+          <input
+            class="md:block hidden search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[30%] p-2 px-10 bg-[#121416] rounded-[20px]"
+            type="text"
+            placeholder="Enter something for search..."
+          />
           <div
             @click.stop
-            :class="dropOpen ? 'md:mt-[14%] mt-[25%] md:-mr-0 -mr-[8%] ' : 'md:mt-0'"
+            :class="
+              dropOpen ? 'md:mt-[14%] mt-[25%] md:-mr-0 -mr-[8%] ' : 'md:mt-0'
+            "
             class="user-dropdown p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right"
           >
             <div @click="dropOpen = !dropOpen" class="flex items-center">
@@ -153,7 +161,10 @@
           </div>
         </div>
         <!-- Show page -->
-        <div :class="dropOpen ? 'min-h-[72.5vh]' : ''" class="show-page md:min-h-[60.5vh] min-h-[68.5vh] h-auto m-2 md:mb-[10%] mb-[35%] md:ml-[22%]">
+        <div
+          :class="dropOpen ? 'min-h-[72.5vh]' : ''"
+          class="show-page md:min-h-[60.5vh] min-h-[68.5vh] h-auto m-2 md:mb-[10%] mb-[35%] md:ml-[22%]"
+        >
           <router-view />
         </div>
         <!-- Music player -->
@@ -164,7 +175,7 @@
 </template>
 
 <script>
-import musicPlayer from '../components/musicPlayer.vue'
+import musicPlayer from "../components/musicPlayer.vue";
 export default {
   data() {
     return {
@@ -209,8 +220,8 @@ export default {
   background: linear-gradient(120deg, #131518, #111212, #121212);
 }
 
-.search{
-  background-image: url('../assets/imgs/search-input.png');
+.search {
+  background-image: url("../assets/imgs/search-input.png");
   background-size: 20px;
   background-position-x: 13px;
   background-position-y: 55%;
