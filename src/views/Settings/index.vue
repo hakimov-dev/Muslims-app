@@ -6,12 +6,18 @@
          <div class="img-wrap flex justify-center items-center text-center">
           <img class="md:h-[120px] md:w-[120px] rounded-full object-contain bg-black p-3 select-none" src="../../assets/imgs/user2.png" alt="">
          </div>
-         <div class="inputs-wrap mt-[20px] w-[70%]">
+         <div class="inputs-wrap mt-[20px] md:w-[70%] w-[80%]">
           <input class="md:flex justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]" type="text" placeholder="Enter your username..">
           <input class="md:flex my-[30px] justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]" type="text" placeholder="Enter your name...">
           <input class="md:flex justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]" type="text" placeholder="Enter your surname...">
          </div>
          <button class="mt-[5%] border-[1px] text-white transition-all font-medium hover:border-gray-300 border-gray-500 w-[70%] p-2 px-4 bg-[#121416] rounded-[5px]">Submit</button>
+         <a
+          target="_blank"
+          href="https://github.com/hakimov-dev/Muslims-app/discussions/1"
+          class="text-red-500 md:hidden block mt-[10%]"
+          >Report bug?</a
+        >
         </div>
     </div>
 </template>
