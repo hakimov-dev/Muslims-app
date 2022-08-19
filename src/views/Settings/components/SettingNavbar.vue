@@ -8,4 +8,20 @@
 </template>
 
 <style scoped>
+  
+  a{
+    opacity: .6;
+    transition: all .3s linear;
+  }
+   
+  a:hover{
+    opacity: 1;
+  }
+   
+
+ .router-link-active,
+ .router-link-exact-active{
+   border-bottom: 1px solid white; 
+   opacity: 1 !important;
+ }
 </style>
