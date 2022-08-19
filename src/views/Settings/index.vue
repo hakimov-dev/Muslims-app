@@ -16,6 +16,7 @@
           <label for="file" class="absolute md:-bottom-[1%] bottom-2 right-[3%] cursor-pointer md:-right-[1%] h-[35px] w-[35px] bg-[#1b1b1b] pt-[9px] pl-[9px] rounded-full">
            <img class="h-[17px] w-[17px]" src="../../assets/imgs/edit.png" alt="">
           </label>
+          <input class="hidden" type="file" name="file" id="file">
         </div>
         <div class="inputs-wrap mt-[20px] md:w-[70%] w-[80%]">
           <input
