@@ -20,6 +20,11 @@ const routes = [
     path: '/user-settings',
     name: 'user-settings',
     component: () => import("../views/Settings")
+  },
+  {
+    path: '/update-password',
+    name: 'update-pasword',
+    component: () => import("../views/Settings")
   }
 ];
 
