@@ -28,4 +28,5 @@ import { useRoute } from 'vue-router';
 import Card from '@/views/Home/components/mp3Card.vue'
 
 const store = useStore()
+const route = useRoute()
 </script>
