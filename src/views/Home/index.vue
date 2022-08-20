@@ -13,4 +13,6 @@
 
 <script setup>
 import Card from "./components/mp3Card.vue";
+
+console.log($cookies.isKey('user_favorite'))
 </script>
