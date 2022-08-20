@@ -13,8 +13,8 @@
          <div class="flex flex-col">
           <h1 class="title text-[22px] text-white">Search result surah</h1>
           <!-- Content cards -->
-           <div class="content-links flex flex-row flex-wrap items-center w-[80%]">
-             <Card />
+           <div class="content-links flex justify-between flex-row flex-wrap items-center w-[80%]">
+             <Card v-for="item in 6"/>
            </div>
          </div>
         </div>
