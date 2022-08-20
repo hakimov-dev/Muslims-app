@@ -5,7 +5,11 @@ export default{
         passwordValue: 'hakimovDev',
         isError: false,
     },
-    mutations: {},
+    mutations: {
+        signUp(state, payload){
+            
+        }
+    },
     actions: {},
     getters: {}
 }
