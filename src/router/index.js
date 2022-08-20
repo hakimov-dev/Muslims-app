@@ -25,6 +25,11 @@ const routes = [
     path: "/update-passwords",
     name: "update-pasword",
     component: () => import("../views/Settings")
+  },
+  {
+    path: '/search-result/search?:q',
+    name: "search-result",
+    component: () => import("../views/Search")
   }
 ];
 
