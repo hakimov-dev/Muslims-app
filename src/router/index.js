@@ -30,6 +30,11 @@ const routes = [
     path: '/search-result/search/:query',
     name: "search-result",
     component: () => import("../views/Search")
+  },
+  {
+     path: '/favorite',
+     name: 'favorite',
+     component: () => import("../views/Favorite")
   }
 ];
 
