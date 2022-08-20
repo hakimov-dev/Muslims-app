@@ -29,4 +29,6 @@ import Card from '@/views/Home/components/mp3Card.vue'
 
 const store = useStore()
 const route = useRoute()
+
+store.state.searchValue = route.params.query
 </script>
