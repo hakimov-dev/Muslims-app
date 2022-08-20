@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref, watchEffect } from "vue";
+import { ref, watch } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 import Card from "@/views/Home/components/mp3Card.vue";
@@ -60,13 +60,8 @@ function search(){
     const search = allLinks.value[allLinks.value.findIndex(x => x.title == store.state.searchValue || route.params.query)]
 
     resultLinks.value.push(search)
+    console.log(store.state.searchValue || route.params.query)
 }
-
-watchEffect(() => {
- if(route.path || route.name == 'search-result'){
-    search()
- }
-})
 
 store.state.searchValue = route.params.query;
 </script>
