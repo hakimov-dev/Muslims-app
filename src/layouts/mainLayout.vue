@@ -194,6 +194,10 @@ export default {
   },
 
   methods: {
+    searchItems(event){
+      
+    },
+
     isScrolledIntoView(el) {
       let rect = el.getBoundingClientRect();
       let elemTop = rect.top;
