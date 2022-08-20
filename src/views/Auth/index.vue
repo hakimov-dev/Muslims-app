@@ -24,6 +24,7 @@
             type="password"
             placeholder="Enter your password..."
             v-model="$store.state.auth.passwordValue"
+            @keypress.enter="$store.commit('auth/login')"
           />
 
          <transition>
