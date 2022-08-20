@@ -76,6 +76,11 @@ const routes = [
   {
      path: '/:catchAll(.*)',
      redirect: '/'
+  },
+  {
+      path: '/login',
+      name: 'login',
+      component: () => import("../views/Auth")
   }
 ];
 
@@ -93,7 +98,7 @@ router.beforeEach((to, from, next) => {
           return next("/auth")
       }
       else {
-           return next("/")  
+           return next("/login")  
       }
   } else {
       return next()
