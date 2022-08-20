@@ -1,6 +1,8 @@
 export default{
     namespaced: true,
-    state: {},
+    state: {
+        loginValue: 'hakimov-dev'
+    },
     mutations: {},
     actions: {},
     getters: {}
