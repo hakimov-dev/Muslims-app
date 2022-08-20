@@ -18,7 +18,8 @@ export default createStore({
     ]
 
       const search = allLinks[allLinks.findIndex(x => x.title == state.searchValue)]
-  
+      
+      state.searchResult = []
       state.searchResult.push(search)
   }},
   actions: {},
