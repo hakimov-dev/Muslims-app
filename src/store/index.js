@@ -17,7 +17,7 @@ export default createStore({
       { title: "Favorite", link: "/favorite" }
     ]
 
-      const search = allLinks[allLinks.findIndex(x => x.title == state.searchValue)]
+      const search = allLinks[allLinks.findIndex(x => x.title == state.searchValue.trim())]
       
       state.searchResult = []
       state.searchResult.push(search)
