@@ -1,5 +1,10 @@
 <template>
     <div class="search-result">
-        <h1 class="text-2xl text-white">This is search result page!</h1>
+        <div class="flex flex-col">
+        <!-- Search result links -->
+         <div class="flex flex-col"></div>
+        <!-- Search result surah -->
+         <div class="flex flex-col"></div>
+        </div>
     </div>
 </template>
