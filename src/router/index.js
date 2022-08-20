@@ -56,6 +56,10 @@ const routes = [
       layout: 'main'
      },
      component: () => import("../views/Favorite")
+  },
+  {
+     path: '/:catchAll(.*)',
+     redirect: '/'
   }
 ];
 
