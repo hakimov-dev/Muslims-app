@@ -24,5 +24,7 @@ export default createStore({
       state.searchResult.push(search)
   }},
   actions: {},
-  modules: {}
+  modules: {
+    auth: moduleAuth
+  }
 });
