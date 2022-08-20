@@ -58,6 +58,14 @@ const routes = [
      component: () => import("../views/Favorite")
   },
   {
+     path: '/auth',
+     name: 'auth',
+     meta: {
+      layout: 'auth'
+     },
+     component: () => import("../views/Auth")
+  },
+  {
      path: '/:catchAll(.*)',
      redirect: '/'
   }
