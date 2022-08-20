@@ -22,5 +22,6 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import Card from '@/views/Home/components/mp3Card.vue'
 </script>
