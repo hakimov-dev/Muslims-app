@@ -18,6 +18,7 @@ export default{
                 $cookies.set('user_pic', null)
                 $cookies.set('user_pass', state.passwordValue) 
                 $cookies.set('user_favorite', JSON.stringify([]))
+                localStorage.setItem('user_token', Array.from(Array(50), () => Math.floor(Math.random() * 36).toString(36)).join(''))
             }else
                 state.isError = true
         }
