@@ -27,7 +27,7 @@
           />
 
          <transition>
-          <h1 class="text-red-600 text-[16px] mt-[3%]">The login or password is incorrect. Please check and try again!</h1>
+          <h1 class="text-red-600 text-[16px] mt-[3%]" v-if="$store.state.auth.isError">The login or password is incorrect. Please check and try again!</h1>
          </transition>
           <button
           class="mt-[5%] uppercase border-[1px] text-white transition-all font-medium hover:border-gray-300 border-gray-500 w-[70%] p-2 px-4 bg-[#121416] rounded-[5px]"
