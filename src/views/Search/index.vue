@@ -56,9 +56,20 @@ let allLinks = ref([
 ]);
 let resultLinks = ref([]);
 
-const search = allLinks.value[allLinks.value.findIndex(x => x.title == store.state.searchValue || route.params.query)]
+function search(){
+    const search = allLinks.value[allLinks.value.findIndex(x => x.title == store.state.searchValue || route.params.query)]
 
-resultLinks.value.push(search)
+    resultLinks.value.push(search)
+}
+
+watchEffect(() => {
+ if(route.path){
+    search()
+ }
+})
+
+
+search()
 
 store.state.searchValue = route.params.query;
 </script>
