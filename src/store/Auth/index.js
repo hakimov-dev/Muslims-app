@@ -11,6 +11,7 @@ export default{
         login(state, payload){
             if(state.loginValue == 'hakimov-dev' && state.passwordValue == 'hakimovDev'){
                 state.isError = false
+                router.push('/')
             }else
                 state.isError = true
         }
