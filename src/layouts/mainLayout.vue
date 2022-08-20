@@ -196,7 +196,7 @@ export default {
 
   methods: {
     searchItems(){
-      if(this.$store.state.searchValue.length > 0)
+      if(this.$store.state.searchValue.length > 0 && this.$store.state.searchValue.trim() !== '')
        this.$router.push(`/search-result/search/${this.$store.state.searchValue.trim()}`)
        else
          alert('Added something for search!')
