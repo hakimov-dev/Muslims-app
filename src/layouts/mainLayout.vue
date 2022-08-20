@@ -195,7 +195,7 @@ export default {
 
   methods: {
     searchItems(event){
-      
+      this.$router.push(`/search-result/search/${event.target.value}`)
     },
 
     isScrolledIntoView(el) {

@@ -27,7 +27,7 @@ const routes = [
     component: () => import("../views/Settings")
   },
   {
-    path: '/search-result/search?:q',
+    path: '/search-result/search/:query',
     name: "search-result",
     component: () => import("../views/Search")
   }
