@@ -5,8 +5,11 @@
          <div class="flex flex-col items-start w-full">
            <h1 class="title text-[22px] text-white">Search result links</h1>
            <!-- Content links -->
-           <div class="content-links flex flex-col items-center w-[80%]">
-            <div class="flex my-[10px] items-center link-card h-[50px] text-[16px] text-white font-medium rounded-md w-full p-[15px] transition-all bg-[#171717] hover:bg-[#252525]">Router link</div>
+           <div class="content-links flex flex-col items-center w-[80%]" v-if="resultLinks.value">
+             <router-link :to="item.link" v-for="item in resultLinks.value" class="flex my-[10px] items-center link-card h-[50px] text-[16px] text-white font-medium rounded-md w-full p-[15px] transition-all bg-[#171717] hover:bg-[#252525]">{{item.title}}</router-link>
+           </div>
+            <div class="content-links flex flex-col items-center w-[80%]" v-else>
+             <div class="flex my-[10px] items-center link-card h-[50px] text-[16px] text-white font-medium rounded-md w-full p-[15px] transition-all bg-[#171717] hover:bg-[#252525]">Links not found</div>
            </div>
          </div>
         <!-- Search result surah -->
