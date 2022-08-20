@@ -4,8 +4,17 @@
   </component>
 </template>
 
-<script setup>
+<script>
 import mainLayout from "@/layouts/mainLayout";
+import authLayout from "@/layouts/authLayout.vue"
 
-const layout = mainLayout;
+export default {
+  components: {mainLayout, authLayout},
+
+  computed: {
+    layout(){
+      return (this.$route.meta.layout || "auth") + "-layout";
+    }
+  },
+}
 </script>
