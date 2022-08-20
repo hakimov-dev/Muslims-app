@@ -5,7 +5,8 @@ const routes = [
     path: "/",
     name: "home",
     meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
     },
     component: () => import("../views/Home")
   },
@@ -13,7 +14,8 @@ const routes = [
     path: "/pray-time",
     name: "pray-time",
     meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
     },
     component: () => import("../views/PrayTimes")
   },
@@ -21,7 +23,8 @@ const routes = [
     path: "/muslims-calendar",
     name: "muslims-calendar",
     meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
     },
     component: () => import("../views/Calendar")
   },
@@ -29,7 +32,8 @@ const routes = [
     path: "/user-settings",
     name: "user-settings",
     meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
     },
     component: () => import("../views/Settings")
   },
@@ -37,7 +41,8 @@ const routes = [
     path: "/update-passwords",
     name: "update-pasword",
     meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
     },
     component: () => import("../views/Settings")
   },
@@ -45,7 +50,8 @@ const routes = [
     path: '/search-result/search/:query',
     name: "search-result",
     meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
     },
     component: () => import("../views/Search")
   },
@@ -53,7 +59,8 @@ const routes = [
      path: '/favorite',
      name: 'favorite',
      meta: {
-      layout: 'main'
+      layout: 'main',
+      auth: true
      },
      component: () => import("../views/Favorite")
   },
@@ -61,7 +68,8 @@ const routes = [
      path: '/auth',
      name: 'auth',
      meta: {
-      layout: 'auth'
+      layout: 'auth',
+      auth: true
      },
      component: () => import("../views/Auth")
   },
@@ -85,7 +93,7 @@ router.beforeEach((to, from, next) => {
           return next("/auth")
       }
       else {
-           return next("/auth")  
+           return next("/")  
       }
   } else {
       return next()
