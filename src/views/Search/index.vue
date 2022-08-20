@@ -7,11 +7,11 @@
         <!-- Content links -->
         <div
           class="content-links flex flex-col items-center w-[80%]"
-          v-if="resultLinks"
+          v-if="$store.state.searchResult !== [] && $store.state.searchResult[0] !== undefined"
         >
           <router-link
             :to="item.link"
-            v-for="item in resultLinks"
+            v-for="item in $store.state.searchResult"
             class="flex my-[10px] items-center link-card h-[50px] text-[16px] text-white font-medium rounded-md w-full p-[15px] transition-all bg-[#171717] hover:bg-[#252525]"
             >{{ item.title }}</router-link
           >
@@ -39,29 +39,12 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 import Card from "@/views/Home/components/mp3Card.vue";
 
 const store = useStore();
 const route = useRoute();
-let allLinks = ref([
-  { title: "Home", link: "/" },
-  { title: "Pray times", link: "/pray-time" },
-  { title: "Muslims calendar", link: "/muslims-calendar" },
-  { title: "Settings", link: "/user-settings" },
-  { title: "Update password", link: "/update-passwords" },
-  { title: "Favorite", link: "/favorite" }
-]);
-let resultLinks = ref([]);
-
-function search(){
-    const search = allLinks.value[allLinks.value.findIndex(x => x.title == store.state.searchValue || route.params.query)]
-
-    resultLinks.value.push(search)
-    console.log(store.state.searchValue || route.params.query)
-}
 
 store.state.searchValue = route.params.query;
 </script>
