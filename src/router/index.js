@@ -78,7 +78,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if(to.meta.auth) {
-      if (localStorage.getItem("user_token")){
+      if (localStorage.getItem("user_token") && $cookies.get('user_favorite') && $cookies.get('user_pass') && $cookies.get('user_pic') && $cookies.get('user_lastname') && $cookies.get('user_username') && $cookies.get('user_name') && $cookies.get('user_city') && $cookies.get('user_country') && $cookies.get('user_token_expired_day')){
           return next()
       }
       else if(to.path=="/"){
