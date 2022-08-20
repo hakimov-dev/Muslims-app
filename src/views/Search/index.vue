@@ -63,13 +63,10 @@ function search(){
 }
 
 watchEffect(() => {
- if(route.path){
+ if(route.path || route.name == 'search-result'){
     search()
  }
 })
-
-
-search()
 
 store.state.searchValue = route.params.query;
 </script>
