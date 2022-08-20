@@ -29,6 +29,7 @@ import Card from '@/views/Home/components/mp3Card.vue'
 
 const store = useStore()
 const route = useRoute()
+let allLinks = ref([{title: 'Home', link: '/'}, {title: 'Pray times', link: '/pray-time'}, {title: 'Muslims calendar', link: '/muslims-calendar'}, {title: 'Settings', link: '/user-settings'}, {title: 'Update password', link: '/update-passwords'}, {title: 'Favorite', link: '/favorite'}])
 
 store.state.searchValue = route.params.query
 </script>
