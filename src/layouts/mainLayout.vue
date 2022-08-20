@@ -102,6 +102,7 @@
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
           <input
+            @keypress.enter="searchItems($event)"
             class="md:block hidden search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[30%] p-2 px-10 bg-[#121416] rounded-[20px]"
             type="text"
             placeholder="Enter something for search..."
