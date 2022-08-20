@@ -7,4 +7,4 @@ import router from "./router";
 import "@/assets/styles/index.css";
 import "@/assets/styles/style.css";
 
-createApp(App).use(router).use(store).mount("#app");
+createApp(App).use(router).use(store).use(VueCookies).mount("#app");
