@@ -21,4 +21,6 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Card from '@/views/Home/components/mp3Card.vue'
+</script>
