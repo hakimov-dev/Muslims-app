@@ -11,9 +11,9 @@
           class="author flex flex-col ml-[15px] md:w-[40%] w-[60%] overflow-hidden"
         >
           <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
-            in aradtum
+            {{$store.state.home.playerContent.englishName}}
           </h1>
-          <h1 class="author-name text-gray-400 text-[12px]">Nasheeds</h1>
+          <h1 class="author-name text-gray-400 text-[12px]">Alafsy</h1>
         </div>
         <div class="social flex items-center justify-evenly w-[20%]">
           <img
