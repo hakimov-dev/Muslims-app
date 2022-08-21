@@ -114,6 +114,9 @@ function closePlayer(){
   store.state.home.playerContent = null
 }
 
+watch(store.state.home.playerContent, (currentValue, oldValue) => {
+})
+
 function onPlay() {
   var player = document.querySelector("#player");
   var timeline = document.querySelector(".timeline");
