@@ -15,7 +15,8 @@ export default {
        try{
        const list = await axios.get(`${process.env.VUE_APP_QURAN_API}`) 
        
-       ctx.commit('setSurahList', list.data.data.surah)
+       ctx.commit('setSurahList',  list.data.data.surahs)
+       ctx.commit('setEdition', list.data.data.edition)
        }catch(error){
         console.log(error)
        }
