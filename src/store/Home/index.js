@@ -26,6 +26,8 @@ export default {
     async getSurahById(ctx, id){
         try{
           const surah = await axios.get(`{${process.env.VUE_APP_SURAH_BY_ID_API}/${id}/ar.alafasy`)
+
+          ctx.commit('setCardId', id)
         }catch(error){
           console.log(error)
         }
