@@ -9,7 +9,9 @@
       v-if="$store.state.home.surahList"
       class="cards flex justify-between items-center flex-wrap md:p-[3%]"
     >
-      <Card v-for="item in $store.state.home.surahList" :surah-about="item" />
+      <Card v-for="item in $store.state.home.surahList" 
+        @click="$store.dispatch('home/getSurahById', item.number)" 
+        :surah-about="item" />
     </div>
   </div>
 </template>
