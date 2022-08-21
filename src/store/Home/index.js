@@ -13,7 +13,7 @@ export default {
     },
 
     setSurahAbout(state, payload){
-      
+      state.playerContent = payload
     }
   },
   actions: {
