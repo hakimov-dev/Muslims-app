@@ -3,7 +3,11 @@ import axios from 'axios'
 export default {
     namespaced: true,
     state: {},
-    mutations: {},
+    mutations: {
+        setSurahList(state, payload){
+            
+        }
+    },
     actions: {
      async getAbouts(ctx){
        try{
