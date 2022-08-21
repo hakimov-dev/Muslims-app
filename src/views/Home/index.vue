@@ -22,8 +22,9 @@ import { useStore } from "vuex";
 
 const store = useStore();
 
-function playAudio(){
- 
+function playAudio(id){
+ store.state.home.activaSurahID = id
+ store.dispatch('home/getSurahById', id)
 }
 
 store.dispatch("home/getAbouts");

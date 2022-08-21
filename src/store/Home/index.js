@@ -10,10 +10,6 @@ export default {
     setSurahList(state, payload) {
       state.surahList = payload;
     },
-
-    setCardId(state, id){
-      state.activaSurahID = id
-    }
   },
   actions: {
     async getAbouts(ctx) {
@@ -29,8 +25,8 @@ export default {
     async getSurahById(ctx, id){
         try{
           const surah = await axios.get(`${process.env.VUE_APP_SURAH_BY_ID_API}/${id}/ar.alafasy`)
-
-          ctx.commit('setCardId', id)
+           
+          console.log(surah)
         }catch(error){
           console.log(error)
         }
