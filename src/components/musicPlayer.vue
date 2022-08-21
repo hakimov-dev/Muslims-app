@@ -2,11 +2,14 @@
   <div class="music-player md:ml-[20%] p-3 select-none" v-if="$store.state.home.playerContent">
     <div class="flex md:flex-row flex-col items-center justify-between relative">
       <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
-        <img
+        <!-- <img
           class="h-[66px] w-[66px] rounded"
           src="../assets/imgs/book.jpg"
           alt=""
-        />
+        /> -->
+        <div class="h-[66px] w-[66px] rounded bg-[#c4c4c4] text-center flex items-center justify-center">
+         <h1 class="text-[#00000] font-semibold image-text text-[13px]">{{$store.state.home.playerContent.name}}</h1>
+        </div>
         <div
           class="author flex flex-col ml-[15px] md:w-[40%] w-[60%] overflow-hidden"
         >
@@ -182,6 +185,10 @@ function muteAudio() {
 </script>
 
 <style scoped>
+.image-text{
+  text-shadow: 1px 1px 2px #00000079;
+}
+
 audio::-webkit-media-controls-play-button {
   display: none;
 }
