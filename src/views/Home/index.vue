@@ -6,7 +6,7 @@
       placeholder="Search surah..."
     />
     <div class="cards flex justify-between items-center flex-wrap md:p-[3%]">
-      <Card v-for="item in $store.state.home.surahList" />
+      <Card v-for="item in $store.state.home.surahList" :surahAbout="item"/>
     </div>
   </div>
 </template>
