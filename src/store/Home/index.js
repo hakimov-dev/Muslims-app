@@ -27,7 +27,7 @@ export default {
         try{
           const surah = await axios.get(`${process.env.VUE_APP_SURAH_BY_ID_API}/${id}/ar.alafasy`)
            
-          console.log(surah)
+          ctx.commit('setSurahAbout', surah.data.data)
         }catch(error){
           console.log(error)
         }
