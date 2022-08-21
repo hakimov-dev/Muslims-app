@@ -2,12 +2,7 @@
   <div class="music-player md:ml-[20%] p-3 select-none" v-if="$store.state.home.playerContent">
     <div class="flex md:flex-row flex-col items-center justify-between relative">
       <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
-        <!-- <img
-          class="h-[66px] w-[66px] rounded"
-          src="../assets/imgs/book.jpg"
-          alt=""
-        /> -->
-        <div class="h-[66px] w-[66px] rounded bg-[#c4c4c4] text-center flex items-center justify-center">
+        <div class="h-[66px] w-[66px] rounded bg-[#c4c4c4] text-center flex items-center justify-center select-none">
          <h1 class="text-[#00000] font-semibold image-text text-[13px]">{{$store.state.home.playerContent.name}}</h1>
         </div>
         <div
