@@ -4,7 +4,7 @@
       <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
         <img
           class="h-[66px] w-[66px] rounded"
-          src="https://i.ytimg.com/vi/QVDwN4RMlQE/maxresdefault.jpg"
+          src="../assets/imgs/book.jpg"
           alt=""
         />
         <div
