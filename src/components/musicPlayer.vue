@@ -93,7 +93,7 @@
           <source src="../assets/audio.mp3" type="audio/mp3" />
         </audio>
       </div>
-     <img class="absolute left-[96%] -top-2  h-[14px] w-[14px] md:left-[78%] md:top-0 md:h-[16px] md:w-[16px] opacity-60 transition-all cursor-pointer hover:opacity-100" src="../assets/imgs/close.png" />
+     <img @click="closePlayer" class="absolute left-[96%] -top-2  h-[14px] w-[14px] md:left-[78%] md:top-0 md:h-[16px] md:w-[16px] opacity-60 transition-all cursor-pointer hover:opacity-100" src="../assets/imgs/close.png" />
     </div>
   </div>
 </template>
