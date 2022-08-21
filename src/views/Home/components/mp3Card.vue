@@ -24,6 +24,13 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineProps } from 'vue';
+
+defineProps({
+  surahAbout: Object
+})
+
+</script>
 
 <style></style>
