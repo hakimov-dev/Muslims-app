@@ -4,7 +4,8 @@ export default {
   namespaced: true,
   state: {
     surahList: null,
-    activaSurahID: 0
+    activaSurahID: 0,
+    playerContent: null
   },
   mutations: {
     setSurahList(state, payload) {
