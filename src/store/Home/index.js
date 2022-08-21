@@ -7,7 +7,7 @@ export default {
     },
     mutations: {
         setSurahList(state, payload){
-
+         state.surahList = payload
         }
     },
     actions: {
