@@ -99,7 +99,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { watch, ref } from "vue";
 import { useStore } from "vuex"
 
 let isPlay = ref(false);
