@@ -2,10 +2,12 @@ import axios from 'axios'
 
 export default {
     namespaced: true,
-    state: {},
+    state: {
+        surahList: null
+    },
     mutations: {
         setSurahList(state, payload){
-            
+
         }
     },
     actions: {
