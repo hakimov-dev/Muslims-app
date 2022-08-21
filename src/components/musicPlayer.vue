@@ -110,7 +110,8 @@ let audioVolume = ref(0);
 const store = useStore()
 
 function closePlayer(){
-
+  store.state.home.activaSurahID = 0
+  store.state.home.playerContent = null
 }
 
 function onPlay() {
