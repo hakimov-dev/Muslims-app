@@ -15,6 +15,9 @@ export default {
 
     setSurahAbout(state, payload){
       state.playerContent = payload
+      payload.ayahs.forEach(audio => {
+        console.log(audio)
+      });
     }
   },
   actions: {
