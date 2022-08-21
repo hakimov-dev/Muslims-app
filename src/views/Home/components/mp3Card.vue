@@ -76,7 +76,7 @@ defineProps({
 }
 
 .image-text{
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #00000079;
 }
 
 
