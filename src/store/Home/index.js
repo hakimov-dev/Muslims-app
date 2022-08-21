@@ -8,6 +8,10 @@ export default {
     mutations: {
         setSurahList(state, payload){
          state.surahList = payload
+        },
+
+        setEdition(state, payload){
+         
         }
     },
     actions: {
