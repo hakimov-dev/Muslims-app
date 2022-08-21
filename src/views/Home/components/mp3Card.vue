@@ -13,12 +13,22 @@
         alt=""
       />
       <img
+        v-if="$store.state.home.activaSurahID !== surahAbout.number"
         :class="$store.state.home.activaSurahID == surahAbout.number ? '' : ' md:group-hover:top-[70%] group-hover:top-[60%]'"
         class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] md:left-[75%] left-[70%]"
         src="../../../assets/imgs/play.png"
         alt=""
       />
+
+      <section
+      v-if="$store.state.home.playerContent === null"
+      :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[60%] md:top-[70%]' : ''" 
+      class="h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]">
+      <span class="loader-player"></span>
+      </section>
+      
       <img
+        v-else
         :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[60%] md:top-[70%]' : ''"
         class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
         src="../../../assets/imgs/pause.png"
@@ -48,4 +58,35 @@ defineProps({
 });
 </script>
 
-<style></style>
+<style scoped>
+.loader-player{
+  margin-top: -5.5px;
+  margin-left: -5px;
+   width: 30px;
+    height: 30px;
+    border: 5px solid;
+    border-color: #131417 transparent;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-animation: rotation 1s linear infinite;
+            animation: rotation 1s linear infinite;
+}
+
+
+ @-webkit-keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
