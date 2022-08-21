@@ -4,7 +4,6 @@ export default {
     namespaced: true,
     state: {
         surahList: null,
-        author: null,
     },
     mutations: {
         setSurahList(state, payload){
@@ -20,8 +19,7 @@ export default {
        try{
        const list = await axios.get(`${process.env.VUE_APP_QURAN_API}`) 
        
-       ctx.commit('setSurahList',  list.data.data.surahs)
-       ctx.commit('setEdition', list.data.data.edition)
+       ctx.commit('setSurahList',  list.data.data)
        }catch(error){
         console.log(error)
        }
