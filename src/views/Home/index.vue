@@ -10,7 +10,7 @@
       class="cards flex justify-between items-center flex-wrap md:p-[3%]"
     >
       <Card v-for="item in $store.state.home.surahList" 
-        @click="playAudio" 
+        @click="playAudio(item.number)" 
         :surah-about="item" />
     </div>
   </div>
@@ -21,6 +21,10 @@ import Card from "./components/mp3Card.vue";
 import { useStore } from "vuex";
 
 const store = useStore();
+
+function playAudio(){
+ 
+}
 
 store.dispatch("home/getAbouts");
 </script>
