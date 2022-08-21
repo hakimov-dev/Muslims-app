@@ -22,7 +22,7 @@
       />
       <img
         v-else
-        :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[70%]' : ''"
+        :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[60%] md:top-[70%]' : ''"
         class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
         src="../../../assets/imgs/pause.png"
         alt=""
