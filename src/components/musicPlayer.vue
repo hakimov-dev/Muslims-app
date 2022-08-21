@@ -1,6 +1,6 @@
 <template>
   <div class="music-player md:ml-[20%] p-3 select-none">
-    <div class="flex md:flex-row flex-col items-center justify-between">
+    <div class="flex md:flex-row flex-col items-center justify-between relative">
       <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
         <img
           class="h-[66px] w-[66px] rounded"
@@ -31,7 +31,7 @@
       <div
         class="audio-wrap flex items-center md:w-[60%] w-full ml-[5%] md:mt-0 mt-3"
       >
-        <div class="audio flex items-center w-[100%] md:!-ml-[15%]">
+        <div class="audio flex items-center w-[100%] md:!-ml-[18%]">
           <div
             @click="onPlay"
             class="play-button bg-white rounded-full md:p-[12px] p-[6px] hover:opacity-80 transition-all cursor-pointer"
@@ -93,6 +93,7 @@
           <source src="../assets/audio.mp3" type="audio/mp3" />
         </audio>
       </div>
+     <img class="absolute left-[78%] top-0 h-[16px] w-[16px] opacity-60 transition-all cursor-pointer hover:opacity-100" src="../assets/imgs/close.png" />
     </div>
   </div>
 </template>
