@@ -1,5 +1,5 @@
 <template>
-  <div class="music-player md:ml-[20%] p-3 select-none">
+  <div class="music-player md:ml-[20%] p-3 select-none" v-if="playerContent">
     <div class="flex md:flex-row flex-col items-center justify-between relative">
       <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
         <img
