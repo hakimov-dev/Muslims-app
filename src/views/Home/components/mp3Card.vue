@@ -2,7 +2,7 @@
   <div
     :id="surahAbout.number"
     :class="$store.state.home.activaSurahID == surahAbout.number ? '!bg-[#282828]' : ''"
-    class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[240px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
+    class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[8px] p-[6px] md:w-[235px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
   >
     <div
       class="img-wrap flex flex-col md:h-[160px] h-[120px] overflow-hidden relative"
