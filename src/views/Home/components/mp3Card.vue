@@ -7,11 +7,14 @@
     <div
       class="img-wrap flex flex-col md:h-[160px] h-[120px] overflow-hidden relative"
     >
-      <img
+      <!-- <img
         class="md:h-[160px] h-[120px] !rounded-xl shadow-xl"
         src="../../../assets/imgs/book.jpg"
         alt=""
-      />
+      /> -->
+      <div class="md:h-[160px] h-[120px] !rounded-xl shadow-xl bg-[#c4c4c4] text-center flex items-center justify-center">
+       <h1 class="text-[#00000] font-semibold image-text text-[22px]">{{surahAbout.name}}</h1>
+      </div>
       <img
         v-if="$store.state.home.activaSurahID !== surahAbout.number"
         :class="$store.state.home.activaSurahID == surahAbout.number ? '' : ' md:group-hover:top-[70%] group-hover:top-[60%]'"
@@ -70,6 +73,10 @@ defineProps({
     display: inline-block;
     -webkit-animation: rotation 1s linear infinite;
             animation: rotation 1s linear infinite;
+}
+
+.image-text{
+  text-shadow: 1px 1px 2px black;
 }
 
 
