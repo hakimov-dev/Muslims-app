@@ -1,6 +1,7 @@
 <template>
   <div
     :id="surahAbout.number"
+    :class="$store.state.home.activaSurahID == surahAbout.number ? '!bg-[#282828]' : ''"
     class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[240px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
   >
     <div
@@ -12,8 +13,15 @@
         alt=""
       />
       <img
-        class="group-hover:top-[70%] transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
+        :class="$store.state.home.activaSurahID == surahAbout.number ? '' : 'group-hover:top-[70%]'"
+        class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
         src="../../../assets/imgs/play.png"
+        alt=""
+      />
+      <img
+        :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[70%]' : ''"
+        class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
+        src="../../../assets/imgs/pause.png"
         alt=""
       />
     </div>
