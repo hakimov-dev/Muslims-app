@@ -13,6 +13,12 @@
         @click="playAudio(item.number)" 
         :surah-about="item" />
     </div>
+    <div
+      v-else
+      class="cards flex justify-between items-center flex-wrap md:p-[3%]"
+    >
+      <LoadingCard />
+    </div>
   </div>
 </template>
 
