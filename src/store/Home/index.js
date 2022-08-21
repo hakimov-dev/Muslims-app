@@ -11,9 +11,6 @@ export default {
       state.surahList = payload;
     },
 
-    setEdition(state, payload) {
-      state.author = payload;
-    }
   },
   actions: {
     async getAbouts(ctx) {
