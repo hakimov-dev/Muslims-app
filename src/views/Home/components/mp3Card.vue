@@ -13,8 +13,8 @@
         alt=""
       />
       <img
-        :class="$store.state.home.activaSurahID == surahAbout.number ? '' : 'group-hover:top-[70%]'"
-        class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
+        :class="$store.state.home.activaSurahID == surahAbout.number ? '' : ' md:group-hover:top-[70%] group-hover:top-[60%]'"
+        class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] md:left-[75%] left-[70%]"
         src="../../../assets/imgs/play.png"
         alt=""
       />
