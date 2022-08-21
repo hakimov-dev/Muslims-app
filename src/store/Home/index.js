@@ -11,6 +11,9 @@ export default {
       state.surahList = payload;
     },
 
+    setCardId(state, id){
+      state.activaSurahID = id
+    }
   },
   actions: {
     async getAbouts(ctx) {
