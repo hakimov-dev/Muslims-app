@@ -11,6 +11,10 @@ export default {
     setSurahList(state, payload) {
       state.surahList = payload;
     },
+
+    setSurahAbout(state, payload){
+      
+    }
   },
   actions: {
     async getAbouts(ctx) {
