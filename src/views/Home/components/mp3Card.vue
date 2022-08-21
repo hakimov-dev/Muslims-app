@@ -1,7 +1,7 @@
 <template>
   <div
     :id="surahAbout.number"
-    class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[235px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
+    class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[240px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
   >
     <div
       class="img-wrap flex flex-col md:h-[160px] h-[120px] overflow-hidden relative"
@@ -19,7 +19,7 @@
     </div>
     <div class="text-wrap flex flex-col p-3 text-white leading-[30px]">
       <h1 class="mp3-name text-[18px] font-medium flex items-center w-full">
-        {{ surahAbout.englishName }} <span class="surah-name-arabic text-[13px] opacity-60 md:inline-block hidden ml-[5px]">({{surahAbout.name}})</span>
+        {{ surahAbout.englishName }} <span class="surah-name-arabic text-[11px] opacity-60 md:inline-block hidden ml-[5px]">({{surahAbout.name}})</span>
       </h1>
       <h1 class="mp3-author text-[14px] opacity-60">Alafasy</h1>
       <h1 class="ayah-number text-[14px] opacity-60">
