@@ -25,6 +25,7 @@ const store = useStore();
 function playAudio(id){
  store.state.home.activaSurahID = 0
  store.state.home.playerContent = null
+ store.state.home.playerAudios = []
 
  store.state.home.activaSurahID = id
  store.dispatch('home/getSurahById', id)
