@@ -27,7 +27,11 @@ export default {
     },
 
     async getSurahById(ctx, id){
-        
+        try{
+
+        }catch(error){
+          console.log(error)
+        }
     }
   },
   getters: {}
