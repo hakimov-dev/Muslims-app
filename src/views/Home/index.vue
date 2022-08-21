@@ -18,6 +18,7 @@
 
 <script setup>
 import Card from "./components/mp3Card.vue";
+import LoadingCard from "./components/loadingCard.vue"
 import { useStore } from "vuex";
 
 const store = useStore();
