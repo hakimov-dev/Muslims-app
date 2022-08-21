@@ -99,7 +99,7 @@
 </template>
 
 <script setup>
-import { watch, ref } from "vue";
+import { watchEffect, ref } from "vue";
 import { useStore } from "vuex"
 
 let isPlay = ref(false);
@@ -114,7 +114,13 @@ function closePlayer(){
   store.state.home.playerContent = null
 }
 
-watch(store.state.home.playerContent, (currentValue, oldValue) => {
+watchEffect(function() {
+ if(store.state.home.playerContent !== null){
+  setTimeout(() => {
+    isPlay.value = false
+    onPlay()
+  }, 100);
+}
 })
 
 function onPlay() {
