@@ -109,6 +109,10 @@ let durationWidth = ref(-10);
 let audioVolume = ref(0);
 const store = useStore()
 
+function closePlayer(){
+
+}
+
 function onPlay() {
   var player = document.querySelector("#player");
   var timeline = document.querySelector(".timeline");
