@@ -7,7 +7,7 @@ export default {
     actions: {
      async getAbouts(ctx){
        try{
-
+       const userIP = await axios.get(process.env.VUE_APP_IP_API)
        }catch(error){
         console.log(error)
        }
