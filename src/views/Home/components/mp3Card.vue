@@ -9,7 +9,7 @@
     >
       <img
         class="md:h-[160px] h-[120px] !rounded-xl shadow-xl"
-        :src="image"
+        src="../../../assets/imgs/book.jpg"
         alt=""
       />
       <img
@@ -48,8 +48,6 @@ import { defineProps } from "vue";
 defineProps({
   surahAbout: Object
 });
-
-const images = [require('@/assets/imgs/book1.jpg'), require('@/assets/imgs/book2.jpg'), require('@/assets/imgs/book3.jpg'), require('@/assets/imgs/book4.jpg'), require('@/assets/imgs/book5.jpg'), require('@/assets/imgs/book6.jpg'), require('@/assets/imgs/book7.jpg')]
 </script>
 
 <style></style>
