@@ -100,6 +100,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { useStore } from "vuex"
 
 let isPlay = ref(false);
 let currentTime = ref("00:00");
