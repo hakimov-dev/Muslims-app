@@ -1,6 +1,7 @@
 <template>
   <div
     :id="surahAbout.number"
+    @click="$store.dispatch('home/getSurahById', surahAbout.number)"
     :class="$store.state.home.activaSurahID == surahAbout.number ? '!bg-[#282828]' : ''"
     class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[240px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
   >
