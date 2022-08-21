@@ -17,7 +17,7 @@
       />
     </div>
     <div class="text-wrap flex flex-col p-3 text-white leading-[30px]">
-      <h1 class="mp3-name text-[18px] font-medium">Baqarah</h1>
+      <h1 class="mp3-name text-[18px] font-medium">{{surahAbout.englishName}}</h1>
       <h1 class="mp3-author text-[14px] opacity-60">Alafsy</h1>
       <h1 class="ayah-number text-[14px] opacity-60">000</h1>
     </div>
