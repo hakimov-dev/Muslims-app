@@ -17,6 +17,7 @@ export default {
       state.playerContent = payload
       payload.ayahs.forEach(audio => {
         console.log(audio)
+        state.playerAudios.push(`${audio.audio}`)
       });
     }
   },
