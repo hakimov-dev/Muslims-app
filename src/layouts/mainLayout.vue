@@ -59,7 +59,13 @@
           </router-link>
 
           <router-link
-            :class="$route.name !== 'user-settings' ? ($route.name !== 'update-pasword' ? 'opacity-60' : '') : ''"
+            :class="
+              $route.name !== 'user-settings'
+                ? $route.name !== 'update-pasword'
+                  ? 'opacity-60'
+                  : ''
+                : ''
+            "
             class="md:flex items-center font-medium text-[18px] md:py-2 md:my-1 hover:opacity-100 transition-all"
             to="/user-settings"
           >
@@ -195,13 +201,16 @@ export default {
   },
 
   methods: {
-    searchItems(){
-      if(this.$store.state.searchValue.length > 0 && this.$store.state.searchValue.trim() !== ''){
-       this.$router.push(`/search-result/search/${this.$store.state.searchValue.trim()}`)
-       this.$store.commit('search', this.$store.state.searchValue.trim()) 
-       }
-       else
-         alert('Added something for search!')
+    searchItems() {
+      if (
+        this.$store.state.searchValue.length > 0 &&
+        this.$store.state.searchValue.trim() !== ""
+      ) {
+        this.$router.push(
+          `/search-result/search/${this.$store.state.searchValue.trim()}`
+        );
+        this.$store.commit("search", this.$store.state.searchValue.trim());
+      } else alert("Added something for search!");
     },
 
     isScrolledIntoView(el) {

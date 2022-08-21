@@ -5,17 +5,20 @@
       type="text"
       placeholder="Search surah..."
     />
-    <div v-if="$store.state.home.surahList" class="cards flex justify-between items-center flex-wrap md:p-[3%]">
-      <Card v-for="item in $store.state.home.surahList" :surah-about="item"/>
+    <div
+      v-if="$store.state.home.surahList"
+      class="cards flex justify-between items-center flex-wrap md:p-[3%]"
+    >
+      <Card v-for="item in $store.state.home.surahList" :surah-about="item" />
     </div>
   </div>
 </template>
 
 <script setup>
 import Card from "./components/mp3Card.vue";
-import { useStore } from "vuex"
+import { useStore } from "vuex";
 
-const store = useStore()
+const store = useStore();
 
-store.dispatch('home/getAbouts')
+store.dispatch("home/getAbouts");
 </script>

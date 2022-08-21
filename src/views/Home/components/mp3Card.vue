@@ -18,21 +18,26 @@
       />
     </div>
     <div class="text-wrap flex flex-col p-3 text-white leading-[30px]">
-      <h1 class="mp3-name text-[18px] font-medium">{{surahAbout.englishName}}</h1>
+      <h1 class="mp3-name text-[18px] font-medium">
+        {{ surahAbout.englishName }}
+      </h1>
       <h1 class="mp3-author text-[14px] opacity-60">Alafasy</h1>
-      <h1 class="ayah-number text-[14px] opacity-60">{{surahAbout.numberOfAyahs}} ayahs</h1>
-      <h1 class="revelation-type text-[14px] opacity-60 md:block hidden">Revelation type: {{surahAbout.revelationType}}</h1>
+      <h1 class="ayah-number text-[14px] opacity-60">
+        {{ surahAbout.numberOfAyahs }} ayahs
+      </h1>
+      <h1 class="revelation-type text-[14px] opacity-60 md:block hidden">
+        Revelation type: {{ surahAbout.revelationType }}
+      </h1>
     </div>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 defineProps({
   surahAbout: Object
-})
-
+});
 </script>
 
 <style></style>

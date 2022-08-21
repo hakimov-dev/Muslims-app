@@ -1,29 +1,29 @@
-import axios from 'axios'
+import axios from "axios";
 
 export default {
-    namespaced: true,
-    state: {
-        surahList: null,
+  namespaced: true,
+  state: {
+    surahList: null
+  },
+  mutations: {
+    setSurahList(state, payload) {
+      state.surahList = payload;
     },
-    mutations: {
-        setSurahList(state, payload){
-         state.surahList = payload
-        },
 
-        setEdition(state, payload){
-         state.author = payload
-        }
-    },
-    actions: {
-     async getAbouts(ctx){
-       try{
-       const list = await axios.get(`${process.env.VUE_APP_QURAN_API}`) 
-       
-       ctx.commit('setSurahList',  list.data.data)
-       }catch(error){
-        console.log(error)
-       }
-        }
-    },
-    getters: {}
-}
+    setEdition(state, payload) {
+      state.author = payload;
+    }
+  },
+  actions: {
+    async getAbouts(ctx) {
+      try {
+        const list = await axios.get(`${process.env.VUE_APP_QURAN_API}`);
+
+        ctx.commit("setSurahList", list.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  },
+  getters: {}
+};

@@ -7,7 +7,10 @@
         <!-- Content links -->
         <div
           class="content-links flex flex-col items-center w-[80%]"
-          v-if="$store.state.searchResult !== [] && $store.state.searchResult[0] !== undefined"
+          v-if="
+            $store.state.searchResult !== [] &&
+            $store.state.searchResult[0] !== undefined
+          "
         >
           <router-link
             :to="item.link"

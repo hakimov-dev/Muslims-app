@@ -6,15 +6,15 @@
 
 <script>
 import mainLayout from "@/layouts/mainLayout";
-import authLayout from "@/layouts/authLayout.vue"
+import authLayout from "@/layouts/authLayout.vue";
 
 export default {
-  components: {mainLayout, authLayout},
+  components: { mainLayout, authLayout },
 
   computed: {
-    layout(){
+    layout() {
       return (this.$route.meta.layout || "auth") + "-layout";
     }
-  },
-}
+  }
+};
 </script>
