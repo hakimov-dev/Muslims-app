@@ -4,7 +4,11 @@ export default {
     mutations: {},
     actions: {
      async getAbouts(ctx){
-     
+       try{
+
+       }catch(error){
+        console.log(error)
+       }
         }
     },
     getters: {}
