@@ -10,7 +10,7 @@
       class="cards flex justify-between items-center flex-wrap md:p-[3%]"
     >
       <Card v-for="item in $store.state.home.surahList" 
-        @click="$store.dispatch('home/getSurahById', item.number)" 
+        @click="playAudio" 
         :surah-about="item" />
     </div>
   </div>
