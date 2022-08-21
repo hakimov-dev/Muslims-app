@@ -69,7 +69,6 @@ const routes = [
      name: 'auth',
      meta: {
       layout: 'auth',
-      auth: true
      },
      component: () => import("../views/Auth")
   },
@@ -80,6 +79,9 @@ const routes = [
   {
       path: '/login',
       name: 'login',
+      meta: {
+        layout: 'auth'
+      },
       component: () => import("../views/Auth")
   }
 ];
