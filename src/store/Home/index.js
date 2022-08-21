@@ -3,7 +3,8 @@ import axios from 'axios'
 export default {
     namespaced: true,
     state: {
-        surahList: null
+        surahList: null,
+        author: null,
     },
     mutations: {
         setSurahList(state, payload){
@@ -11,7 +12,7 @@ export default {
         },
 
         setEdition(state, payload){
-         
+         state.author = payload
         }
     },
     actions: {
