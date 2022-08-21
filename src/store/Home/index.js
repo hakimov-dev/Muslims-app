@@ -5,7 +5,8 @@ export default {
   state: {
     surahList: null,
     activaSurahID: 0,
-    playerContent: null
+    playerContent: null,
+    playerAudios: []
   },
   mutations: {
     setSurahList(state, payload) {
