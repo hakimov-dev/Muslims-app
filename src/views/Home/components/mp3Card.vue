@@ -9,7 +9,7 @@
     >
       <img
         class="md:h-[160px] h-[120px] !rounded-xl shadow-xl"
-        src="https://kartinkin.net/uploads/posts/2021-07/1626954887_7-kartinkin-com-p-koran-fon-krasivo-7.jpg"
+        :src="image"
         alt=""
       />
       <img
@@ -48,6 +48,8 @@ import { defineProps } from "vue";
 defineProps({
   surahAbout: Object
 });
+
+const images = [require('@/assets/imgs/book1.jpg'), require('@/assets/imgs/book2.jpg'), require('@/assets/imgs/book3.jpg'), require('@/assets/imgs/book4.jpg'), require('@/assets/imgs/book5.jpg'), require('@/assets/imgs/book6.jpg'), require('@/assets/imgs/book7.jpg')]
 </script>
 
 <style></style>
