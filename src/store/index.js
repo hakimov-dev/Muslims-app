@@ -26,6 +26,7 @@ export default createStore({
   }},
   actions: {},
   modules: {
-    auth: moduleAuth
+    auth: moduleAuth,
+    home: moduleHome
   }
 });
