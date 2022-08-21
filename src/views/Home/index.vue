@@ -17,7 +17,7 @@
       v-else
       class="cards flex justify-between items-center flex-wrap md:p-[3%]"
     >
-      <LoadingCard />
+      <LoadingCard v-for="item in 8" />
     </div>
   </div>
 </template>
