@@ -1,5 +1,6 @@
 <template>
   <div
+    :id="surahAbout.number"
     class="card cursor-pointer group transition-all hover:bg-[#282828] bg-[#171717] md:p-[10px] p-[6px] md:w-[220px] md:h-[310px] w-[175px] h-[250px] shadow-xl my-[20px] rounded-xl"
   >
     <div
