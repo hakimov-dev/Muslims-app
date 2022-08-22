@@ -148,7 +148,6 @@ function onPlay() {
 
     players.forEach(audio => {
       audioDuration.push(Math.floor(audio.duration))
-   
        
        playersDurations.value = audioDuration.reduce((a, b) => a + b)
     })
