@@ -37,6 +37,8 @@ function playAudio(id){
 
   store.state.home.activaSurahID = id
   store.dispatch('home/getSurahById', id)
+ }else{
+   store.state.home.clickAgainCard = true
  }
 }
 
