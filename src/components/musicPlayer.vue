@@ -100,7 +100,6 @@
 import { watchEffect, ref } from "vue";
 import { useStore } from "vuex"
 
-// let isPlay = ref(false);
 let currentTime = ref("00:00");
 let duration = ref("00:00");
 let durationWidth = ref(-10);
