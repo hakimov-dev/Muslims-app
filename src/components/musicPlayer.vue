@@ -90,6 +90,15 @@
         >
           <source src="../assets/audio.mp3" type="audio/mp3" />
         </audio>
+        <audio
+          v-for="item in $store.state.home.playerAudios"
+          class="hidden"
+          id="players"
+          controls
+          controlslist="nodownload noplaybackrate"
+        >
+          <source :src="item" type="audio/mp3" />
+        </audio>
       </div>
      <img @click="closePlayer" class="absolute left-[96%] -top-2  h-[14px] w-[14px] md:left-[78%] md:top-0 md:h-[16px] md:w-[16px] opacity-60 transition-all cursor-pointer hover:opacity-100" src="../assets/imgs/close.png" />
     </div>
@@ -147,6 +156,12 @@ function onPlay() {
         (100 * player.currentTime) / player.duration
       )}% 100%`;
     });
+  
+    // store.state.home.playerAudios.forEach((audio, idx) => {
+    //    const formatAudio = new Audio(audio)
+    //    formatAudio.setAttribute('id', `audio${idx}`)
+    //    console.log(formatAudio.duration)
+    // })
   } else {
     store.state.home.isPlayAudio = false;
     player.pause();
