@@ -142,6 +142,12 @@ function onPlay() {
 
   if (store.state.home.isPlayAudio == false) {
     store.state.home.isPlayAudio = true;
+    // Players
+    players.forEach(audio => {
+      const durations = Math.floor(audio.duration)
+    })
+
+    // Main player
     audioVolume.value = player.volume;
     volumeEl.style.backgroundSize = `${Math.floor(
       (100 * player.volume) / 1
