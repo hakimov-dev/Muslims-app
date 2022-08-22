@@ -35,7 +35,7 @@
             class="play-button bg-white rounded-full md:p-[12px] p-[6px] hover:opacity-80 transition-all cursor-pointer"
           >
             <img
-              v-if="!isPlay"
+              v-if="!$store.state.home.isPlayAudio"
               class="md:h-[20px] md:w-[20px] h-[14px] w-[14px]"
               src="../assets/imgs/play.png"
               alt=""
@@ -100,7 +100,7 @@
 import { watchEffect, ref } from "vue";
 import { useStore } from "vuex"
 
-let isPlay = ref(false);
+// let isPlay = ref(false);
 let currentTime = ref("00:00");
 let duration = ref("00:00");
 let durationWidth = ref(-10);
@@ -115,7 +115,7 @@ function closePlayer(){
 watchEffect(function() {
  if(store.state.home.playerContent !== null){
   setTimeout(() => {
-    isPlay.value = false
+    store.state.home.isPlayAudio = false
     onPlay()
   }, 100);
 }
@@ -126,8 +126,8 @@ function onPlay() {
   var timeline = document.querySelector(".timeline");
   var volumeEl = document.querySelector(".volumeline");
 
-  if (isPlay.value == false) {
-    isPlay.value = true;
+  if (store.state.home.isPlayAudio == false) {
+    store.state.home.isPlayAudio = true;
     audioVolume.value = player.volume;
     volumeEl.style.backgroundSize = `${Math.floor(
       (100 * player.volume) / 1
@@ -144,7 +144,7 @@ function onPlay() {
       )}% 100%`;
     });
   } else {
-    isPlay.value = false;
+    store.state.home.isPlayAudio = false;
     player.pause();
   }
 }
