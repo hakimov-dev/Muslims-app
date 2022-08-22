@@ -21,14 +21,14 @@
       <section
       v-if="$store.state.home.playerContent === null"
       :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[60%] md:top-[70%]' : ''" 
-      class="h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]">
+      class="h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] md:left-[75%] left-[70%]">
       <span class="loader-player"></span>
       </section>
       
       <img
         v-else
         :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[60%] md:top-[70%]' : ''"
-        class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
+        class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] md:left-[75%] left-[70%]"
         :src="$store.state.home.isPlayAudio == true ? require('../../../assets/imgs/pause.png') : require('../../../assets/imgs/play.png')"
         alt=""
       />
