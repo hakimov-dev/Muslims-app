@@ -114,6 +114,7 @@ let duration = ref("00:00");
 let durationWidth = ref(-10);
 let audioVolume = ref(0);
 const store = useStore()
+var playersDurations = ref(null)
 
 function closePlayer(){
   store.state.home.activaSurahID = 0
@@ -143,10 +144,17 @@ function onPlay() {
   if (store.state.home.isPlayAudio == false) {
     store.state.home.isPlayAudio = true;
     // Players
+    const audioDuration = []
+
     players.forEach(audio => {
-      const durations = Math.floor(audio.duration)
+      audioDuration.push(Math.floor(audio.duration))
+   
+       
+       playersDurations.value = audioDuration.reduce((a, b) => a + b)
     })
 
+    console.log(playersDurations.value)
+    
     // Main player
     audioVolume.value = player.volume;
     volumeEl.style.backgroundSize = `${Math.floor(
