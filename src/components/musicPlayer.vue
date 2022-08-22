@@ -138,6 +138,7 @@ function onPlay() {
   var player = document.querySelector("#player");
   var timeline = document.querySelector(".timeline");
   var volumeEl = document.querySelector(".volumeline");
+  var players = document.querySelectorAll('#players')
 
   if (store.state.home.isPlayAudio == false) {
     store.state.home.isPlayAudio = true;
