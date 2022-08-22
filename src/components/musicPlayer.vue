@@ -112,11 +112,16 @@ function closePlayer(){
 }
 
 watchEffect(function() {
- if(store.state.home.playerContent !== null){
+ if(store.state.home.playerContent !== null && store.state.home.clickAgainCard == false){
   setTimeout(() => {
     store.state.home.isPlayAudio = false
     onPlay()
   }, 100);
+}
+
+if(store.state.home.clickAgainCard == true){
+ store.state.home.clickAgainCard = false
+ onPlay()
 }
 })
 
