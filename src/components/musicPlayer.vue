@@ -156,12 +156,6 @@ function onPlay() {
         (100 * player.currentTime) / player.duration
       )}% 100%`;
     });
-  
-    // store.state.home.playerAudios.forEach((audio, idx) => {
-    //    const formatAudio = new Audio(audio)
-    //    formatAudio.setAttribute('id', `audio${idx}`)
-    //    console.log(formatAudio.duration)
-    // })
   } else {
     store.state.home.isPlayAudio = false;
     player.pause();
