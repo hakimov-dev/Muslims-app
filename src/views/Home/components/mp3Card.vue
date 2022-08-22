@@ -12,7 +12,7 @@
       </div>
       <img
         v-if="$store.state.home.activaSurahID !== surahAbout.number"
-        :class="$store.state.home.activaSurahID == surahAbout.number ? '' : ' md:group-hover:top-[70%] group-hover:top-[60%]'"
+        :class="$store.state.home.activaSurahID !== surahAbout.number ? 'md:group-hover:top-[70%] group-hover:top-[60%]' : ''"
         class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] md:left-[75%] left-[70%]"
         src="../../../assets/imgs/play.png"
         alt=""
@@ -29,7 +29,7 @@
         v-else
         :class="$store.state.home.activaSurahID == surahAbout.number ? 'top-[60%] md:top-[70%]' : ''"
         class="transition-all h-[40px] w-[40px] p-[10px] rounded-full bg-white absolute top-[120%] left-[75%]"
-        src="../../../assets/imgs/pause.png"
+        :src="$store.state.home.isPlayAudio == true ? require('../../../assets/imgs/pause.png') : require('../../../assets/imgs/play.png')"
         alt=""
       />
     </div>
