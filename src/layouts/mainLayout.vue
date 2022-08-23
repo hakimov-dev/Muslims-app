@@ -214,7 +214,7 @@ export default {
       this.to = this.from
       this.$router.push(`${this.from.path}`)
     }else{
-      this.$router.push(`${this.to.path}`)
+      this.$router.push(`${this.from.path}`)
       this.to = null
     }
     },
