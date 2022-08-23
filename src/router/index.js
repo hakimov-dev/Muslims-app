@@ -92,8 +92,6 @@ router.beforeEach((to, from, next) => {
       $cookies.isKey("user_lastname") &&
       $cookies.isKey("user_username") &&
       $cookies.isKey("user_name") &&
-      $cookies.isKey("user_city") &&
-      $cookies.isKey("user_country") &&
       $cookies.isKey("user_token_expired_day")
     ) {
       return next();
