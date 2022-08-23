@@ -2,6 +2,10 @@ export default {
     namespaced: true,
     state: {},
     mutations: {},
-    actions: {},
+    actions: {
+       async getIpAddress(){
+     
+       }
+    },
     getters: {}
 }
