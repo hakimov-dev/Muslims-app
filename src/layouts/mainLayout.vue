@@ -108,8 +108,8 @@
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
           <div class="md:flex hidden items-center w-[10%] justify-between">
-            <button id="left" @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="left" src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
-            <button id="right" @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="right" src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
+            <button id="left" @click="prevNext($event)" :class="from === null ? 'opacity-60 cursor-not-allowed' : ''" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="left" src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
+            <button id="right" @click="prevNext($event)" :class="to === null ? 'opacity-60 cursor-not-allowed' : ''" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="right" src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
           </div>
           <div
             @click.stop
