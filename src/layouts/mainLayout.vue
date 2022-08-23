@@ -176,7 +176,9 @@
           <router-view />
         </div>
         <!-- Music player -->
-        <musicPlayer class="fixed w-full bottom-0 bg-[#181818] md:h-[13vh]" />
+        <transition>
+         <musicPlayer class="fixed w-full bottom-0 bg-[#181818] md:h-[13vh]" />
+        </transition>
       </div>
     </div>
   </div>
