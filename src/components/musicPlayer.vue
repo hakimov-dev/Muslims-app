@@ -160,7 +160,10 @@ function onPlay() {
     player.src = store.state.home.playerAudios[audioID.value]
     
     player.addEventListener('ended',  event => {
-      console.log('End')
+      if(audioID.value !== store.state.home.playerAudios.length){
+        player.src = store.state.home.playerAudios[audioID.value++]
+        player.play()
+      }
     })
 
     audioVolume.value = player.volume;
