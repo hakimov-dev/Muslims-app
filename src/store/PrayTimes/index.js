@@ -5,7 +5,7 @@ export default {
     state: {},
     mutations: {},
     actions: {
-       async getIpAdress(){
+       async getIpAdress(ctx){
         try{
          const IPadress = await axios.get(`${process.env.VUE_APP_IP_API}`)
 
