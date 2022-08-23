@@ -27,6 +27,10 @@ export default {
         }catch(error){
           console.log(error)
         }
+       },
+
+       async getPrayTimes(ctx){
+        
        }
     },
     getters: {}
