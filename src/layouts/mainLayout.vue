@@ -201,6 +201,9 @@ export default {
 
   methods: {
     
+    prevNext(event){
+    
+    },
 
     isScrolledIntoView(el) {
       let rect = el.getBoundingClientRect();
