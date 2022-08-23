@@ -16,7 +16,11 @@ export default {
        },
 
        async getIpInfo(ctx, payload){
-        
+        try{
+
+        }catch(error){
+          console.log(error)
+        }
        }
     },
     getters: {}
