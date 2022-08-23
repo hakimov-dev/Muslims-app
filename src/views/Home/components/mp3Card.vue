@@ -8,7 +8,7 @@
       class="img-wrap flex flex-col md:h-[160px] h-[120px] overflow-hidden relative"
     >
       <div class="md:h-[160px] h-[120px] !rounded-xl shadow-xl bg-[#c4c4c4] select-none text-center flex items-center justify-center">
-       <h1 class="text-[#00000] font-semibold image-text text-[22px]">{{surahAbout.name}}</h1>
+       <h1 class="text-[#000] font-semibold image-text text-[22px]">{{surahAbout.name}}</h1>
       </div>
       <img
         v-if="$store.state.home.activaSurahID !== surahAbout.number"
