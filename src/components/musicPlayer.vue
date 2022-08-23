@@ -88,7 +88,7 @@
           controls
           controlslist="nodownload noplaybackrate"
         >
-          <source src="../assets/audio.mp3" type="audio/mp3" />
+          <source :src="audio" type="audio/mp3" />
         </audio>
         <audio
           v-for="item in $store.state.home.playerAudios"
@@ -115,6 +115,7 @@ let durationWidth = ref(-10);
 let audioVolume = ref(0);
 const store = useStore()
 var playersDurations = ref(null)
+var audio = ref(null)
 
 function closePlayer(){
   store.state.home.activaSurahID = 0
