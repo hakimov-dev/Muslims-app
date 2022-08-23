@@ -157,6 +157,12 @@ function onPlay() {
     }, 1000);
     
     // Main player
+    player.src = store.state.home.playerAudios[audioID.value]
+    
+    player.addEventListener('ended',  event => {
+      console.log('End')
+    })
+
     audioVolume.value = player.volume;
     volumeEl.style.backgroundSize = `${Math.floor(
       (100 * player.volume) / 1
