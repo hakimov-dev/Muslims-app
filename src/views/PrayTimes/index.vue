@@ -18,4 +18,6 @@ import PrayTimeCard from "./components/PrayTimeCard.vue";
 import { useStore } from "vuex";
 
 const store = useStore()
+
+store.dispatch('prayTimes/getIpAdress')
 </script>
