@@ -47,15 +47,6 @@ const routes = [
     component: () => import("../views/Settings")
   },
   {
-    path: "/search-result/search/:query",
-    name: "search-result",
-    meta: {
-      layout: "main",
-      auth: true
-    },
-    component: () => import("../views/Search")
-  },
-  {
     path: "/favorite",
     name: "favorite",
     meta: {
