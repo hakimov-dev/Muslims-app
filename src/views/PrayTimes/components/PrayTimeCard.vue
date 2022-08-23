@@ -12,10 +12,19 @@
       />
     </div>
     <div
+       v-if="content.title"
       class="text-wrap flex flex-col p-3 text-white leading-[50px] text-center"
     >
       <h1 class="pray-name text-[18px] font-medium">{{ content.title }}</h1>
       <h1 class="pray-time text-[16px] opacity-80">{{ content.time }}</h1>
+    </div>
+   
+    <div
+       v-else
+       class="text-wrap flex flex-col p-3 text-white text-center"
+    >
+      <h1 class="pray-name mb-[22px] text-[28px] font-medium text-gray-300 bg-gray-300 animate-pulse rounded-[3px]">Loading...</h1>
+      <h1 class="pray-time text-[18px] opacity-80 text-gray-300 bg-gray-300 animate-pulse rounded-[3px]">Loading.</h1>
     </div>
   </div>
 </template>
