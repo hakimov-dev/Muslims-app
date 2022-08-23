@@ -108,8 +108,8 @@
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
           <div class="md:flex hidden items-center w-[10%] justify-between">
-            <button id="left" @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
-            <button id="right" @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
+            <button id="left" @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="left" src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
+            <button id="right" @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="right" src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
           </div>
           <div
             @click.stop
@@ -187,7 +187,9 @@ export default {
   data() {
     return {
       dropOpen: false,
-      scrollHeight: 0
+      scrollHeight: 0,
+      to: null, 
+      from: null
     };
   },
 
@@ -203,9 +205,12 @@ export default {
     
     prevNext(event){
     if(event.target.id == 'left'){
-
+      this.$router.beforeEach((to, from) => {
+        console.log('to', to)
+        console.log('from', from)
+      })
     }else{
-      
+
     }
     },
 
