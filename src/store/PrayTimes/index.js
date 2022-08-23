@@ -5,7 +5,7 @@ export default {
     state: {},
     mutations: {
         setPrayTimes(state, payload){
-            
+            console.log(payload)
         }
     },
     actions: {
@@ -23,11 +23,9 @@ export default {
         try{
          const { data } = await axios.get(`${process.env.VUE_APP_IP_INFO_API}/${payload}/json`)
 
-         if($cookies.isKey('user_country') || $cookies.isKey('user_city') || $cookies.isKey('user_timezone')){
           $cookies.set('user_country', data.country_name, '30min')
          .set('user_city', data.city, '30min')
          .set('user_timezone', data.timezone, '30min')
-         }
 
          ctx.dispatch('getPrayTimes')
         }catch(error){
