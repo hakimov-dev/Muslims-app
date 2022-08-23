@@ -212,7 +212,9 @@ export default {
     prevNext(event){
     if(event.target.id == 'left'){
       this.to = this.from
+      this.$router.push(`${this.from.path}`)
     }else{
+      this.$router.push(`${this.to.path}`)
       this.to = null
     }
     },
