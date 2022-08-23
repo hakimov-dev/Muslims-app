@@ -201,14 +201,17 @@ export default {
     this.scroll();
   },
 
+  watch: { 
+     '$route' (to, from) {
+           
+      }
+  },
+
   methods: {
     
     prevNext(event){
     if(event.target.id == 'left'){
-      this.$router.beforeEach((to, from) => {
-        console.log('to', to)
-        console.log('from', from)
-      })
+     
     }else{
 
     }
