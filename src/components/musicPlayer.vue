@@ -116,6 +116,7 @@ let audioVolume = ref(0);
 const store = useStore()
 var playersDurations = ref(null)
 var audio = ref(null)
+var audioID = ref(0)
 
 function closePlayer(){
   store.state.home.activaSurahID = 0
