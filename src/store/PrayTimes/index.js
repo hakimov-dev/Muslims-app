@@ -24,6 +24,8 @@ export default {
          .set('user_city', data.city, '30min')
          .set('user_timezone', data.timezone, '30min')
          }
+
+         ctx.dispatch('getPrayTimes')
         }catch(error){
           console.log(error)
         }
