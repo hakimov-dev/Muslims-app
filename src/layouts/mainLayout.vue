@@ -91,7 +91,7 @@
         <div
           :class="
             scrollHeight > 10
-              ? 'fixed shadow-xl bg-[#000000] w-full z-[111]'
+              ? 'fixed shadow-xl bg-[#070707] w-full z-[111]'
               : ''
           "
           class="transition-all navbar justify-between md:py-0 py-4 md:px-0 px-4 md:pl-[25%] md:pr-[3%] md:h-[90px] h-[70px] flex items-center"
@@ -107,6 +107,10 @@
             />
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
+          <div class="md:flex hidden items-center w-[10%] justify-between">
+            <button class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
+            <button class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
+          </div>
           <!-- <input
             v-model="$store.state.searchValue"
             @keypress.enter="searchItems"
