@@ -48,7 +48,7 @@
             />
           </div>
           <span class="times-display text-white ml-3 text-[14x]">
-            {{ currentTime }}/{{ duration }}
+            {{ currentTime }}/{{ duration || '00:00' }}
           </span>
           <input
             v-model="durationWidth"
