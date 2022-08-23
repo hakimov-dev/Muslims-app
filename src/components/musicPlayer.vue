@@ -178,8 +178,7 @@ function onPlay() {
 }
 
 function formatTime(audio_duration) {
-  console.log(isNaN(audio_duration))
- if(isNaN(audio_duration)){
+ if(isNaN(audio_duration) === false){
   let sec = Math.floor(audio_duration);
   let min = Math.floor(sec / 60);
   min = min >= 10 ? min : "0" + min;
@@ -187,9 +186,12 @@ function formatTime(audio_duration) {
   sec = sec >= 10 ? sec : "0" + sec;
   return min + ":" + sec;
  }else{
-  console.log(audio_duration)
-  store.state.home.isPlayAudio = false;
+   store.state.home.isPlayAudio = true;
   onPlay()
+  setTimeout(() => {
+    store.state.home.isPlayAudio = true;
+    onPlay()    
+  }, 10);
  }
 }
 
