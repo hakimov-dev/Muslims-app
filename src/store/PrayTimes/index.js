@@ -2,7 +2,9 @@ import axios from 'axios'
 
 export default {
     namespaced: true,
-    state: {},
+    state: {
+        prayTimes: null
+    },
     mutations: {
         setPrayTimes(state, payload){
             console.log(payload)
