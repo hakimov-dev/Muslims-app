@@ -3,7 +3,11 @@ import axios from 'axios'
 export default {
     namespaced: true,
     state: {},
-    mutations: {},
+    mutations: {
+        setPrayTimes(state, payload){
+            
+        }
+    },
     actions: {
        async getIpAdress(ctx){
         try{
