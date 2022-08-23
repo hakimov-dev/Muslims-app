@@ -146,13 +146,14 @@ function onPlay() {
     // Players
     const audioDuration = []
 
-    players.forEach(audio => {
+    setTimeout(() => {
+      players.forEach(audio => {
       audioDuration.push(Math.floor(audio.duration))
-       
-       playersDurations.value = audioDuration.reduce((a, b) => a + b)
     })
 
-    console.log(playersDurations.value)
+    playersDurations.value = audioDuration.reduce((a, b) => a + b)
+    console.log(formatTime(playersDurations.value))
+    }, 1000);
     
     // Main player
     audioVolume.value = player.volume;
@@ -162,12 +163,12 @@ function onPlay() {
     player.play();
     player.addEventListener("timeupdate", (event) => {
       currentTime.value = formatTime(player.currentTime);
-      duration.value = formatTime(player.duration);
+      duration.value = formatTime(playersDurations.value);
       durationWidth.value = Math.floor(
-        (100 * player.currentTime) / player.duration
+        (100 * player.currentTime) / playersDurations.value
       );
       timeline.style.backgroundSize = `${Math.floor(
-        (100 * player.currentTime) / player.duration
+        (100 * player.currentTime) / playersDurations.value
       )}% 100%`;
     });
   } else {
