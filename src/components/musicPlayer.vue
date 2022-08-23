@@ -152,7 +152,6 @@ function onPlay() {
     })
 
     playersDurations.value = audioDuration.reduce((a, b) => a + b)
-    console.log(formatTime(playersDurations.value))
     }, 1000);
     
     // Main player
