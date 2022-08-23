@@ -15,4 +15,5 @@
 
 <script setup>
 import PrayTimeCard from "./components/PrayTimeCard.vue";
+import { useStore } from "vuex";
 </script>
