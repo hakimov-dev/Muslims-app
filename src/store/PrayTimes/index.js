@@ -17,7 +17,7 @@ export default {
 
        async getIpInfo(ctx, payload){
         try{
-
+         const { data } = await axios.get(`${process.env.VUE_APP_IP_INFO_API}/${payload}/json`)
         }catch(error){
           console.log(error)
         }
