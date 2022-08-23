@@ -19,7 +19,6 @@ export default {
         try{
          const { data } = await axios.get(`${process.env.VUE_APP_IP_INFO_API}/${payload}/json`)
 
-         console.log(data)
          if($cookies.isKey('user_country') || $cookies.isKey('user_city') || $cookies.isKey('user_timezone')){
           $cookies.set('user_country', data.country_name, '30min')
          .set('user_city', data.city, '30min')
