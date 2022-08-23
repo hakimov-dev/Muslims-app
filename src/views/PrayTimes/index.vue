@@ -8,7 +8,7 @@
     <div
       class="pray-times-cards flex justify-evenly items-center flex-wrap mt-[3%]"
     >
-      <PrayTimeCard v-for="(item, idx) in $store.state.prayTimes.prayTimes" :id="idx" />
+      <PrayTimeCard v-for="(item, idx) in $store.state.prayTimes.prayTimes" :id="idx" :content="item"/>
     </div>
   </div>
 </template>

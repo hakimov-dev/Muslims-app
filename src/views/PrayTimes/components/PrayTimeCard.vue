@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-const props = defineProps(["id"]);
+const props = defineProps(["id", "content"]);
 
 function returnImage(id) {
   if (id == 1) return require("../../../assets/imgs/fajr.jpg");
