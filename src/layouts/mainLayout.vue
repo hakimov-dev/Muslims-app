@@ -202,7 +202,11 @@ export default {
   methods: {
     
     prevNext(event){
-    
+    if(event.target.id == 'left'){
+
+    }else{
+      
+    }
     },
 
     isScrolledIntoView(el) {
