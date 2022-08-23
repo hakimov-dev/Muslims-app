@@ -140,7 +140,6 @@ function onPlay() {
   var timeline = document.querySelector(".timeline");
   var volumeEl = document.querySelector(".volumeline");
   var players = document.querySelectorAll('#players')
-  var setTimeIntervalID = 0
  
   if (store.state.home.isPlayAudio == false) {
     store.state.home.isPlayAudio = true;
@@ -187,13 +186,11 @@ function formatTime(audio_duration) {
   sec = sec >= 10 ? sec : "0" + sec;
   return min + ":" + sec;
  }else{
-  setTimeIntervalID = setInterval(() => {
    store.state.home.isPlayAudio = true;
    onPlay()
    setTimeout(() => {
    store.state.home.isPlayAudio = true;
    onPlay()    
-  }, 10);
   }, 10);
  }
 }
