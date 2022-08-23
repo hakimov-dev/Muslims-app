@@ -39,7 +39,7 @@ export default {
 
           const times = data.data[new Date().getDate() - 1].timings
           
-          ctx.commit('setPrayTimes', [String(times['Fajr']), String(times['Sunrise']), String(times['Dhuhr']), String(times['Asr'], String(times['Maghrib']), String(times['Isha']))])
+          ctx.commit('setPrayTimes', [{title: 'Fajr', time: String(times['Fajr'])}, {title: 'Sunrise', time:String(times['Sunrise'])}, {title: 'Dhuhr', time: String(times['Dhuhr'])}, {title: 'Asr', time:String(times['Asr'])}, {title: 'Maghrib', time:String(times['Maghrib'])}, {title: 'Isha', time:String(times['Isha'])}])
         }catch(error){
             console.log(error)
         }
