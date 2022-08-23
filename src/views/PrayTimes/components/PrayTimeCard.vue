@@ -14,8 +14,8 @@
     <div
       class="text-wrap flex flex-col p-3 text-white leading-[50px] text-center"
     >
-      <h1 class="pray-name text-[18px] font-medium">Asr</h1>
-      <h1 class="pray-time text-[16px] opacity-80">00:00</h1>
+      <h1 class="pray-name text-[18px] font-medium">{{ content.title }}</h1>
+      <h1 class="pray-time text-[16px] opacity-80">{{ content.time }}</h1>
     </div>
   </div>
 </template>
