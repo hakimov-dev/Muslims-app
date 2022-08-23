@@ -155,6 +155,18 @@ function onPlay() {
 
     playersDurations.value = audioDuration.reduce((a, b) => a + b)
     }, 1000);
+
+    // Player current time 
+
+    let playerCurrentTime = 0
+    let intervalID = 0
+    if(playerCurrentTime !== playersDurations.value){
+     intervalID = setInterval(() => {
+      playerCurrentTime++
+     }, 1000);  
+    }else{
+      clearInterval(intervalID)
+    }
     
     // Main player
     player.src = store.state.home.playerAudios[audioID.value]
@@ -172,13 +184,13 @@ function onPlay() {
     )}% 100%`;
     player.play();
     player.addEventListener("timeupdate", (event) => {
-      currentTime.value = formatTime(player.currentTime);
+      currentTime.value = formatTime(playerCurrentTime);
       duration.value = formatTime(playersDurations.value);
       durationWidth.value = Math.floor(
-        (100 * player.currentTime) / playersDurations.value
+        (100 * playerCurrentTime) / playersDurations.value
       );
       timeline.style.backgroundSize = `${Math.floor(
-        (100 * player.currentTime) / playersDurations.value
+        (100 * playerCurrentTime) / playersDurations.value
       )}% 100%`;
     });
   } else {
