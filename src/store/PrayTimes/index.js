@@ -3,8 +3,12 @@ export default {
     state: {},
     mutations: {},
     actions: {
-       async getIpAddress(){
-     
+       async getIpAdress(){
+        try{
+
+        }catch(error){
+            console.log(error)
+        }
        }
     },
     getters: {}
