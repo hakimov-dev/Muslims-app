@@ -21,7 +21,9 @@ export default {
 
          console.log(data)
          if($cookies.isKey('user_country') || $cookies.isKey('user_city') || $cookies.isKey('user_timezone')){
-     
+          $cookies.set('user_country', data.country_name, '30min')
+         .set('user_city', data.city, '30min')
+         .set('user_timezone', data.timezone, '30min')
          }
         }catch(error){
           console.log(error)
