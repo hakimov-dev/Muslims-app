@@ -203,17 +203,17 @@ export default {
 
   watch: { 
      '$route' (to, from) {
-           
-      }
-  },
+          if(to !== from)
+            this.from = from
+  }},
 
   methods: {
     
     prevNext(event){
     if(event.target.id == 'left'){
-     
+      this.to = this.from
     }else{
-
+      this.to = null
     }
     },
 
@@ -236,7 +236,7 @@ export default {
       };
     }
   }
-};
+}
 </script>
 
 <style>
