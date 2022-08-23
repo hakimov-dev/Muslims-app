@@ -7,7 +7,7 @@ export default {
     },
     mutations: {
         setPrayTimes(state, payload){
-            console.log(payload)
+            state.prayTimes = payload
         }
     },
     actions: {
