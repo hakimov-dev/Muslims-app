@@ -33,7 +33,9 @@ export default {
 
        async getPrayTimes(ctx){
         try{
+         const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_API}${$cookies.get('user_city')}&country=${$cookies.get('user_country')}=2&month=${new Date().getMonth() + 1}&year=${new Date().getFullYear()}`)
 
+         console.log(data.data[new Date().getDate() - 1].timings)
         }catch(error){
             console.log(error)
         }
