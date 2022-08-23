@@ -111,13 +111,6 @@
             <button @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
             <button @click="prevNext($event)" class="bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
           </div>
-          <!-- <input
-            v-model="$store.state.searchValue"
-            @keypress.enter="searchItems"
-            class="md:block hidden search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[30%] p-2 px-10 bg-[#121416] rounded-[20px]"
-            type="text"
-            placeholder="Enter something for search..."
-          /> -->
           <div
             @click.stop
             :class="

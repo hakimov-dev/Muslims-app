@@ -3,31 +3,9 @@ import moduleAuth from "./Auth";
 import moduleHome from "./Home";
 
 export default createStore({
-  state: {
-    searchValue: "",
-    searchResult: []
-  },
+  state: {},
   getters: {},
-  mutations: {
-    search(state, payload) {
-      let allLinks = [
-        { title: "Home", link: "/" },
-        { title: "Pray times", link: "/pray-time" },
-        { title: "Muslims calendar", link: "/muslims-calendar" },
-        { title: "Settings", link: "/user-settings" },
-        { title: "Update password", link: "/update-passwords" },
-        { title: "Favorite", link: "/favorite" }
-      ];
-
-      const search =
-        allLinks[
-          allLinks.findIndex((x) => x.title == state.searchValue.trim())
-        ];
-
-      state.searchResult = [];
-      state.searchResult.push(search);
-    }
-  },
+  mutations: {},
   actions: {},
   modules: {
     auth: moduleAuth,
