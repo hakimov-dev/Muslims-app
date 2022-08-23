@@ -187,11 +187,13 @@ function formatTime(audio_duration) {
   sec = sec >= 10 ? sec : "0" + sec;
   return min + ":" + sec;
  }else{
+  setTimeIntervalID = setInterval(() => {
    store.state.home.isPlayAudio = true;
-  onPlay()
-  setTimeout(() => {
-    store.state.home.isPlayAudio = true;
-    onPlay()    
+   onPlay()
+   setTimeout(() => {
+   store.state.home.isPlayAudio = true;
+   onPlay()    
+  }, 10);
   }, 10);
  }
 }
