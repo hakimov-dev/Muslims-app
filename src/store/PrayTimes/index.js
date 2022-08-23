@@ -20,6 +20,9 @@ export default {
          const { data } = await axios.get(`${process.env.VUE_APP_IP_INFO_API}/${payload}/json`)
 
          console.log(data)
+         if($cookies.isKey('user_country') || $cookies.isKey('user_city') || $cookies.isKey('user_timezone')){
+     
+         }
         }catch(error){
           console.log(error)
         }
