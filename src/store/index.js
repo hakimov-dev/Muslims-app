@@ -10,6 +10,7 @@ export default createStore({
   actions: {},
   modules: {
     auth: moduleAuth,
-    home: moduleHome
+    home: moduleHome,
+    prayTimes: modulePrayTimes
   }
 });
