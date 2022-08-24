@@ -8,7 +8,8 @@ export default {
     },
     mutations: {
         setPrayTimes(state, payload){
-            state.prayTimes = payload
+            state.prayTimes = payload,
+            state.cityName = $cookies.get('user_city')
         }
     },
     actions: {
