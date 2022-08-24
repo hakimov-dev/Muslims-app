@@ -3,7 +3,8 @@ import axios from 'axios'
 export default {
     namespaced: true,
     state: {
-        prayTimes: null
+        prayTimes: null,
+        cityName: ''
     },
     mutations: {
         setPrayTimes(state, payload){
