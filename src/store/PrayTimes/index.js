@@ -52,7 +52,7 @@ export default {
       async searchCity(ctx, value){
         try{
             if(value !== ''){
-                const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_DAY_API}${value}.json`)
+                const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_DAY_API}${value}.json?key=${process.env.VUE_APP_PRAY_TIMES_DAY_API_KEY}`)
 
                 console.log(data)
             }else{
