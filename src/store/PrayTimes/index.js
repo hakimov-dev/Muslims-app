@@ -50,7 +50,11 @@ export default {
        },
 
        searchCity(ctx, value){
-        
+        if(value !== ''){
+            alert('succes')
+        }else{
+            alert('Input is emty')
+        }
        }
     },
     getters: {}
