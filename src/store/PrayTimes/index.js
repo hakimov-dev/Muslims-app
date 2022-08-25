@@ -52,11 +52,25 @@ export default {
       async searchCity(ctx, value){
         try{
             if(value !== ''){
-                const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_API}${value.split(" ")[0]}&country=${value.split(" ")[0]}=2&month=${new Date().getMonth() + 1}&year=${new Date().getFullYear()}`)
+                // const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_API}${value.split(" ")[0]}&country=${value.split(" ")[0]}=2&month=${new Date().getMonth() + 1}&year=${new Date().getFullYear()}`)
 
-                const times = data.data[new Date().getDate() - 1].timings
+                // const times = data.data[new Date().getDate() - 1].timings
                 
-                console.log(times)
+                // console.log(times)
+                const options = {
+                    method: 'GET',
+                    url: 'https://vanitysoft-boundaries-io-v1.p.rapidapi.com/reaperfire/rest/v1/public/boundary/county/levy/state/fl',
+                    headers: {
+                      'X-RapidAPI-Key': 'a3edcb46b9msh778b6a70b4e7f29p1f63aajsn6433f5ae43f9',
+                      'X-RapidAPI-Host': 'vanitysoft-boundaries-io-v1.p.rapidapi.com'
+                    }
+                  };
+                  
+                  axios.request(options).then(function (response) {
+                      console.log(response.data);
+                  }).catch(function (error) {
+                      console.error(error);
+                  });
             }else
                 alert('Input is emty')
             
