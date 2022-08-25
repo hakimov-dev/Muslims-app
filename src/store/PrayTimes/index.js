@@ -47,6 +47,10 @@ export default {
         }catch(error){
             console.log(error)
         }
+       },
+
+       searchCity(ctx, value){
+        
        }
     },
     getters: {}
