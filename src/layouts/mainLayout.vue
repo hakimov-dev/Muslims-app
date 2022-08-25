@@ -168,7 +168,7 @@
         <!-- Show page -->
         <div
           :class="dropOpen ? 'min-h-[72.5vh]' : ''"
-          class="show-page md:min-h-[60.5vh] min-h-[68.5vh] h-auto m-2 md:mb-[10%] mb-[35%] md:ml-[22%]"
+          class="show-page md:min-h-[65.5vh] min-h-[68.5vh] h-auto m-2 md:mb-[10%] mb-[35%] md:ml-[22%]"
         >
           <router-view />
         </div>
