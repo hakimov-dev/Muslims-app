@@ -5,6 +5,7 @@
       type="text"
       placeholder="Search city..."
       v-model="$store.state.prayTimes.cityName"
+      @keypress.enter="$store.dispatch('prayTimes/searchCity', $store.state.prayTimes.cityName.trim())"
     />
     <div
       class="pray-times-cards flex justify-evenly items-center flex-wrap mt-[3%]"
