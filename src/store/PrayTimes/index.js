@@ -49,7 +49,7 @@ export default {
         }
        },
 
-       searchCity(ctx, value){
+      async searchCity(ctx, value){
         if(value !== ''){
             alert('succes')
         }else{
