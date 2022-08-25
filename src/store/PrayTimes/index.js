@@ -52,7 +52,7 @@ export default {
       async searchCity(ctx, value){
         try{
             if(value !== ''){
-                alert('succes')
+                const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_DAY_API}/${value}.json`)
             }else{
                 alert('Input is emty')
             }
