@@ -50,10 +50,14 @@ export default {
        },
 
       async searchCity(ctx, value){
-        if(value !== ''){
-            alert('succes')
-        }else{
-            alert('Input is emty')
+        try{
+            if(value !== ''){
+                alert('succes')
+            }else{
+                alert('Input is emty')
+            }
+        }catch(error){
+            
         }
        }
     },
