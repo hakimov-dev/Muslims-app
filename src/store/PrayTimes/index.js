@@ -57,7 +57,7 @@ export default {
                 alert('Input is emty')
             }
         }catch(error){
-            
+            console.log(error)
         }
        }
     },
