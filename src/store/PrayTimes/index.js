@@ -9,7 +9,7 @@ export default {
     mutations: {
         setPrayTimes(state, payload){
             state.prayTimes = payload,
-            state.cityName = $cookies.get('user_city')
+            state.cityName = `${$cookies.get('user_country')} | ${$cookies.get('user_city')}`
         }
     },
     actions: {
@@ -52,12 +52,14 @@ export default {
       async searchCity(ctx, value){
         try{
             if(value !== ''){
-                const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_DAY_API}${value}.json?key=${process.env.VUE_APP_PRAY_TIMES_DAY_API_KEY}`)
+                const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_API}${value.split(" ")[0]}&country=${value.split(" ")[0]}=2&month=${new Date().getMonth() + 1}&year=${new Date().getFullYear()}`)
 
-                console.log(data)
-            }else{
+                const times = data.data[new Date().getDate() - 1].timings
+                
+                console.log(times)
+            }else
                 alert('Input is emty')
-            }
+            
         }catch(error){
             console.log(error)
         }
