@@ -17,7 +17,8 @@
     "vue": "^3.2.13",
     "vue-cookies": "^1.8.1",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.0",
+    "worldcities": "^0.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
