@@ -57,7 +57,6 @@ export default {
                 // const times = data.data[new Date().getDate() - 1].timings
                 
                 // console.log(times)
-             
             }else
                 alert('Input is emty')
             
