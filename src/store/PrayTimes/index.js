@@ -57,20 +57,7 @@ export default {
                 // const times = data.data[new Date().getDate() - 1].timings
                 
                 // console.log(times)
-                const options = {
-                    method: 'GET',
-                    url: 'https://vanitysoft-boundaries-io-v1.p.rapidapi.com/reaperfire/rest/v1/public/boundary/county/levy/state/fl',
-                    headers: {
-                      'X-RapidAPI-Key': 'a3edcb46b9msh778b6a70b4e7f29p1f63aajsn6433f5ae43f9',
-                      'X-RapidAPI-Host': 'vanitysoft-boundaries-io-v1.p.rapidapi.com'
-                    }
-                  };
-                  
-                  axios.request(options).then(function (response) {
-                      console.log(response.data);
-                  }).catch(function (error) {
-                      console.error(error);
-                  });
+             
             }else
                 alert('Input is emty')
             
