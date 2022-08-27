@@ -1,7 +1,11 @@
 export default {
     namespaced: true,
     state: {
-        user: {}
+        user: {
+            username: '',
+            name: '',
+            surname: '' 
+        }
     },
     mutations: {},
     actions: {},
