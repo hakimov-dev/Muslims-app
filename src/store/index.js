@@ -3,6 +3,7 @@ import moduleAuth from "./Auth";
 import moduleHome from "./Home";
 import modulePrayTimes from "./PrayTimes"
 import moduleCalendar from './Calendar'
+import moduleSettings from './Settings'
 
 export default createStore({
   state: {},
