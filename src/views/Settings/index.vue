@@ -85,7 +85,8 @@ const image = ref(null)
 
 function uploadImage(){
   let file = document.getElementById('file').files[0]
-   
+  store.commit('settings/postUserAbouts', file)  
+
   image.value = URL.createObjectURL(file)
 }
 </script>
