@@ -12,14 +12,14 @@ export default {
     },
     mutations: {
         postUserAbouts(state, payload){
-         if(state.user.username.trim() !== '' && state.user.name.trim() !== '' && state.user.surname.trim() !== '' || state.user.pic !== null){
+         if(state.user.username.trim() !== '' && state.user.name.trim() !== '' && state.user.surname.trim() !== '' || payload){
             state.updateProfileError = ''
             alert('Your profile was updated!')
             $cookies.set('user_username', state.user.username.trim())
             $cookies.set('user_lastname', state.user.surname.trim())
             $cookies.set('user_name', state.user.name.trim())
-            if(state.user.pic !== null)
-             $cookies.set('user_pic', state.user.pic)
+            if(payload)
+             $cookies.set('user_pic', payload)
 
              state.refreshPage = true
              setTimeout(() => {

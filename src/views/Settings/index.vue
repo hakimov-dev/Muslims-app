@@ -60,7 +60,7 @@
         </div>
          <p class="errorText text-red-600 pt-3" v-if="$store.state.settings.updateProfileError !== ''">{{ $store.state.settings.updateProfileError }}</p>
         <button
-          @click="$store.commit('settings/postUserAbouts', null)"
+          @click="$store.commit('settings/postUserAbouts', file)"
           class="mt-[5%] border-[1px] text-white transition-all font-medium hover:border-gray-300 border-gray-500 w-[70%] p-2 px-4 bg-[#121416] rounded-[5px]"
         >
           Submit
@@ -82,11 +82,10 @@ import { ref } from 'vue'
 
 const store  = useStore()
 const image = ref(null)
+let file = document.getElementById('file').files[0]
+
 
 function uploadImage(){
-  let file = document.getElementById('file').files[0]
-  store.commit('settings/postUserAbouts', file)  
-
   image.value = URL.createObjectURL(file)
 }
 </script>
