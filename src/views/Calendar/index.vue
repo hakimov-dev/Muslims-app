@@ -22,6 +22,9 @@
 
 <script setup>
 import CalendarTable from "./components/CalendarTable.vue";
+import DatePicker from 'vue-datepicker-next';
+import 'vue-datepicker-next/index.css';
+
 import { useStore } from 'vuex'
 
 
