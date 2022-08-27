@@ -22,6 +22,7 @@
 <script setup>
 import CalendarTable from "./components/CalendarTable.vue";
 import { ref } from "vue";
+import { useStore } from 'vuex'
 
 let date = ref("");
 
