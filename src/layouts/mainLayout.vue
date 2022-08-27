@@ -121,8 +121,8 @@
                 :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../assets/imgs/user2.png')"
                 alt=""
               />
-              <h1 class="md:text-[18px] text-[14px] md:block hidden">
-                Hakimov-dev
+              <h1 class="md:text-[18px] text-[14px] md:block hidden capitalize">
+                {{ $store.state.settings.user.username || 'Loading...'}}
               </h1>
             </div>
             <transition>
