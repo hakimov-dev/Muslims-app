@@ -26,6 +26,7 @@
             />
           </label>
           <input
+            @change="uploadImage($event)"
             class="hidden"
             type="file"
             name="file"
