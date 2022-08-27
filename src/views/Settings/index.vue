@@ -86,6 +86,7 @@ const imagaObj = ref(null)
 
 function uploadImage(){
   let file = document.getElementById('file').files[0]
+  imagaObj.value = file
 
   image.value = URL.createObjectURL(file)
 }
