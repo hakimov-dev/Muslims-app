@@ -10,14 +10,14 @@
           class="img-wrap flex justify-center items-center text-center relative"
         >
           <img
-            :class="$store.state.settings.user.pic == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'h-[150px] w-[150px]'"
+            :class="image == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'h-[150px] w-[150px]'"
             class="rounded-full object-contain p-3 select-none"
-            :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../../assets/imgs/user2.png')"
+            :src="image ? image : require('../../assets/imgs/user2.png')"
             alt=""
           />
           <label
             for="file"
-            :class="$store.state.settings.user.pic == null ? 'md:-bottom-[1%] bottom-2 right-[3%] md:-right-[1%]' : 'md:bottom-[4%] md:right-[12%] bottom-2 right-[3%]'"
+            :class="image == null ? 'md:-bottom-[1%] bottom-2 right-[3%] md:-right-[1%]' : 'md:bottom-[4%] md:right-[12%] bottom-2 right-[3%]'"
             class="absolute cursor-pointer h-[35px] w-[35px] bg-[#1b1b1b] pt-[9px] pl-[9px] rounded-full"
           >
             <img
@@ -78,13 +78,15 @@
 
 <script setup>
 import { useStore } from 'vuex'
+import { ref } from 'vue'
 
 const store  = useStore()
+const image = ref(null)
 
 function uploadImage(){
   let file = document.getElementById('file').files[0]
    
-  store.state.settings.user.pic = URL.createObjectURL(file)
+  image.value = URL.createObjectURL(file)
 }
 </script>
 
