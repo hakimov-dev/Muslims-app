@@ -19,7 +19,7 @@ export default {
             $cookies.set('user_lastname', state.user.surname.trim())
             $cookies.set('user_name', state.user.name.trim())
             if(payload)
-             $cookies.set('user_pic', payload)
+             $cookies.set('user_pic', JSON.stringify(payload))
 
              state.refreshPage = true
              setTimeout(() => {
