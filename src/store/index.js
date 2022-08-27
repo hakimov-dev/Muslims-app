@@ -14,6 +14,7 @@ export default createStore({
     auth: moduleAuth,
     home: moduleHome,
     prayTimes: modulePrayTimes,
-    calendar: moduleCalendar
+    calendar: moduleCalendar,
+    settings: moduleSettings
   }
 });
