@@ -8,6 +8,7 @@ export default {
             pic: null 
         },
         updateProfileError: '',
+        updatePasswordError: ''
     },
     mutations: {
         getUserAbouts(state, payload){
