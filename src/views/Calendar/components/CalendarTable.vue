@@ -63,7 +63,7 @@
               {{ item.date.gregorian.weekday.en }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
-              03:48 (+05)
+              {{ item.timings.Fajr }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               05:18 (+05)
