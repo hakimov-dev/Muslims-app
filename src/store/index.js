@@ -6,7 +6,9 @@ import moduleCalendar from './Calendar'
 import moduleSettings from './Settings'
 
 export default createStore({
-  state: {},
+  state: {
+    refreshPage: false
+  },
   getters: {},
   mutations: {},
   actions: {},
