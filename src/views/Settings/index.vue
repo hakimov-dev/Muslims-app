@@ -10,7 +10,7 @@
           class="img-wrap flex justify-center items-center text-center relative"
         >
           <img
-            :class="$store.state.settings.user.pic == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'md:h-[130px] md:w-[130px]'"
+            :class="$store.state.settings.user.pic == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'md:h-[180px] md:w-[180px]'"
             class="rounded-full object-contain p-3 select-none"
             :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../../assets/imgs/user2.png')"
             alt=""
@@ -76,7 +76,10 @@
 </template>
 
 <script setup>
-function uploadImage(event){
-  
+
+function uploadImage(){
+  let file = document.getElementById('file').files[0]
+   
+  store.state.settings.user.pic = URL.createObjectURL(file)
 }
 </script>
