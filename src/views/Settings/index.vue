@@ -90,6 +90,14 @@ function uploadImage(){
 
   image.value = URL.createObjectURL(file)
 }
+
+function stringify(obj) {
+    const replacer = [];
+    for (const key in obj) {
+        replacer.push(key);
+    }
+    return JSON.stringify(replacer);
+}
 </script>
 
 <script>
