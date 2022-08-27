@@ -87,3 +87,9 @@ function uploadImage(){
   store.state.settings.user.pic = URL.createObjectURL(file)
 }
 </script>
+
+<script>
+export default {
+  
+}
+</script>
