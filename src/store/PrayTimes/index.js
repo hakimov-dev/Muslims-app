@@ -31,8 +31,9 @@ export default {
           $cookies.set('user_country', data.country_name)
          .set('user_city', data.city)
          .set('user_timezone', data.timezone)
-
-         ctx.dispatch('getPrayTimes')
+        
+        if(router.currentRoute.value.name == 'pray-time')
+          ctx.dispatch('getPrayTimes')
         }catch(error){
           console.log(error)
         }
