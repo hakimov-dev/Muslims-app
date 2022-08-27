@@ -75,7 +75,7 @@
               {{ item.timings.Asr }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
-              19:40 (+05)
+              {{ item.timings.Maghrib }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               21:10 (+05)
