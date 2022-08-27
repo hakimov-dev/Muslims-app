@@ -31,6 +31,7 @@ Calendar(store.state.calendar.inputDate)
 
 function Calendar(value){
  if(value !== ''){
+  store.state.calendar.calendarData = null
   store.dispatch('calendar/getCalendar', {month: value.getMonth() + 1, year: value.getFullYear()})
  }
 }
