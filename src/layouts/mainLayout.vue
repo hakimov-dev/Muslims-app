@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!$store.state.refreshPage" class="main-layout" @click="dropOpen = false">
+  <div v-if="!$store.state.settings.refreshPage" class="main-layout" @click="dropOpen = false">
     <div class="flex md:flex-row flex-col-reverse items-start">
       <!-- Sidebar -->
       <div

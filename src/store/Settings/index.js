@@ -8,6 +8,7 @@ export default {
             pic: null 
         },
         updateProfileError: '',
+        refreshPage: false
     },
     mutations: {
         getUserAbouts(state, payload){
