@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#181818] rounded-xl">
-    <div class="overflow-x-auto !rounded-t-md mt-[3%]">
+    <div class="overflow-x-auto !rounded-t-md mt-[3%]" v-if="$store.state.calendar.calendarData">
       <table class="table-auto w-full !rounded-t-xl text-white">
         <thead class="border-b">
           <tr class="bg-[#000000]">
