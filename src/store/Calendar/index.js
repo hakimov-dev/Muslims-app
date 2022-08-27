@@ -11,7 +11,7 @@ export default {
           try{
            const { data } = await axios.get(`${process.env.VUE_APP_PRAY_TIMES_API}${$cookies.get('user_city')}&country=${$cookies.get('user_country')}=2&month=${date.month}&year=${date.year}`)
       
-           
+           ctx.commit('setCalendarData', data.data)
           }catch(error){
             console.log(error)
           }
