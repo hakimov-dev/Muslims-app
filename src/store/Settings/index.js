@@ -20,6 +20,11 @@ export default {
             $cookies.set('user_name', state.user.name.trim())
             if(state.user.pic !== null)
              $cookies.set('user_pic', state.user.pic)
+
+             state.refreshPage = true
+             setTimeout(() => {
+                 state.refreshPage = false
+             }, 1);
          }else
            state.updateProfileError = 'Rows are empty enter something in rows!'
         }
