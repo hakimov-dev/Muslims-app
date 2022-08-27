@@ -12,7 +12,7 @@
         >
           <img
             class="md:h-[120px] md:w-[120px] rounded-full object-contain bg-black p-3 select-none"
-            src="../../assets/imgs/user2.png"
+            :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../../assets/imgs/user2.png')"
             alt=""
           />
           <label
