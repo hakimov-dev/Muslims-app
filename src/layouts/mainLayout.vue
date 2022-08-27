@@ -122,7 +122,7 @@
                 alt=""
               />
               <h1 class="md:text-[18px] text-[14px] md:block hidden capitalize">
-                {{ $store.state.settings.user.username || 'Loading...'}}
+                {{ $cookies.get('user_username') || 'Loading...'}}
               </h1>
             </div>
             <transition>
