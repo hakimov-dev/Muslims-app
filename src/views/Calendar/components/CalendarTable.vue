@@ -177,5 +177,9 @@
 <script setup>
 function active(date){
   const d = new Date()
+  if(date == `${d.getDate() > 9 ? d.getDate() : '0' + d.getDate()}-${d.getMonth() + 1 > 9 ? d.getMonth() + 1 : '0' + d.getMonth() + 1}-${d.getFullYear()}`)
+    return true
+  else 
+    return false
 }
 </script>
