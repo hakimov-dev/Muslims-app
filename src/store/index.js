@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 import moduleAuth from "./Auth";
 import moduleHome from "./Home";
 import modulePrayTimes from "./PrayTimes"
+import moduleCalendar from './Calendar'
 
 export default createStore({
   state: {},
