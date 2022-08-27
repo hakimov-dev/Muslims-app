@@ -121,7 +121,7 @@
             <div @click="dropOpen = !dropOpen" class="flex items-center">
               <img
                 class="h-[30px] w-[30px] rounded-full mr-2"
-                :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../../assets/imgs/user2.png')"
+                :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../assets/imgs/user2.png')"
                 alt=""
               />
               <h1 class="md:text-[18px] text-[14px] md:block hidden">
