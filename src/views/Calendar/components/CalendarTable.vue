@@ -4,7 +4,9 @@
       <table class="table-auto w-full !rounded-t-xl text-white">
         <thead class="border-b">
           <tr class="bg-[#000000]">
-            <th class="text-center p-4 font-medium">Mуxаrrам</th>
+            <th class="text-center p-4 font-medium">
+             {{ $store.state.calendar.calendarData[0].date.hijri.month.en }}
+            </th>
             <th
               class="text-center border-l-[1px] border-gray-400 p-4 font-medium"
             >
