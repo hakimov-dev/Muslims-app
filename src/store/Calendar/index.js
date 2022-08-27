@@ -3,11 +3,12 @@ import axios from 'axios'
 export default {
     namespaced: true,
     state: {
-        inputDate: ''
+        inputDate: '',
+        calendarData: null
     },
     mutations: {
         setCalendarData(state, data){
-            
+
         }
     },
     actions: {
