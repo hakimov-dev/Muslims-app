@@ -76,4 +76,7 @@
 </template>
 
 <script setup>
+function uploadImage(event){
+  
+}
 </script>
