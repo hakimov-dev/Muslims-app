@@ -10,7 +10,7 @@
           class="img-wrap flex justify-center items-center text-center relative"
         >
           <img
-            :class="$store.state.settings.user.pic == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'md:h-[180px] md:w-[180px]'"
+            :class="$store.state.settings.user.pic == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'h-[150px] w-[150px] md:h-[220px] md:w-[220px]'"
             class="rounded-full object-contain p-3 select-none"
             :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../../assets/imgs/user2.png')"
             alt=""
