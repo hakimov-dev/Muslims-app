@@ -6,7 +6,8 @@ export default {
             name: '',
             surname: '',
             pic: null 
-        }
+        },
+        updateProfileError: '',
     },
     mutations: {
         getUserAbouts(state, payload){
