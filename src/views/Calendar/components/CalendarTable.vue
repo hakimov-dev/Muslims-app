@@ -8,7 +8,7 @@
             <th
               class="text-center border-l-[1px] border-gray-400 p-4 font-medium"
             >
-              August
+             {{$store.state.calendar.calendarData[0].date.gregorian.month.en}}
             </th>
             <th
               class="text-center border-l-[1px] border-gray-400 p-4 font-medium"
