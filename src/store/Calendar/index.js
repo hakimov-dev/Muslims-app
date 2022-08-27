@@ -8,7 +8,7 @@ export default {
     },
     mutations: {
         setCalendarData(state, data){
-
+          state.calendarData = data
         }
     },
     actions: {
