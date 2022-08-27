@@ -33,8 +33,8 @@ store.state.calendar.inputDate = `${newDate.getFullYear()}-${String(
 
 Calendar(store.state.calendar.inputDate)
 
-function Calendar(date){
- const date = new Date(date)
+function Calendar(value){
+ const date = new Date(value)
 }
 </script>
 
