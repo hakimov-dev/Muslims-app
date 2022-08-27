@@ -24,7 +24,7 @@ export default {
              state.refreshPage = true
              setTimeout(() => {
                  state.refreshPage = false
-             }, 1);
+             }, 3);
          }else
            state.updateProfileError = 'Rows are empty enter something in rows!'
         }
