@@ -86,7 +86,7 @@ const imageObj = ref(null)
 
 function uploadImage(){
   let file = document.getElementById('file').files[0]
-  imageObj.value = file
+  imageObj.value = stringify(file)
 
   image.value = URL.createObjectURL(file)
 }
