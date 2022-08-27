@@ -58,7 +58,7 @@
             v-for="(item, idx) in $store.state.calendar.calendarData"
           >
             <td class="p-4 text-center">{{ item.date.hijri.day }}</td>
-            <td class="p-4 text-center border-l-[1px] border-gray-400">1</td>
+            <td class="p-4 text-center border-l-[1px] border-gray-400">{{ item.date.gregorian.day }}</td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               Monday
             </td>
