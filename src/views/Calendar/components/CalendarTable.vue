@@ -56,7 +56,7 @@
             class="!rounded-b-md"
             :class="{
               'border-b-[1px] border-gray-400': idx !== $store.state.calendar.calendarData.length -1,
-              'bg-white text-gray-600 font-semibold': item.date.gregorian.day == new Date().getDate()
+              'bg-white text-gray-600 font-semibold': active(item.date.gregorian.date)
             }"
             v-for="(item, idx) in $store.state.calendar.calendarData"
           >
@@ -177,7 +177,8 @@
 <script setup>
 function active(date){
   const d = new Date()
-  if(date == `${d.getDate() > 9 ? d.getDate() : '0' + d.getDate()}-${d.getMonth() + 1 > 9 ? d.getMonth() + 1 : '0' + d.getMonth() + 1}-${d.getFullYear()}`)
+  let month = d.getMonth() + 1 
+  if(date == `${d.getDate() > 9 ? d.getDate() : '0' + d.getDate()}-${month > 9 ? month : '0' + month}-${d.getFullYear()}`)
     return true
   else 
     return false
