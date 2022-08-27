@@ -33,9 +33,11 @@ store.state.calendar.inputDate = `${newDate.getFullYear()}-${String(
 Calendar(store.state.calendar.inputDate)
 
 function Calendar(value){
- const date = new Date(value)
+ if(value !== ''){
+  const date = new Date(value)
 
- store.dispatch('calendar/getCalendar', {month: date.getMonth() + 1, year: date.getFullYear()})
+  store.dispatch('calendar/getCalendar', {month: date.getMonth() + 1, year: date.getFullYear()})
+ }
 }
 </script>
 
