@@ -38,15 +38,6 @@ const routes = [
     component: () => import("../views/Settings")
   },
   {
-    path: "/update-passwords",
-    name: "update-pasword",
-    meta: {
-      layout: "main",
-      auth: true
-    },
-    component: () => import("../views/Settings")
-  },
-  {
     path: "/favorite",
     name: "favorite",
     meta: {

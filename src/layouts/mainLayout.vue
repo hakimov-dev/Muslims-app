@@ -3,7 +3,7 @@
     <div class="flex md:flex-row flex-col-reverse items-start">
       <!-- Sidebar -->
       <div
-        class="z-[1111] sidebar bg-[#000000] md:fixed flex items-center md:flex-col text-white md:h-screen h-[10%] w-full md:w-[20%] md:py-4 md:px-3"
+        class="z-[1111] sidebar bg-[#000000] fixed top-[92%] md:top-0 flex items-center md:flex-col text-white md:h-screen h-[8%] w-full md:w-[20%] md:py-4 md:px-3"
       >
         <router-link
           to="/"
@@ -113,9 +113,6 @@
           </div>
           <div
             @click.stop
-            :class="
-              dropOpen ? 'md:mt-[14%] mt-[25%] md:-mr-0 -mr-[8%] ' : 'md:mt-0'
-            "
             class="user-dropdown p-4 flex flex-col items-center text-white select-none cursor-pointer w-auto float-right"
           >
             <div @click="dropOpen = !dropOpen" class="flex items-center">
@@ -131,29 +128,11 @@
             <transition>
               <div
                 v-if="dropOpen"
-                class="links-box flex flex-col z-[111] items-stretch bg-[#282828] shadow-xl mt-2 md:p-2 p-1 w-full md:rounded-none rounded-[3px] text-center"
+                :class="scrollHeight > 0 ? 'mt-[3%]' : 'md:top-[10%] top-[6%]'"
+                class="links-box group absolute w-[30%] md:mr-0 mr-[6%] md:w-[10%] flex flex-col z-[111] items-stretch bg-[#282828] hover:bg-[#4b4b4b] transition-all shadow-xl mt-2 md:p-0 p-1 w-full md:rounded-none rounded-[3px] text-center"
               >
-                <router-link
-                  class="p-1 m-1 md:flex hidden items-center justify-evenly hover:bg-[#4b4b4b] transition-all"
-                  to="/user-settings"
-                  ><img
-                    class="md:w-[20px] h-[20px]"
-                    src="../assets/imgs/user.png"
-                    alt=""
-                  /><span>Your profile</span></router-link
-                >
-                <router-link
-                  class="p-1 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all"
-                  to="/favorite"
-                  ><img
-                    class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2"
-                    src="../assets/imgs/saved.png"
-                    alt=""
-                  /><span>Favorite</span></router-link
-                >
-                <hr class="h-[.5px] border-gray-500 px-2 md:block hidden" />
                 <div
-                  class="p-1 flex items-center p-1 mt-2 m-1 flex items-center justify-evenly hover:bg-[#4b4b4b] transition-all"
+                  class="p-1 flex items-center group-hover::bg-[#4b4b4b] mt-2 m-1 flex items-center justify-evenly transition-all"
                 >
                   <img
                     class="md:w-[20px] md:h-[20px] w-[16px] h-[16px] md:mr-0 mr-2"
