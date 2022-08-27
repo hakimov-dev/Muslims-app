@@ -15,7 +15,7 @@ export default {
             state.updateProfileError = ''
             $cookies.setItem('user_username', state.user.username.trim())
             $cookies.setItem('user_lastname', state.user.surname.trim())
-            $cookies.get('user_name', state.user.name.trim())
+            $cookies.setItem('user_name', state.user.name.trim())
             if(state.user.pic !== null)
              $cookies.setItem('user_pic', state.user.pic)
          }else
