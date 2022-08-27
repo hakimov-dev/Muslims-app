@@ -5,7 +5,11 @@ export default {
     state: {
         inputDate: ''
     },
-    mutations: {},
+    mutations: {
+        setCalendarData(state, data){
+            
+        }
+    },
     actions: {
         async getCalendar(ctx, date){
           try{
