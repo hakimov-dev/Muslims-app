@@ -82,10 +82,11 @@ import { ref } from 'vue'
 
 const store  = useStore()
 const image = ref(null)
-let file = document.getElementById('file').files[0]
-
+const imagaObj = ref(null)
 
 function uploadImage(){
+  let file = document.getElementById('file').files[0]
+
   image.value = URL.createObjectURL(file)
 }
 </script>
