@@ -30,6 +30,8 @@ const store = useStore()
 store.state.calendar.inputDate = `${newDate.getFullYear()}-${String(
   newDate.getMonth() + 1
 ).padStart(2, "0")}-${String(newDate.getDate()).padStart(2, "0")}`;
+
+console.log(store.state.calendar.inputDate)
 </script>
 
 <style scoped>
