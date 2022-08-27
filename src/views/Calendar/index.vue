@@ -27,6 +27,8 @@ import { useStore } from 'vuex'
 const newDate = new Date();
 const store = useStore()
 
+store.dispatch('prayTimes/getIpAdress')
+
 store.state.calendar.inputDate = `${newDate.getFullYear()}-${String(
   newDate.getMonth() + 1
 ).padStart(2, "0")}-${String(newDate.getDate()).padStart(2, "0")}`;
