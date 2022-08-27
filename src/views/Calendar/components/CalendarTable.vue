@@ -54,7 +54,10 @@
         <tbody>
           <tr
             class="!rounded-b-md"
-            :class="idx !== $store.state.calendar.calendarData.length -1 ? 'border-b-[1px] border-gray-400' : ''"
+            :class="{
+              'border-b-[1px] border-gray-400': idx !== $store.state.calendar.calendarData.length -1,
+              'bg-white text-gray-600 font-semibold': item.date.gregorian.day == new Date().getDate()
+            }"
             v-for="(item, idx) in $store.state.calendar.calendarData"
           >
             <td class="p-4 text-center">{{ item.date.hijri.day }}</td>
