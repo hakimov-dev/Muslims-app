@@ -8,6 +8,7 @@
         type="date"
         name="date"
         id="date"
+        @change="Calendar($store.state.calendar.inputDate)"
       />
       <!-- <input
         class="md:mr-[1%] md:w-[30%] md:mx-auto md:flex justify-center search outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[50%] p-2 px-10 bg-[#121416] rounded-[20px]"
