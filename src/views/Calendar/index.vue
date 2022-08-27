@@ -35,6 +35,8 @@ Calendar(store.state.calendar.inputDate)
 
 function Calendar(value){
  const date = new Date(value)
+
+ store.dispatch('calendar/getCalendar', {month: date.getMonth() + 1, year: date.getFullYear()})
 }
 </script>
 
