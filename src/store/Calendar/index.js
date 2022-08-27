@@ -6,7 +6,11 @@ export default {
     mutations: {},
     actions: {
         async getCalendar(ctx, date){
+          try{
 
+          }catch(error){
+            console.log(error)
+          }
         }
     },
     getters: {}
