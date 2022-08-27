@@ -4,7 +4,8 @@ export default {
         user: {
             username: '',
             name: '',
-            surname: '' 
+            surname: '',
+            pic: null 
         }
     },
     mutations: {},
