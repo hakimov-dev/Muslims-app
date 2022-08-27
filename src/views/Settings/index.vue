@@ -77,9 +77,11 @@
 
 <script setup>
 
+let image = null
+
 function uploadImage(){
   let file = document.getElementById('file').files[0]
    
-  store.state.settings.user.pic = URL.createObjectURL(file)
+  image = URL.createObjectURL(file)
 }
 </script>
