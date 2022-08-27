@@ -86,17 +86,9 @@ const imageObj = ref(null)
 
 function uploadImage(){
   let file = document.getElementById('file').files[0]
-  imageObj.value = stringify(file)
+  imageObj.value = file
 
   image.value = URL.createObjectURL(file)
-}
-
-function stringify(obj) {
-    const replacer = [];
-    for (const key in obj) {
-        replacer.push(key);
-    }
-    return JSON.stringify(replacer);
 }
 </script>
 
