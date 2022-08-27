@@ -54,8 +54,8 @@
         <tbody>
           <tr
             class="!rounded-b-md"
-            :class="item !== 10 ? 'border-b-[1px] border-gray-400' : ''"
-            v-for="item in 10"
+            :class="idx !== $store.state.calendar.calendarData.length -1 ? 'border-b-[1px] border-gray-400' : ''"
+            v-for="(item, idx) in $store.state.calendar.calendarData"
           >
             <td class="p-4 text-center">3</td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">1</td>
