@@ -24,12 +24,11 @@ import CalendarTable from "./components/CalendarTable.vue";
 import { ref } from "vue";
 import { useStore } from 'vuex'
 
-let date = ref("");
 
 const newDate = new Date();
 const store = useStore()
 
-date.value = `${newDate.getFullYear()}-${String(
+ = `${newDate.getFullYear()}-${String(
   newDate.getMonth() + 1
 ).padStart(2, "0")}-${String(newDate.getDate()).padStart(2, "0")}`;
 </script>
