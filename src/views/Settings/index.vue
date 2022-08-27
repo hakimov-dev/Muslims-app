@@ -35,20 +35,23 @@
         </div>
         <div class="inputs-wrap mt-[20px] md:w-[70%] w-[80%]">
           <input
-            class="md:flex justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]"
+            class="md:flex justify-center capitalize outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]"
             type="text"
             v-model="$store.state.settings.user.username"
             placeholder="Enter your username.."
+            maxlength="30"
           />
           <input
-            class="md:flex my-[30px] justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]"
+            class="md:flex my-[30px] capitalize justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]"
             type="text"
             placeholder="Enter your name..."
+            maxlength="30"
           />
           <input
-            class="md:flex justify-center outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]"
+            class="md:flex justify-center capitalize outline-none border-[1px] text-white transition-all font-medium focus:border-gray-300 hover:border-gray-300 focus:border-gray-300 border-gray-500 w-[100%] p-2 px-4 bg-[#121416] rounded-[5px]"
             type="text"
             placeholder="Enter your surname..."
+            maxlength="30"
           />
         </div>
         <button
