@@ -56,7 +56,7 @@
             maxlength="30"
           />
         </div>
-        <p class="errorText text-red-600 pt-3"></p>
+         <p class="errorText text-red-600 pt-3" v-if="$store.state.settings.updateProfileError !== ''">{{ $store.state.settings.updateProfileError }}</p>
         <button
           class="mt-[5%] border-[1px] text-white transition-all font-medium hover:border-gray-300 border-gray-500 w-[70%] p-2 px-4 bg-[#121416] rounded-[5px]"
         >
