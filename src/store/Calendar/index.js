@@ -5,8 +5,8 @@ export default {
     },
     mutations: {},
     actions: {
-        async getCalendar(){
-            
+        async getCalendar(ctx, date){
+
         }
     },
     getters: {}
