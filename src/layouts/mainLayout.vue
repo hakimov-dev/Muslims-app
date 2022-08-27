@@ -199,8 +199,11 @@ export default {
 
   mounted() {
     this.scroll();
-    if(this.$stores.state.settings.user.username !== ''){
-
+    if(this.$store.state.settings.user.username == ''){
+     this.$store.state.settings.user.username = $cookies.get('user_username')
+     this.$store.state.settings.user.surname = $cookies.get('user_lastname')
+     this.$store.state.settings.user.name = $cookies.get('user_name')
+     this.$store.state.settings.user.pic = $cookies.get('user_pic')
     }
   },
 
