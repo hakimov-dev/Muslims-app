@@ -66,7 +66,7 @@
               {{ item.timings.Fajr }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
-              05:18 (+05)
+              {{ item.timings.Sunrise }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               12:29 (+05)
