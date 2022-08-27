@@ -4,6 +4,10 @@ export default {
         inputDate: ''
     },
     mutations: {},
-    actions: {},
+    actions: {
+        async getCalendar(){
+            
+        }
+    },
     getters: {}
 }
