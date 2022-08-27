@@ -60,7 +60,7 @@
             <td class="p-4 text-center">{{ item.date.hijri.day }}</td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">{{ item.date.gregorian.day }}</td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
-              Monday
+              {{ item.date.gregorian.weekday.en }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               03:48 (+05)
