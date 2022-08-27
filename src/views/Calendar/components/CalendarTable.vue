@@ -176,6 +176,6 @@
 
 <script setup>
 function active(date){
-
+  const d = new Date()
 }
 </script>
