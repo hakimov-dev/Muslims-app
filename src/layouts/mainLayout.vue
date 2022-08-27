@@ -199,6 +199,9 @@ export default {
 
   mounted() {
     this.scroll();
+    if(this.$stores.state.settings.user.username !== ''){
+
+    }
   },
 
   watch: { 
