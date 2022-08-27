@@ -10,9 +10,9 @@
           class="img-wrap flex justify-center items-center text-center relative"
         >
           <img
-            :class="image == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'md:h-[180px] md:w-[180px]'"
+            :class="$store.state.settings.user.pic == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'md:h-[180px] md:w-[180px]'"
             class="rounded-full object-contain p-3 select-none"
-            :src="image ? image : require('../../assets/imgs/user2.png')"
+            :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../../assets/imgs/user2.png')"
             alt=""
           />
           <label
@@ -76,12 +76,13 @@
 </template>
 
 <script setup>
+import { useStore } from 'vuex'
 
-let image = null
+const store  = useStore()
 
 function uploadImage(){
   let file = document.getElementById('file').files[0]
    
-  image = URL.createObjectURL(file)
+  store.state.settings.user.pic = URL.createObjectURL(file)
 }
 </script>
