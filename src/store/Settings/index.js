@@ -8,7 +8,11 @@ export default {
             pic: null 
         }
     },
-    mutations: {},
+    mutations: {
+        getUserAbouts(state, payload){
+         
+        }
+    },
     actions: {},
     getters: {}
 }
