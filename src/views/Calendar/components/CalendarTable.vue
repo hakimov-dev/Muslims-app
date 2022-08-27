@@ -69,7 +69,7 @@
               {{ item.timings.Sunrise }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
-              12:29 (+05)
+              {{ item.timings.Dhuhr }}
             </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               16:25 (+05)
