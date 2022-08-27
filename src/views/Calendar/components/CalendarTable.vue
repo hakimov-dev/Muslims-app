@@ -178,9 +178,7 @@
 function active(date){
   const d = new Date()
   let month = d.getMonth() + 1 
-  if(date == `${d.getDate() > 9 ? d.getDate() : '0' + d.getDate()}-${month > 9 ? month : '0' + month}-${d.getFullYear()}`)
-    return true
-  else 
-    return false
+  
+   return date == `${d.getDate() > 9 ? d.getDate() : '0' + d.getDate()}-${month > 9 ? month : '0' + month}-${d.getFullYear()}`
 }
 </script>
