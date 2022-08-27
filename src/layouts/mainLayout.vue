@@ -184,6 +184,7 @@ export default {
      this.$store.state.settings.user.surname = $cookies.get('user_lastname')
      this.$store.state.settings.user.name = $cookies.get('user_name')
      this.$store.state.settings.user.pic = $cookies.get('user_pic') == "null" ? null : JSON.parse($cookies.get('user_pic')) 
+     console.log(this.$store.state.settings.user.pic)
     }
   },
 
