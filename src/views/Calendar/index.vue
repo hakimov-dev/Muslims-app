@@ -32,6 +32,10 @@ store.state.calendar.inputDate = `${newDate.getFullYear()}-${String(
 ).padStart(2, "0")}-${String(newDate.getDate()).padStart(2, "0")}`;
 
 console.log(store.state.calendar.inputDate)
+
+function Calendar(date){
+
+}
 </script>
 
 <style scoped>
