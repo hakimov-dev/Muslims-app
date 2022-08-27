@@ -27,6 +27,7 @@ import { useStore } from 'vuex'
 let date = ref("");
 
 const newDate = new Date();
+const store = useStore()
 
 date.value = `${newDate.getFullYear()}-${String(
   newDate.getMonth() + 1
