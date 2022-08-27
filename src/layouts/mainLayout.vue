@@ -117,7 +117,8 @@
           >
             <div @click="dropOpen = !dropOpen" class="flex items-center">
               <img
-                class="h-[30px] w-[30px] rounded-full mr-2"
+                :class="$store.state.settings.user.pic == null ? 'h-[30px] w-[30px]' : 'h-[35px] w-[35px]'"
+                class="rounded-full mr-2"
                 :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../assets/imgs/user2.png')"
                 alt=""
               />
