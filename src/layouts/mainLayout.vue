@@ -1,7 +1,7 @@
 <template>
   <div v-if="!$store.state.settings.refreshPage" class="main-layout" @click="dropOpen = false">
     <div class="flex md:flex-row flex-col-reverse items-start">
-    <input class="hidden" id="pic" type="text">
+    <input class="hidden" v-model="pic" id="pic" type="text">
       <!-- Sidebar -->
       <div
         class="z-[1111] sidebar bg-[#000000] fixed top-[92%] md:top-0 flex items-center md:flex-col text-white md:h-screen h-[8%] w-full md:w-[20%] md:py-4 md:px-3"
