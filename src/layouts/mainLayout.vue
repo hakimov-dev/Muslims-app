@@ -119,7 +119,7 @@
               <img
                 :class="$store.state.settings.user.pic == null ? 'h-[30px] w-[30px]' : 'h-[35px] w-[35px]'"
                 class="rounded-full mr-2"
-                :src="$store.state.settings.user.pic ? $store.state.settings.user.pic : require('../assets/imgs/user2.png')"
+                :src="$store.state.settings.user.pic !== null ? $store.state.settings.user.pic : require('../assets/imgs/user2.png')"
                 alt=""
               />
               <h1 class="md:text-[18px] text-[14px] md:block hidden capitalize">
@@ -183,7 +183,9 @@ export default {
      this.$store.state.settings.user.username = $cookies.get('user_username')
      this.$store.state.settings.user.surname = $cookies.get('user_lastname')
      this.$store.state.settings.user.name = $cookies.get('user_name')
-     this.$store.state.settings.user.pic = $cookies.get('user_pic') == "null" ? null : JSON.parse($cookies.get('user_pic'))
+     var pic = $cookies.get('user_pic') == "null" ? null : JSON.parse($cookies.get('user_pic'))
+     this.$store.state.settings.user.pic = pic == null ? null : URL.createObjectURL(new File(["logo"], "logo.png", JSON.parse(pic)))
+     console.log(this.$store.state.settings.user.pic)
     }
   },
 
