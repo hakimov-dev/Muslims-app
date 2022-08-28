@@ -9,7 +9,6 @@ export default {
     mutations: {
         setCalendarData(state, data){
           state.calendarData = data
-          console.log(data[0])
         }
     },
     actions: {
