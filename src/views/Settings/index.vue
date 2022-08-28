@@ -90,6 +90,10 @@ function uploadImage(){
 
   image.value = URL.createObjectURL(file)
 }
+
+function stringify(obj) {
+  
+}
 </script>
 
 <script>
