@@ -70,7 +70,6 @@ router.beforeEach((to, from, next) => {
       localStorage.getItem("user_token") &&
       $cookies.isKey("user_favorite") &&
       $cookies.isKey("user_pass") &&
-      $cookies.isKey("user_pic") &&
       $cookies.isKey("user_lastname") &&
       $cookies.isKey("user_username") &&
       $cookies.isKey("user_name") &&
