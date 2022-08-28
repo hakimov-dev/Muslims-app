@@ -1,7 +1,7 @@
 <template>
   <div v-if="!$store.state.settings.refreshPage" class="main-layout" @click="dropOpen = false">
     <div class="flex md:flex-row flex-col-reverse items-start">
-    <input class="hidden" v-model="pic" id="pic" type="text">
+    <input class="hidden" :value="pic" id="pic" type="file">
       <!-- Sidebar -->
       <div
         class="z-[1111] sidebar bg-[#000000] fixed top-[92%] md:top-0 flex items-center md:flex-col text-white md:h-screen h-[8%] w-full md:w-[20%] md:py-4 md:px-3"
@@ -185,9 +185,9 @@ export default {
      this.$store.state.settings.user.username = $cookies.get('user_username')
      this.$store.state.settings.user.surname = $cookies.get('user_lastname')
      this.$store.state.settings.user.name = $cookies.get('user_name')
-     var pic = $cookies.get('user_pic') == "null" ? null : JSON.parse($cookies.get('user_pic'))
-     this.$store.state.settings.user.pic = pic == null ? null : URL.createObjectURL(new File(["logo"], "logo.png", JSON.parse(pic)))
-     console.log(new File(["logo"], "logo.png", JSON.parse(pic)))
+     this.pic = $cookies.get('user_pic') == "null" ? null : new File(["logo"], "logo.png", JSON.parse(JSON.parse($cookies.get('user_pic'))))
+     this.$store.state.settings.user.pic = pic == null ? null : URL.createObjectURL(this.pic)
+     console.log(this.pic)
     }
   },
 
