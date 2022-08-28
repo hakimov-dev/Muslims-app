@@ -182,6 +182,7 @@ export default {
   mounted() {
     this.scroll();
     if(this.$store.state.settings.user.username == ''){
+     var fileInput = document.querySelector('#pic')
      this.$store.state.settings.user.username = $cookies.get('user_username')
      this.$store.state.settings.user.surname = $cookies.get('user_lastname')
      this.$store.state.settings.user.name = $cookies.get('user_name')
