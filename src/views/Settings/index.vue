@@ -52,7 +52,7 @@
         </button>
         <a
           target="_blank"
-          href="https://github.com/hakimov-dev/Muslims-app/discussions/1"
+          href="https://github.com/hakimov-dev/Muslims-app/issues/new"
           class="text-red-500 md:hidden block mt-[10%]"
           >Report bug?</a
         >

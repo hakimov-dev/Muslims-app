@@ -85,7 +85,7 @@
 
         <a
           target="_blank"
-          href="https://github.com/hakimov-dev/Muslims-app/discussions/1"
+          href="https://github.com/hakimov-dev/Muslims-app/issues/new"
           class="text-red-500 md:block hidden md:mt-[100%]"
           >Report bug?</a
         >
