@@ -170,7 +170,8 @@ export default {
       dropOpen: false,
       scrollHeight: 0,
       to: null, 
-      from: null
+      from: null,
+      pic: null
     };
   },
 
