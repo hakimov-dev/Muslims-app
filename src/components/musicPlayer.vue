@@ -1,15 +1,24 @@
 <template>
-  <div class="music-player md:ml-[20%] p-3 select-none" v-if="$store.state.home.playerContent">
-    <div class="flex md:flex-row flex-col items-center justify-between relative">
+  <div
+    class="music-player md:ml-[20%] p-3 select-none"
+    v-if="$store.state.home.playerContent"
+  >
+    <div
+      class="flex md:flex-row flex-col items-center justify-between relative"
+    >
       <div class="img-wrap flex items-center md:w-[40%] w-full mx-auto">
-        <div class="h-[66px] w-[66px] rounded bg-[#c4c4c4] text-center flex items-center justify-center select-none">
-         <h1 class="text-[#00000] font-semibold image-text text-[13px]">{{$store.state.home.playerContent.name}}</h1>
+        <div
+          class="h-[66px] w-[66px] rounded bg-[#c4c4c4] text-center flex items-center justify-center select-none"
+        >
+          <h1 class="text-[#00000] font-semibold image-text text-[13px]">
+            {{ $store.state.home.playerContent.name }}
+          </h1>
         </div>
         <div
           class="author flex flex-col ml-[15px] md:w-[40%] w-[60%] overflow-hidden"
         >
           <h1 class="mp3-name text-[16px] w-[50%] text-white font-medium">
-            {{$store.state.home.playerContent.englishName}}
+            {{ $store.state.home.playerContent.englishName }}
           </h1>
           <h1 class="author-name text-gray-400 text-[12px]">Alafsy</h1>
         </div>
@@ -48,7 +57,7 @@
             />
           </div>
           <span class="times-display text-white ml-3 text-[14x]">
-            {{ currentTime }}/{{ duration || '00:00' }}
+            {{ currentTime }}/{{ duration || "00:00" }}
           </span>
           <input
             v-model="durationWidth"
@@ -100,83 +109,90 @@
           <source :src="item" type="audio/mp3" />
         </audio>
       </div>
-     <img @click="closePlayer" class="absolute left-[96%] -top-2  h-[14px] w-[14px] md:left-[78%] md:top-0 md:h-[16px] md:w-[16px] opacity-60 transition-all cursor-pointer hover:opacity-100" src="../assets/imgs/close.png" />
+      <img
+        @click="closePlayer"
+        class="absolute left-[96%] -top-2 h-[14px] w-[14px] md:left-[78%] md:top-0 md:h-[16px] md:w-[16px] opacity-60 transition-all cursor-pointer hover:opacity-100"
+        src="../assets/imgs/close.png"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import { watchEffect, ref } from "vue";
-import { useStore } from "vuex"
+import { useStore } from "vuex";
 
 let currentTime = ref("00:00");
 let duration = ref("00:00");
 let durationWidth = ref(-10);
 let audioVolume = ref(0);
-const store = useStore()
-var playersDurations = ref(null)
-var audio = ref(null)
-var audioID = ref(0)
+const store = useStore();
+var playersDurations = ref(null);
+var audio = ref(null);
+var audioID = ref(0);
 
-function closePlayer(){
-  store.state.home.activaSurahID = 0
-  store.state.home.playerContent = null
+function closePlayer() {
+  store.state.home.activaSurahID = 0;
+  store.state.home.playerContent = null;
 }
 
-watchEffect(function() {
- if(store.state.home.playerContent !== null && store.state.home.clickAgainCard == false){
-  setTimeout(() => {
-    store.state.home.isPlayAudio = false
-    onPlay()
-  }, 100);
-}
+watchEffect(function () {
+  if (
+    store.state.home.playerContent !== null &&
+    store.state.home.clickAgainCard == false
+  ) {
+    setTimeout(() => {
+      store.state.home.isPlayAudio = false;
+      onPlay();
+    }, 100);
+  }
 
-if(store.state.home.clickAgainCard == true){
- store.state.home.clickAgainCard = false
- onPlay()
-}
-})
+  if (store.state.home.clickAgainCard == true) {
+    store.state.home.clickAgainCard = false;
+    onPlay();
+  }
+});
 
 function onPlay() {
   var player = document.querySelector("#player");
   var timeline = document.querySelector(".timeline");
   var volumeEl = document.querySelector(".volumeline");
-  var players = document.querySelectorAll('#players')
- 
+  var players = document.querySelectorAll("#players");
+
   if (store.state.home.isPlayAudio == false) {
     store.state.home.isPlayAudio = true;
     // Players
-    const audioDuration = []
+    const audioDuration = [];
 
     setTimeout(() => {
-      players.forEach(audio => {
-      audioDuration.push(Math.floor(audio.duration))
-    })
+      players.forEach((audio) => {
+        audioDuration.push(Math.floor(audio.duration));
+      });
 
-    playersDurations.value = audioDuration.reduce((a, b) => a + b)
+      playersDurations.value = audioDuration.reduce((a, b) => a + b);
     }, 1000);
 
-    // Player current time 
+    // Player current time
 
-    let playerCurrentTime = 0
-    let intervalID = 0
-    if(playerCurrentTime !== playersDurations.value){
-     intervalID = setInterval(() => {
-      playerCurrentTime++
-     }, 1000);  
-    }else{
-      clearInterval(intervalID)
+    let playerCurrentTime = 0;
+    let intervalID = 0;
+    if (playerCurrentTime !== playersDurations.value) {
+      intervalID = setInterval(() => {
+        playerCurrentTime++;
+      }, 1000);
+    } else {
+      clearInterval(intervalID);
     }
-    
+
     // Main player
-    player.src = store.state.home.playerAudios[audioID.value]
-    
-    player.addEventListener('ended',  event => {
-      if(audioID.value !== store.state.home.playerAudios.length){
-        player.src = store.state.home.playerAudios[audioID.value++]
-        player.play()
+    player.src = store.state.home.playerAudios[audioID.value];
+
+    player.addEventListener("ended", (event) => {
+      if (audioID.value !== store.state.home.playerAudios.length) {
+        player.src = store.state.home.playerAudios[audioID.value++];
+        player.play();
       }
-    })
+    });
 
     audioVolume.value = player.volume;
     volumeEl.style.backgroundSize = `${Math.floor(
@@ -200,21 +216,21 @@ function onPlay() {
 }
 
 function formatTime(audio_duration) {
- if(isNaN(audio_duration) === false){
-  let sec = Math.floor(audio_duration);
-  let min = Math.floor(sec / 60);
-  min = min >= 10 ? min : "0" + min;
-  sec = Math.floor(sec % 60);
-  sec = sec >= 10 ? sec : "0" + sec;
-  return min + ":" + sec;
- }else{
-   store.state.home.isPlayAudio = true;
-   onPlay()
-   setTimeout(() => {
-   store.state.home.isPlayAudio = true;
-   onPlay()    
-  }, 10);
- }
+  if (isNaN(audio_duration) === false) {
+    let sec = Math.floor(audio_duration);
+    let min = Math.floor(sec / 60);
+    min = min >= 10 ? min : "0" + min;
+    sec = Math.floor(sec % 60);
+    sec = sec >= 10 ? sec : "0" + sec;
+    return min + ":" + sec;
+  } else {
+    store.state.home.isPlayAudio = true;
+    onPlay();
+    setTimeout(() => {
+      store.state.home.isPlayAudio = true;
+      onPlay();
+    }, 10);
+  }
 }
 
 function updateVolume() {
@@ -239,7 +255,7 @@ function muteAudio() {
 </script>
 
 <style scoped>
-.image-text{
+.image-text {
   text-shadow: 1px 1px 2px #00000079;
 }
 

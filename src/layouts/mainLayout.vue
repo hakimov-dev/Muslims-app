@@ -1,7 +1,11 @@
 <template>
-  <div v-if="!$store.state.settings.refreshPage" class="main-layout" @click="dropOpen = false">
+  <div
+    v-if="!$store.state.settings.refreshPage"
+    class="main-layout"
+    @click="dropOpen = false"
+  >
     <div class="flex md:flex-row flex-col-reverse items-start">
-    <input class="hidden" :value="pic" id="pic" type="file">
+      <input class="hidden" :value="pic" id="pic" type="file" />
       <!-- Sidebar -->
       <div
         class="z-[1111] sidebar bg-[#000000] fixed top-[92%] md:top-0 flex items-center md:flex-col text-white md:h-screen h-[8%] w-full md:w-[20%] md:py-4 md:px-3"
@@ -109,8 +113,32 @@
             <h1 class="font-medium text-xl">Muslims app</h1>
           </router-link>
           <div class="md:flex hidden items-center w-[10%] justify-between">
-            <button id="left" @click="prevNext($event)" :class="from === null ? 'opacity-60 cursor-not-allowed' : ''" class="transition-all bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="left" src="../assets/imgs/left-arrow.png" class="h-[16px] w-[18px] mr-[3px]" alt=""></button>
-            <button id="right" @click="prevNext($event)" :class="to === null ? 'opacity-60 cursor-not-allowed' : ''" class="transition-all bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"><img id="right" src="../assets/imgs/right-arrow.png" class="h-[16px] w-[18px] ml-[3px]" alt=""></button>
+            <button
+              id="left"
+              @click="prevNext($event)"
+              :class="from === null ? 'opacity-60 cursor-not-allowed' : ''"
+              class="transition-all bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"
+            >
+              <img
+                id="left"
+                src="../assets/imgs/left-arrow.png"
+                class="h-[16px] w-[18px] mr-[3px]"
+                alt=""
+              />
+            </button>
+            <button
+              id="right"
+              @click="prevNext($event)"
+              :class="to === null ? 'opacity-60 cursor-not-allowed' : ''"
+              class="transition-all bg-[#030303] h-[40px] w-[40px] rounded-full flex flex-row items-center justify-center"
+            >
+              <img
+                id="right"
+                src="../assets/imgs/right-arrow.png"
+                class="h-[16px] w-[18px] ml-[3px]"
+                alt=""
+              />
+            </button>
           </div>
           <div
             @click.stop
@@ -118,13 +146,21 @@
           >
             <div @click="dropOpen = !dropOpen" class="flex items-center">
               <img
-                :class="$store.state.settings.user.pic == null ? 'h-[30px] w-[30px]' : 'h-[35px] w-[35px]'"
+                :class="
+                  $store.state.settings.user.pic == null
+                    ? 'h-[30px] w-[30px]'
+                    : 'h-[35px] w-[35px]'
+                "
                 class="rounded-full mr-2"
-                :src="$store.state.settings.user.pic !== null ? $store.state.settings.user.pic : require('../assets/imgs/user2.png')"
+                :src="
+                  $store.state.settings.user.pic !== null
+                    ? $store.state.settings.user.pic
+                    : require('../assets/imgs/user2.png')
+                "
                 alt=""
               />
               <h1 class="md:text-[18px] text-[14px] md:block hidden capitalize">
-                {{ $cookies.get('user_username') || 'Loading...'}}
+                {{ $cookies.get("user_username") || "Loading..." }}
               </h1>
             </div>
             <transition>
@@ -155,7 +191,7 @@
         </div>
         <!-- Music player -->
         <transition>
-         <musicPlayer class="fixed w-full bottom-0 bg-[#181818] md:h-[13vh]" />
+          <musicPlayer class="fixed w-full bottom-0 bg-[#181818] md:h-[13vh]" />
         </transition>
       </div>
     </div>
@@ -170,7 +206,7 @@ export default {
     return {
       dropOpen: false,
       scrollHeight: 0,
-      to: null, 
+      to: null,
       from: null,
       pic: null
     };
@@ -182,30 +218,28 @@ export default {
 
   mounted() {
     this.scroll();
-    if(this.$store.state.settings.user.username == ''){
-     var fileInput = document.querySelector('#pic')
-     this.$store.state.settings.user.username = $cookies.get('user_username')
-     this.$store.state.settings.user.surname = $cookies.get('user_lastname')
-     this.$store.state.settings.user.name = $cookies.get('user_name')
+    if (this.$store.state.settings.user.username == "") {
+      this.$store.state.settings.user.username = $cookies.get("user_username");
+      this.$store.state.settings.user.surname = $cookies.get("user_lastname");
+      this.$store.state.settings.user.name = $cookies.get("user_name");
     }
   },
 
-  watch: { 
-     '$route' (to, from) {
-          if(to !== from)
-            this.from = from
-  }},
+  watch: {
+    $route(to, from) {
+      if (to !== from) this.from = from;
+    }
+  },
 
   methods: {
-    
-    prevNext(event){
-    if(event.target.id == 'left'){
-      this.to = this.from
-      this.$router.push(`${this.from.path}`)
-    }else{
-      this.$router.push(`${this.from.path}`)
-      this.to = null
-    }
+    prevNext(event) {
+      if (event.target.id == "left") {
+        this.to = this.from;
+        this.$router.push(`${this.from.path}`);
+      } else {
+        this.$router.push(`${this.from.path}`);
+        this.to = null;
+      }
     },
 
     isScrolledIntoView(el) {
@@ -227,7 +261,7 @@ export default {
       };
     }
   }
-}
+};
 </script>
 
 <style>

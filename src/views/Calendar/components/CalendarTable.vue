@@ -1,16 +1,21 @@
 <template>
   <div class="bg-[#181818] rounded-xl">
-    <div class="overflow-x-auto !rounded-t-md mt-[3%]" v-if="$store.state.calendar.calendarData">
+    <div
+      class="overflow-x-auto !rounded-t-md mt-[3%]"
+      v-if="$store.state.calendar.calendarData"
+    >
       <table class="table-auto w-full !rounded-t-xl text-white">
         <thead class="border-b">
           <tr class="bg-[#000000]">
             <th class="text-center p-4 font-medium">
-             {{ $store.state.calendar.calendarData[0].date.hijri.month.en }}
+              {{ $store.state.calendar.calendarData[0].date.hijri.month.en }}
             </th>
             <th
               class="text-center border-l-[1px] border-gray-400 p-4 font-medium"
             >
-             {{$store.state.calendar.calendarData[0].date.gregorian.month.en}}
+              {{
+                $store.state.calendar.calendarData[0].date.gregorian.month.en
+              }}
             </th>
             <th
               class="text-center border-l-[1px] border-gray-400 p-4 font-medium"
@@ -55,13 +60,18 @@
           <tr
             class="!rounded-b-md"
             :class="{
-              'border-b-[1px] border-gray-400': idx !== $store.state.calendar.calendarData.length -1,
-              'bg-white text-gray-600 font-semibold': active(item.date.gregorian.date)
+              'border-b-[1px] border-gray-400':
+                idx !== $store.state.calendar.calendarData.length - 1,
+              'bg-white text-gray-600 font-semibold': active(
+                item.date.gregorian.date
+              )
             }"
             v-for="(item, idx) in $store.state.calendar.calendarData"
           >
             <td class="p-4 text-center">{{ item.date.hijri.day }}</td>
-            <td class="p-4 text-center border-l-[1px] border-gray-400">{{ item.date.gregorian.day }}</td>
+            <td class="p-4 text-center border-l-[1px] border-gray-400">
+              {{ item.date.gregorian.day }}
+            </td>
             <td class="p-4 text-center border-l-[1px] border-gray-400">
               {{ item.date.gregorian.weekday.en }}
             </td>
@@ -88,9 +98,11 @@
       </table>
     </div>
 
-     <!-- For laoding -->
+    <!-- For laoding -->
     <div class="overflow-x-auto !rounded-t-md mt-[3%] select-none" v-else>
-      <table class="table-auto w-full !rounded-t-xl text-[#181818] animate-pulse">
+      <table
+        class="table-auto w-full !rounded-t-xl text-[#181818] animate-pulse"
+      >
         <thead class="border-b">
           <tr class="bg-[#000000] text-[#000000]">
             <th class="text-center p-4 font-medium">Loading...</th>
@@ -175,10 +187,15 @@
 </template>
 
 <script setup>
-function active(date){
-  const d = new Date()
-  let month = d.getMonth() + 1 
-  
-   return date == `${d.getDate() > 9 ? d.getDate() : '0' + d.getDate()}-${month > 9 ? month : '0' + month}-${d.getFullYear()}`
+function active(date) {
+  const d = new Date();
+  let month = d.getMonth() + 1;
+
+  return (
+    date ==
+    `${d.getDate() > 9 ? d.getDate() : "0" + d.getDate()}-${
+      month > 9 ? month : "0" + month
+    }-${d.getFullYear()}`
+  );
 }
 </script>

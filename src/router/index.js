@@ -38,15 +38,6 @@ const routes = [
     component: () => import("../views/Settings")
   },
   {
-    path: "/favorite",
-    name: "favorite",
-    meta: {
-      layout: "main",
-      auth: true
-    },
-    component: () => import("../views/Favorite")
-  },
-  {
     path: "/auth",
     name: "auth",
     meta: {
