@@ -166,6 +166,7 @@
             <transition>
               <div
                 v-if="dropOpen"
+                @click="$store.dispatch('signOut')"
                 :class="scrollHeight > 0 ? 'mt-[3%]' : 'md:top-[10%] top-[6%]'"
                 class="links-box group absolute w-[30%] md:mr-0 mr-[6%] md:w-[10%] flex flex-col z-[111] items-stretch bg-[#282828] hover:bg-[#4b4b4b] transition-all shadow-xl mt-2 md:p-0 p-1 w-full md:rounded-none rounded-[3px] text-center"
               >
