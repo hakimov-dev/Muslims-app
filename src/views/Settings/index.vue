@@ -10,29 +10,9 @@
           class="img-wrap flex justify-center items-center text-center relative"
         >
           <img
-            :class="image == null ? 'bg-black md:h-[120px] md:w-[120px]' : 'h-[150px] w-[150px]'"
-            class="rounded-full object-contain p-3 select-none"
-            :src="image ? image : require('../../assets/imgs/user2.png')"
+            class="bg-black md:h-[120px] md:w-[120px] rounded-full object-contain p-3 select-none"
+            src="../../assets/imgs/user2.png"
             alt=""
-          />
-          <label
-            for="file"
-            :class="image == null ? 'md:-bottom-[1%] bottom-2 right-[3%] md:-right-[1%]' : 'md:bottom-[4%] md:right-[12%] bottom-2 right-[3%]'"
-            class="absolute cursor-pointer h-[35px] w-[35px] bg-[#1b1b1b] pt-[9px] pl-[9px] rounded-full"
-          >
-            <img
-              class="h-[17px] w-[17px]"
-              src="../../assets/imgs/edit.png"
-              alt=""
-            />
-          </label>
-          <input
-            @change="uploadImage($event)"
-            class="hidden"
-            type="file"
-            name="file"
-            accept="image/*"
-            id="file"
           />
         </div>
         <div class="inputs-wrap mt-[20px] md:w-[70%] w-[80%]">
@@ -77,27 +57,6 @@
 </template>
 
 <script setup>
-import { useStore } from 'vuex'
-import { ref } from 'vue'
-
-const store  = useStore()
-const image = ref(null)
-const imageObj = ref(null)
-
-function uploadImage(){
-  let file = document.getElementById('file').files[0]
-  imageObj.value = stringify(file)
-
-  image.value = URL.createObjectURL(file)
-}
-
-function stringify(obj) {
-    const replacer = [];
-    for (const key in obj) {
-        replacer.push(key);
-    }
-    return JSON.stringify(obj, replacer);
-}
 </script>
 
 <script>

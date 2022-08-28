@@ -163,6 +163,7 @@
 </template>
 
 <script>
+import { file } from "@babel/types";
 import musicPlayer from "../components/musicPlayer.vue";
 export default {
   data() {
@@ -186,9 +187,6 @@ export default {
      this.$store.state.settings.user.username = $cookies.get('user_username')
      this.$store.state.settings.user.surname = $cookies.get('user_lastname')
      this.$store.state.settings.user.name = $cookies.get('user_name')
-     this.pic = $cookies.get('user_pic') == "null" ? null : new File(["logo"], "logo.png", JSON.parse(JSON.parse($cookies.get('user_pic'))))
-     this.$store.state.settings.user.pic = pic == null ? null : URL.createObjectURL(this.pic)
-     console.log(this.pic)
     }
   },
 

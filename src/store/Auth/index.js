@@ -18,7 +18,6 @@ export default {
         $cookies.set("user_username", "hakimov-dev");
         $cookies.set("user_name", "Muhammadamin");
         $cookies.set("user_lastname", "Hakimov");
-        $cookies.set("user_pic", null);
         $cookies.set("user_pass", state.passwordValue);
         $cookies.set("user_favorite", JSON.stringify([]));
         $cookies.set("user_city", null);
