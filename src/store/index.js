@@ -11,7 +11,11 @@ export default createStore({
   mutations: {},
   actions: {
     signOut(){
-    
+      $cookies.keys().forEach(element => {
+        cookies.remove(element)
+        localStorage.clear()
+      });
+      location.reload()
     }
   },
   modules: {
