@@ -9,7 +9,11 @@ export default createStore({
   state: {},
   getters: {},
   mutations: {},
-  actions: {},
+  actions: {
+    signOut(){
+    
+    }
+  },
   modules: {
     auth: moduleAuth,
     home: moduleHome,
