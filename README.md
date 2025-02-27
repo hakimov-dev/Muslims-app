@@ -1,5 +1,5 @@
 
-#   Hi, welcome Muslims app 👋
+#   Hi, welcome to Muslims app 👋
 
 ![image](https://user-images.githubusercontent.com/83240328/187073821-7adf6849-79d3-4d90-9c7b-c2ccbb067a50.png)
 
@@ -17,7 +17,7 @@
 </p>
 
 
-## You can use this by Muslims app 👀 
+## You can use this Muslims app for👀 
 
 - > Mp3 quran 📖🎧
 - > Pray times  📿🕐
@@ -28,12 +28,12 @@
 
 -  All free 💸
 -  Modern design 🎨
--  You don't need create new profile 🤗
--  Without limit(You can as you much want use this app) 😎
--  Support by author 🌚
--  Always growed app 📈
--  Feedbacks chat for users 💻
-- 100% security your profile 🔒
+-  You don't need to create a new profile 🤗
+-  Limitless (You can use this app as much as you want) 😎
+-  Supported by author 🌚
+-  Always growing with new updates 📈
+-  Feedback chat for users 💻
+-  100% secure profile 🔒
 
 ## Instalation
 ```
